@@ -11,7 +11,7 @@ test('destaque identifica o elemento sem executar o código',()=>{
  for(const q of selectQuestions(bank,'classify')){const html=codeMarkup(q);assert.ok(html.includes('<mark>'));assert.ok(q.focus.end>q.focus.start);assert.equal(q.options.length,4);}
 });
 test('cada oficina tem exatamente uma alteração que passa no teste',()=>{
- for(const q of selectQuestions(bank,'repair')){assert.equal(q.repair_variants.length,4);assert.deepEqual(q.repair_variants.flatMap((v,i)=>v.passed?[i]:[]),[q.answer]);assert.notEqual(q.repair_original_output,q.repair_expected);assert.ok(repairMarkup(q,q.answer).includes('O teste apresentou o resultado esperado.'));}
+ for(const q of selectQuestions(bank,'repair')){assert.equal(q.repair_variants.length,4);assert.deepEqual(q.repair_variants.flatMap((v,i)=>v.passed?[i]:[]),[q.answer]);assert.notEqual(q.repair_original_output,q.repair_expected);assert.ok(repairMarkup(q,q.answer).includes('Deu certo: a saída corresponde ao resultado esperado.'));}
 });
 test('explicações têm limites e textos são escapados na interface',()=>{
  assert.equal(validReflection('        '),false);assert.equal(validReflection('curto'),false);assert.equal(validReflection('Minha justificativa usa self.'),true);assert.equal(validReflection('a'.repeat(401)),false);

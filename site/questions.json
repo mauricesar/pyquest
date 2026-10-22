@@ -13,16 +13,16 @@
       "dono capacidade peso_atual"
     ],
     "answer": 2,
-    "explanation": "O construtor recebe dono e capacidade. peso_atual é um atributo inicializado em zero, sem precisar ser recebido como parâmetro.",
+    "explanation": "Na chamada Mochila(\"Ana\", 5), o construtor recebe \"Ana\" em dono e 5 em capacidade. Já peso_atual começa em zero, definido no próprio construtor. Por isso, a saída é Ana 5 0.",
     "seconds": 60,
     "source": "Prática • questão 6 — Mochila",
     "activity": "quiz",
-    "reflection_prompt": "Quais valores o construtor recebe e qual atributo começa em zero?",
+    "reflection_prompt": "Olhe a criação da mochila: quais valores chegam ao construtor e qual atributo começa em zero?",
     "position": 0
   },
   {
     "id": 321,
-    "title": "A planta da mochila",
+    "title": "Mochila: o que esse nome representa?",
     "concept": "Vocabulário de POO",
     "kind": "Quem sou eu? 🔎",
     "activity": "classify",
@@ -80,14 +80,14 @@
       "self.nome = energia"
     ],
     "answer": 2,
-    "explanation": "self.energia = energia guarda o parâmetro como atributo do objeto. A atribuição sem self só altera uma variável local.",
+    "explanation": "O valor 80 chega pelo parâmetro energia. Ao usar self.energia = energia, o construtor guarda esse valor no objeto. Sem self, a atribuição fica apenas na variável local e pip.energia não é criado.",
     "seconds": 90,
     "source": "Oficina • adaptação do exercício de meta de leitura",
     "focus": {
       "start": 84,
       "end": 101
     },
-    "repair_diagnosis": "O construtor não está guardando energia na instância.",
+    "repair_diagnosis": "Pip recebe a energia ao ser criado, mas esse valor não fica guardado como atributo da instância.",
     "repair_expected": "Energia: 80",
     "repair_variants": [
       {
@@ -139,7 +139,7 @@
   },
   {
     "id": 322,
-    "title": "O nome que referencia uma instância",
+    "title": "E ana, o que representa aqui?",
     "concept": "Vocabulário de POO",
     "kind": "Quem sou eu? 🔎",
     "activity": "classify",
@@ -176,7 +176,7 @@
       "23 23"
     ],
     "answer": 1,
-    "explanation": "Carla acumula 8 + 15 = 23 páginas. Diego recebe apenas 5. Alterar um objeto não modifica o atributo do outro.",
+    "explanation": "Acompanhe um leitor de cada vez: Carla registra 8 + 15 = 23 páginas; Diego registra 5. Cada instância guarda seu próprio paginas_lidas, então a leitura de Carla não muda o total de Diego.",
     "seconds": 90,
     "source": "Prática • questão 7 — Meta de leitura",
     "activity": "quiz",
@@ -218,14 +218,14 @@
       "self.energia = 0"
     ],
     "answer": 0,
-    "explanation": "Depois de validar o valor, -= desconta o gasto. Com 50 de energia e gasto de 20, o estado final é 30.",
+    "explanation": "Pip começa com 50 de energia e gasta 20. Depois das validações, self.energia -= valor faz esse desconto: 50 − 20 = 30.",
     "seconds": 90,
     "source": "Oficina • adaptação dos exercícios de mochila e impressora",
     "focus": {
       "start": 268,
       "end": 289
     },
-    "repair_diagnosis": "Uma operação de gasto precisa diminuir a energia quando for permitida.",
+    "repair_diagnosis": "Pip deveria gastar energia, mas está ganhando. Veja qual operação o método usa depois das validações.",
     "repair_expected": "Energia: 30",
     "repair_variants": [
       {
@@ -250,7 +250,7 @@
       }
     ],
     "repair_original_output": "Energia: 70",
-    "reflection_prompt": "Por que a energia só deve ser alterada depois das validações?",
+    "reflection_prompt": "O que pode dar errado se a energia mudar antes de o método validar o valor?",
     "curriculum": "poo-v3",
     "position": 8
   },
@@ -314,7 +314,7 @@
       "Mostra Abra o cofre e depois 0."
     ],
     "answer": 3,
-    "explanation": "O cofre começa fechado. A primeira condição recusa a operação; o ramo que soma ao saldo não é executado. O saldo permanece zero.",
+    "explanation": "O cofre começa fechado, então a primeira condição exibe Abra o cofre. Como o bloco else não é executado, os 20 não entram no saldo, que continua em zero.",
     "seconds": 90,
     "source": "Prática • questão 9 — Cofre",
     "activity": "quiz",
@@ -363,7 +363,7 @@
       "start": 121,
       "end": 141
     },
-    "repair_diagnosis": "O robô só pode dar passos se estiver ligado. Uma recusa deve preservar passos.",
+    "repair_diagnosis": "Pip está desligado e mesmo assim anda. Quando o movimento for recusado, o atributo passos precisa continuar com o mesmo valor.",
     "repair_expected": "Robô desligado\nPassos: 0",
     "repair_variants": [
       {
@@ -452,7 +452,7 @@
       "Mostra Notas inválidas e depois 0 0."
     ],
     "answer": 0,
-    "explanation": "Como 12 está fora do intervalo, a segunda chamada não altera nenhuma nota. As notas 5 e 7 da primeira chamada são preservadas juntas.",
+    "explanation": "A primeira chamada guarda as notas 5 e 7. Na segunda, a nota 12 está fora do intervalo de 0 a 10. Como as duas notas precisam ser válidas, nenhuma delas é atualizada: continuam 5 e 7.",
     "seconds": 90,
     "source": "Avaliação • exercício 2 — Aluno",
     "activity": "quiz",
@@ -501,7 +501,7 @@
       "start": 229,
       "end": 279
     },
-    "repair_diagnosis": "A impressão inteira deve ser recusada se faltar papel OU tinta.",
+    "repair_diagnosis": "Há papel, mas falta tinta para terminar a impressão. Se qualquer um dos recursos faltar, a impressão inteira deve ser recusada.",
     "repair_expected": "Recursos insuficientes\n4 6\n4 16",
     "repair_variants": [
       {
@@ -544,7 +544,7 @@
       "Mostra Andar inválido e depois 0."
     ],
     "answer": 1,
-    "explanation": "O andar 5 existe, mas a porta está aberta. A movimentação é recusada e andar_atual continua em zero. A verificação precisa ocorrer antes da alteração.",
+    "explanation": "O destino 5 é válido, mas repare na porta: ela começa aberta. Por isso, o método exibe Feche a porta e não altera andar_atual, que continua em zero.",
     "seconds": 90,
     "source": "Avaliação • exercício 4 — Elevador",
     "activity": "quiz",

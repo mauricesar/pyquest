@@ -28,7 +28,7 @@ Questao('Mochila: o que o construtor guarda?', 'Construtor e atributos', 'Prevej
 m = Mochila("Ana", 5)
 print(m.dono, m.capacidade, m.peso_atual)''',
 ['Ana 5 5','Ana 0 5','Ana 5 0','dono capacidade peso_atual'],2,
-'O construtor recebe dono e capacidade. peso_atual é um atributo inicializado em zero, sem precisar ser recebido como parâmetro.',
+'Na chamada Mochila("Ana", 5), o construtor recebe "Ana" em dono e 5 em capacidade. Já peso_atual começa em zero, definido no próprio construtor. Por isso, a saída é Ana 5 0.',
 source='Prática • questão 6 — Mochila',expected_output='Ana 5 0'),
 Questao('Leitura: qual atributo está faltando?', 'self', 'Detetive de bugs', '''class MetaLeitura:
     def __init__(self, nome, meta):
@@ -74,7 +74,7 @@ carla.registrar_leitura(15)
 diego.registrar_leitura(5)
 print(carla.paginas_lidas, diego.paginas_lidas)''',
 ['28 28','23 5','15 5','23 23'],1,
-'Carla acumula 8 + 15 = 23 páginas. Diego recebe apenas 5. Alterar um objeto não modifica o atributo do outro.',90,
+'Acompanhe um leitor de cada vez: Carla registra 8 + 15 = 23 páginas; Diego registra 5. Cada instância guarda seu próprio paginas_lidas, então a leitura de Carla não muda o total de Diego.',90,
 'Prática • questão 7 — Meta de leitura','23 5'),
 Questao('Mochila: atingir o limite é permitido', 'Validação de limites', 'Complete o código', '''# Trecho do método adicionar_peso(self, peso):
 if peso <= 0:
@@ -132,7 +132,7 @@ c = Cofre("Elisa")
 c.guardar(20)
 print(c.saldo)''',
 ['Mostra Abra o cofre e depois 20.','Mostra apenas 20.','O cofre abre automaticamente e guarda 20.','Mostra Abra o cofre e depois 0.'],3,
-'O cofre começa fechado. A primeira condição recusa a operação; o ramo que soma ao saldo não é executado. O saldo permanece zero.',90,
+'O cofre começa fechado, então a primeira condição exibe Abra o cofre. Como o bloco else não é executado, os 20 não entram no saldo, que continua em zero.',90,
 'Prática • questão 9 — Cofre','Abra o cofre\n0'),
 Questao('Pintura: um método chama outro', 'Composição de métodos', 'Preveja a saída', '''class ServicoPintura:
     def __init__(self, largura, altura, preco_metro):
@@ -180,7 +180,7 @@ b.registrar_notas(5, 7)
 b.registrar_notas(9, 12)
 print(b.nota1, b.nota2)''',
 ['Mostra Notas inválidas e depois 5 7.','Mostra Notas inválidas e depois 9 7.','Mostra 9 12, sem recusar.','Mostra Notas inválidas e depois 0 0.'],0,
-'Como 12 está fora do intervalo, a segunda chamada não altera nenhuma nota. As notas 5 e 7 da primeira chamada são preservadas juntas.',90,
+'A primeira chamada guarda as notas 5 e 7. Na segunda, a nota 12 está fora do intervalo de 0 a 10. Como as duas notas precisam ser válidas, nenhuma delas é atualizada: continuam 5 e 7.',90,
 'Avaliação • exercício 2 — Aluno','Notas inválidas\n5 7'),
 Questao('Internet: começar um novo mês', 'Reinicialização de estado', 'Conceito', '''# Atributos do PlanoInternet de Carla:
 # titular = "Carla"
@@ -212,7 +212,7 @@ social = Elevador(8)
 social.ir_para_andar(5)
 print(social.andar_atual)''',
 ['Mostra apenas 5.','Mostra Feche a porta e depois 0.','Mostra Feche a porta e depois 5.','Mostra Andar inválido e depois 0.'],1,
-'O andar 5 existe, mas a porta está aberta. A movimentação é recusada e andar_atual continua em zero. A verificação precisa ocorrer antes da alteração.',90,
+'O destino 5 é válido, mas repare na porta: ela começa aberta. Por isso, o método exibe Feche a porta e não altera andar_atual, que continua em zero.',90,
 'Avaliação • exercício 4 — Elevador','Feche a porta\n0'),
 Questao('Missão final: votos brancos entram no percentual?', 'Percentual e retorno', 'Chefe final', '''class Votacao:
     def __init__(self):

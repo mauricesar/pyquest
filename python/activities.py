@@ -19,7 +19,7 @@ ana.adicionar_peso(2)
 '''
 
 REFLECTIONS = {
-    0: 'Quais valores o construtor recebe e qual atributo começa em zero?',
+    0: 'Olhe a criação da mochila: quais valores chegam ao construtor e qual atributo começa em zero?',
     4: 'Por que usar > em vez de >= para recusar o peso da mochila?',
     6: 'Por que o saldo deve continuar igual quando o cofre está fechado?',
     8: 'Por que verificar papel e tinta antes de descontar os recursos?',
@@ -43,9 +43,9 @@ def execute(code):
 def extra_questions():
     questions = []
     targets = [
-        ('A planta da mochila', 'Mochila', VOCABULARY_CODE.index('Mochila'), 0,
+        ('Mochila: o que esse nome representa?', 'Mochila', VOCABULARY_CODE.index('Mochila'), 0,
          'Mochila aparece na definição da classe. Ela é o modelo usado para criar objetos.'),
-        ('O nome que referencia uma instância', 'ana', VOCABULARY_CODE.index('ana ='), 1,
+        ('E ana, o que representa aqui?', 'ana', VOCABULARY_CODE.index('ana ='), 1,
          'ana é a variável que referencia um objeto criado por Mochila("Ana", 5). A classe é Mochila; o objeto é uma instância dela.'),
         ('Uma informação guardada no objeto', 'self.peso_atual', VOCABULARY_CODE.index('self.peso_atual'), 2,
          'self.peso_atual acessa um atributo da instância. Esse atributo armazena o peso atual da mochila.'),
@@ -68,8 +68,8 @@ def extra_questions():
 pip = Robo("Pip", 80)
 print("Energia:", pip.energia)''',
              broken='energia = energia', replacements=['self.energia = 0', 'energia = self.energia', 'self.energia = energia', 'self.nome = energia'], answer=2,
-             expected='Energia: 80', diagnosis='O construtor não está guardando energia na instância.',
-             explanation='self.energia = energia guarda o parâmetro como atributo do objeto. A atribuição sem self só altera uma variável local.',
+             expected='Energia: 80', diagnosis='Pip recebe a energia ao ser criado, mas esse valor não fica guardado como atributo da instância.',
+             explanation='O valor 80 chega pelo parâmetro energia. Ao usar self.energia = energia, o construtor guarda esse valor no objeto. Sem self, a atribuição fica apenas na variável local e pip.energia não é criado.',
              reflection_prompt='Por que energia = energia não cria o atributo energia do robô?', source='Oficina • adaptação do exercício de meta de leitura'),
         dict(title='Gastar energia está carregando o robô', concept='Alteração de estado',
              code='''class Robo:
@@ -88,9 +88,9 @@ pip = Robo(50)
 pip.gastar(20)
 print("Energia:", pip.energia)''',
              broken='self.energia += valor', replacements=['self.energia -= valor', 'self.energia = valor', 'self.energia += valor', 'self.energia = 0'], answer=0,
-             expected='Energia: 30', diagnosis='Uma operação de gasto precisa diminuir a energia quando for permitida.',
-             explanation='Depois de validar o valor, -= desconta o gasto. Com 50 de energia e gasto de 20, o estado final é 30.',
-             reflection_prompt='Por que a energia só deve ser alterada depois das validações?', source='Oficina • adaptação dos exercícios de mochila e impressora'),
+             expected='Energia: 30', diagnosis='Pip deveria gastar energia, mas está ganhando. Veja qual operação o método usa depois das validações.',
+             explanation='Pip começa com 50 de energia e gasta 20. Depois das validações, self.energia -= valor faz esse desconto: 50 − 20 = 30.',
+             reflection_prompt='O que pode dar errado se a energia mudar antes de o método validar o valor?', source='Oficina • adaptação dos exercícios de mochila e impressora'),
         dict(title='O robô está andando desligado', concept='Estado booleano e validação',
              code='''class Robo:
     def __init__(self):
@@ -107,7 +107,7 @@ pip = Robo()
 pip.andar()
 print("Passos:", pip.passos)''',
              broken='self.ligado == False', replacements=['self.passos >= 0', 'self.ligado == False', 'self.passos < 10', 'self.ligado == True'], answer=3,
-             expected='Robô desligado\nPassos: 0', diagnosis='O robô só pode dar passos se estiver ligado. Uma recusa deve preservar passos.',
+             expected='Robô desligado\nPassos: 0', diagnosis='Pip está desligado e mesmo assim anda. Quando o movimento for recusado, o atributo passos precisa continuar com o mesmo valor.',
              explanation='A condição deve permitir o movimento quando ligado é True. Como o robô começa desligado, a chamada exibe a mensagem e mantém zero passos.',
              reflection_prompt='O que a condição precisa verificar antes de alterar passos?', source='Oficina • adaptação dos exercícios de cofre e elevador'),
         dict(title='A impressora robô está sem tinta', concept='Operação recusada',
@@ -132,7 +132,7 @@ b.imprimir(2)
 print(a.folhas, a.tinta)
 print(b.folhas, b.tinta)''',
              broken='paginas > self.folhas and paginas * 2 > self.tinta', replacements=['paginas > self.folhas', 'paginas > self.folhas or paginas * 2 > self.tinta', 'paginas > self.folhas and paginas * 2 > self.tinta', 'paginas * 2 < self.tinta'], answer=1,
-             expected='Recursos insuficientes\n4 6\n4 16', diagnosis='A impressão inteira deve ser recusada se faltar papel OU tinta.',
+             expected='Recursos insuficientes\n4 6\n4 16', diagnosis='Há papel, mas falta tinta para terminar a impressão. Se qualquer um dos recursos faltar, a impressão inteira deve ser recusada.',
              explanation='O operador or recusa quando pelo menos um recurso é insuficiente. O objeto a preserva 4 folhas e tinta 6; b imprime duas páginas e termina com 4 folhas e tinta 16.',
              reflection_prompt='Por que usar or para detectar recursos insuficientes neste caso?', source='Avaliação • exercício 1 — Impressora'),
     ]
