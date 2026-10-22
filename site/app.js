@@ -1,6 +1,6 @@
 import {score,rank,escapeHTML as e,csv} from './engine.js';
 import {configured,login,anonymous,rpc,logout} from './api.js';
-import {PACKS,selectQuestions,codeMarkup,repairMarkup,bindRepair,reflectionForm,bindReflectionCounter,validReflection} from './activities.js?v=activities-v3';
+import {PACKS,selectQuestions,codeMarkup,repairMarkup,bindRepair,reflectionForm,bindReflectionCounter,validReflection} from './activities.js?v=activities-v3-1';
 const app=document.querySelector('#app');
 const bank=await fetch('questions.json?v=activities-v3').then(r=>{if(!r.ok)throw Error('Banco indisponível');return r.json();}).catch(()=>[]);
 const icons=['🧑‍🚀','🦊','🤖','🐸','🐱','🐙'];
