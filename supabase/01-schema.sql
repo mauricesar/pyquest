@@ -35,8 +35,8 @@ create function public.pq_create_room(p_title text,p_count int,p_seconds int) re
 declare rid uuid; qids int[]; invite text;
 begin
  perform public.pq_teacher_check();
- if length(trim(p_title)) not between 1 and 60 or p_count not in(5,10,15) or p_seconds not in(0,30,60,90) then raise exception 'Configuração inválida.'; end if;
- select array_agg(id order by id) into qids from (select id from public.pq_questions order by id limit p_count) q;
+ if length(trim(p_title)) not between 1 and 60 or p_count not in(5,10,15) or p_seconds not in(0,30,60,90,120) then raise exception 'Configuração inválida.'; end if;
+ select array_agg(id order by id) into qids from (select id from public.pq_questions where data->>'curriculum'='poo-v2' order by id limit p_count) q;
  if coalesce(array_length(qids,1),0)<>p_count then raise exception 'Banco de questões incompleto.'; end if;
  loop
  invite:=upper(substr(replace(gen_random_uuid()::text,'-',''),1,6));

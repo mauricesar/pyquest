@@ -1,242 +1,272 @@
 [
   {
-    "id": 1,
-    "title": "Uma receita para criar personagens",
-    "concept": "Classe e objeto",
-    "kind": "Conceito",
-    "code": "",
-    "options": [
-      "Classe é um modelo; objeto é uma instância desse modelo.",
-      "Classe e objeto são sempre a mesma coisa.",
-      "Objeto é apenas o nome de uma variável.",
-      "Uma classe só pode criar um objeto."
-    ],
-    "answer": 0,
-    "explanation": "Uma classe define atributos e comportamentos. Podemos criar vários objetos a partir dela.",
-    "seconds": 40
-  },
-  {
-    "id": 2,
-    "title": "Quem nasceu aqui?",
-    "concept": "Instanciação",
+    "id": 101,
+    "curriculum": "poo-v2",
+    "title": "Mochila: o que o construtor guarda?",
+    "concept": "Construtor e atributos",
     "kind": "Preveja a saída",
-    "code": "class Personagem:\n    pass\n\nluna = Personagem()\nprint(type(luna).__name__)",
+    "code": "class Mochila:\n    def __init__(self, dono, capacidade):\n        self.dono = dono\n        self.capacidade = capacidade\n        self.peso_atual = 0\n\nm = Mochila(\"Ana\", 5)\nprint(m.dono, m.capacidade, m.peso_atual)",
     "options": [
-      "luna",
-      "Personagem",
-      "str",
-      "None"
-    ],
-    "answer": 1,
-    "explanation": "Personagem() cria uma instância da classe Personagem. O nome do tipo é Personagem.",
-    "seconds": 40
-  },
-  {
-    "id": 3,
-    "title": "A mochila de Luna",
-    "concept": "Atributos",
-    "kind": "Preveja a saída",
-    "code": "class Heroi:\n    def __init__(self, nome):\n        self.nome = nome\n        self.moedas = 10\n\nluna = Heroi(\"Luna\")\nluna.moedas += 5\nprint(luna.moedas)",
-    "options": [
-      "10",
-      "5",
-      "15",
-      "Erro"
+      "Ana 5 5",
+      "Ana 0 5",
+      "Ana 5 0",
+      "dono capacidade peso_atual"
     ],
     "answer": 2,
-    "explanation": "O atributo moedas começa em 10. Somar 5 altera o valor do objeto para 15.",
-    "seconds": 40
+    "explanation": "O construtor recebe dono e capacidade. peso_atual é um atributo inicializado em zero, sem precisar ser recebido como parâmetro.",
+    "seconds": 60,
+    "source": "Prática • questão 6 — Mochila"
   },
   {
-    "id": 4,
-    "title": "Complete o construtor",
-    "concept": "Construtor",
-    "kind": "Complete o código",
-    "code": "class Robo:\n    def ______(self, nome):\n        self.nome = nome",
-    "options": [
-      "start",
-      "__init__",
-      "create",
-      "__main__"
-    ],
-    "answer": 1,
-    "explanation": "__init__ inicializa a instância recém-criada. Ele recebe self e os demais argumentos.",
-    "seconds": 40
-  },
-  {
-    "id": 5,
-    "title": "O bug escondido",
+    "id": 102,
+    "curriculum": "poo-v2",
+    "title": "Leitura: qual atributo está faltando?",
     "concept": "self",
     "kind": "Detetive de bugs",
-    "code": "class Robo:\n    def __init__(self, nome):\n        nome = nome\n\nr = Robo(\"Pip\")\nprint(r.nome)",
+    "code": "class MetaLeitura:\n    def __init__(self, nome, meta):\n        self.nome = nome\n        self.meta = meta\n        paginas_lidas = 0\n\nleitor = MetaLeitura(\"Carla\", 20)\nprint(leitor.paginas_lidas)",
     "options": [
-      "Trocar nome = nome por self.nome = nome.",
-      "Remover o parâmetro self.",
-      "Trocar print por return.",
-      "Trocar Robo por robo."
+      "Trocar paginas_lidas = 0 por self.paginas_lidas = 0.",
+      "Retirar self dos outros atributos.",
+      "Trocar o valor inicial de 0 para 20.",
+      "Criar uma classe diferente para cada leitor."
     ],
     "answer": 0,
-    "explanation": "nome = nome só reatribui o parâmetro local. self.nome = nome guarda o valor na instância.",
-    "seconds": 40
+    "explanation": "Para guardar um atributo na instância, usamos self.paginas_lidas. A atribuição sem self cria apenas uma variável local no construtor.",
+    "seconds": 60,
+    "source": "Prática • questão 7 — Meta de leitura"
   },
   {
-    "id": 6,
-    "title": "Dois heróis, duas energias",
-    "concept": "Instâncias independentes",
-    "kind": "Preveja a saída",
-    "code": "class Heroi:\n    def __init__(self):\n        self.energia = 100\n\na = Heroi()\nb = Heroi()\na.energia -= 30\nprint(b.energia)",
-    "options": [
-      "70",
-      "30",
-      "100",
-      "0"
-    ],
-    "answer": 2,
-    "explanation": "Cada instância tem seu próprio atributo energia. Alterar a não altera b.",
-    "seconds": 40
-  },
-  {
-    "id": 7,
-    "title": "O que é um método?",
-    "concept": "Métodos",
-    "kind": "Conceito",
-    "code": "",
-    "options": [
-      "Uma função definida dentro da classe.",
-      "Qualquer número guardado em uma variável.",
-      "Um arquivo Python.",
-      "Uma cópia automática de um objeto."
-    ],
-    "answer": 0,
-    "explanation": "Métodos definem comportamentos. Em um método de instância, self representa o objeto que o chamou.",
-    "seconds": 40
-  },
-  {
-    "id": 8,
-    "title": "Ativando o escudo",
+    "id": 103,
+    "curriculum": "poo-v2",
+    "title": "Equipe: como registrar uma vitória?",
     "concept": "Chamada de método",
     "kind": "Complete o código",
-    "code": "class Heroi:\n    def defender(self):\n        return \"Escudo ativo!\"\n\nluna = Heroi()\n# Como chamar o método?",
+    "code": "class Equipe:\n    def __init__(self, nome):\n        self.nome = nome\n        self.pontos = 0\n        self.vitorias = 0\n\n    def registrar_vitoria(self):\n        self.vitorias += 1\n        self.pontos += 3\n\nazul = Equipe(\"Azul\")\n# Qual chamada registra uma vitória de Azul?",
     "options": [
-      "Heroi = defender()",
-      "luna.defender",
-      "luna.defender()",
-      "def defender(luna)"
+      "azul.registrar_vitoria",
+      "registrar_vitoria(azul)",
+      "Equipe = registrar_vitoria()",
+      "azul.registrar_vitoria()"
     ],
-    "answer": 2,
-    "explanation": "luna.defender() chama o método no objeto luna. Sem os parênteses, temos uma referência ao método.",
-    "seconds": 40
+    "answer": 3,
+    "explanation": "azul.registrar_vitoria() executa o método no objeto azul. O próprio objeto corresponde a self dentro do método.",
+    "seconds": 60,
+    "source": "Prática • questão 8 — Equipe"
   },
   {
-    "id": 9,
-    "title": "Dano calculado",
-    "concept": "Alteração de estado",
+    "id": 104,
+    "curriculum": "poo-v2",
+    "title": "Dois leitores, dois totais",
+    "concept": "Instâncias independentes",
     "kind": "Preveja a saída",
-    "code": "class Heroi:\n    def __init__(self):\n        self.vida = 100\n\n    def receber_dano(self, dano):\n        self.vida -= dano\n\nh = Heroi()\nh.receber_dano(25)\nh.receber_dano(10)\nprint(h.vida)",
+    "code": "class MetaLeitura:\n    def __init__(self, nome):\n        self.nome = nome\n        self.paginas_lidas = 0\n\n    def registrar_leitura(self, paginas):\n        if paginas > 0:\n            self.paginas_lidas += paginas\n        else:\n            print(\"Quantidade inválida\")\n\ncarla = MetaLeitura(\"Carla\")\ndiego = MetaLeitura(\"Diego\")\ncarla.registrar_leitura(8)\ncarla.registrar_leitura(15)\ndiego.registrar_leitura(5)\nprint(carla.paginas_lidas, diego.paginas_lidas)",
     "options": [
-      "75",
-      "90",
-      "65",
-      "35"
-    ],
-    "answer": 2,
-    "explanation": "O primeiro método reduz a vida para 75. O segundo a reduz para 65.",
-    "seconds": 40
-  },
-  {
-    "id": 10,
-    "title": "Quem é self?",
-    "concept": "self",
-    "kind": "Conceito",
-    "code": "luna.receber_dano(10)",
-    "options": [
-      "O número 10.",
-      "A instância luna dentro do método.",
-      "Todas as instâncias da classe.",
-      "O nome do arquivo."
+      "28 28",
+      "23 5",
+      "15 5",
+      "23 23"
     ],
     "answer": 1,
-    "explanation": "Ao chamar um método de instância, Python passa o próprio objeto como primeiro argumento, convencionalmente chamado self.",
-    "seconds": 40
+    "explanation": "Carla acumula 8 + 15 = 23 páginas. Diego recebe apenas 5. Alterar um objeto não modifica o atributo do outro.",
+    "seconds": 90,
+    "source": "Prática • questão 7 — Meta de leitura"
   },
   {
-    "id": 11,
-    "title": "Retornar ou mostrar?",
-    "concept": "return",
+    "id": 105,
+    "curriculum": "poo-v2",
+    "title": "Mochila: atingir o limite é permitido",
+    "concept": "Validação de limites",
+    "kind": "Complete o código",
+    "code": "# Trecho do método adicionar_peso(self, peso):\nif peso <= 0:\n    print(\"Valor inválido\")\nelif ______:\n    print(\"Capacidade excedida\")\nelse:\n    self.peso_atual += peso\n\n# Recuse apenas se o novo peso ultrapassar a capacidade.\n# É permitido atingir exatamente a capacidade.",
+    "options": [
+      "self.peso_atual + peso >= self.capacidade",
+      "peso < self.capacidade",
+      "self.peso_atual + peso > self.capacidade",
+      "self.peso_atual > peso"
+    ],
+    "answer": 2,
+    "explanation": "A comparação deve usar >. Usar >= recusaria também o peso exatamente igual à capacidade, que o exercício permite.",
+    "seconds": 60,
+    "source": "Prática • questão 6 — Mochila"
+  },
+  {
+    "id": 106,
+    "curriculum": "poo-v2",
+    "title": "Equipe: calcular sem guardar outro atributo",
+    "concept": "return e cálculo",
     "kind": "Preveja a saída",
-    "code": "class Calculadora:\n    def dobro(self, numero):\n        return numero * 2\n\nc = Calculadora()\nresultado = c.dobro(4)\nprint(resultado + 1)",
+    "code": "class Equipe:\n    def __init__(self, nome):\n        self.nome = nome\n        self.vitorias = 0\n        self.empates = 0\n        self.derrotas = 0\n\n    def registrar_vitoria(self):\n        self.vitorias += 1\n\n    def registrar_empate(self):\n        self.empates += 1\n\n    def calcular_jogos(self):\n        return self.vitorias + self.empates + self.derrotas\n\nazul = Equipe(\"Azul\")\nazul.registrar_vitoria()\nazul.registrar_vitoria()\nazul.registrar_empate()\ntotal = azul.calcular_jogos()\nprint(total)",
     "options": [
-      "8",
-      "9",
-      "4",
-      "None"
-    ],
-    "answer": 1,
-    "explanation": "O método retorna 8, que fica em resultado. Depois somamos 1 e mostramos 9.",
-    "seconds": 40
-  },
-  {
-    "id": 12,
-    "title": "O método sem self",
-    "concept": "self",
-    "kind": "Detetive de bugs",
-    "code": "class Gato:\n    def miar():\n        return \"Miau\"\n\ng = Gato()\ng.miar()",
-    "options": [
-      "Falta print dentro da classe.",
-      "Gato precisa ser uma string.",
-      "O método deve receber self: def miar(self):",
-      "É obrigatório usar __init__."
-    ],
-    "answer": 2,
-    "explanation": "A chamada pela instância passa g ao método. Sem parâmetro para recebê-lo, ocorre TypeError.",
-    "seconds": 40
-  },
-  {
-    "id": 13,
-    "title": "Missão final: inventário",
-    "concept": "Objetos e métodos",
-    "kind": "Chefe final",
-    "code": "class Mochila:\n    def __init__(self):\n        self.itens = []\n\n    def guardar(self, item):\n        self.itens.append(item)\n\na = Mochila()\nb = Mochila()\na.guardar(\"poção\")\na.guardar(\"mapa\")\nb.guardar(\"chave\")\nprint(len(a.itens), len(b.itens))",
-    "options": [
-      "3 3",
-      "2 1",
-      "1 2",
-      "0 0"
-    ],
-    "answer": 1,
-    "explanation": "As listas são criadas em cada __init__, uma por instância. a tem dois itens e b tem um.",
-    "seconds": 60
-  },
-  {
-    "id": 14,
-    "title": "Missão final: evolução",
-    "concept": "Estado e retorno",
-    "kind": "Chefe final",
-    "code": "class Heroi:\n    def __init__(self, nome):\n        self.nome = nome\n        self.nivel = 1\n\n    def evoluir(self):\n        self.nivel += 1\n        return self.nivel\n\nh = Heroi(\"Luna\")\nx = h.evoluir()\nh.evoluir()\nprint(x, h.nivel)",
-    "options": [
-      "3 3",
-      "2 2",
-      "2 3",
-      "1 3"
-    ],
-    "answer": 2,
-    "explanation": "x recebe o inteiro 2 na primeira chamada. A segunda muda o nível para 3, sem alterar x.",
-    "seconds": 60
-  },
-  {
-    "id": 15,
-    "title": "Escolha o modelo",
-    "concept": "Modelagem",
-    "kind": "Conceito",
-    "code": "",
-    "options": [
-      "Uma classe Aluno com nome e método apresentar().",
-      "Uma classe para cada letra de um nome.",
-      "Usar somente print, sem guardar informações.",
-      "Criar uma classe diferente para cada aluno da turma."
+      "3",
+      "7",
+      "2",
+      "0"
     ],
     "answer": 0,
-    "explanation": "Uma classe Aluno representa características e comportamentos comuns. Cada estudante pode ser uma instância.",
-    "seconds": 40
+    "explanation": "O método retorna 2 + 1 + 0 = 3 jogos. Sete seria a pontuação dessa campanha, não a quantidade de jogos. Não é necessário criar um atributo total_jogos.",
+    "seconds": 90,
+    "source": "Prática • questão 8 — Equipe"
+  },
+  {
+    "id": 107,
+    "curriculum": "poo-v2",
+    "title": "Cofre fechado: o saldo deve mudar?",
+    "concept": "Estado booleano e validação",
+    "kind": "Preveja a saída",
+    "code": "class Cofre:\n    def __init__(self, dono):\n        self.dono = dono\n        self.saldo = 0\n        self.aberto = False\n\n    def guardar(self, valor):\n        if self.aberto == False:\n            print(\"Abra o cofre\")\n        elif valor <= 0:\n            print(\"Valor inválido\")\n        else:\n            self.saldo += valor\n\nc = Cofre(\"Elisa\")\nc.guardar(20)\nprint(c.saldo)",
+    "options": [
+      "Mostra Abra o cofre e depois 20.",
+      "Mostra apenas 20.",
+      "O cofre abre automaticamente e guarda 20.",
+      "Mostra Abra o cofre e depois 0."
+    ],
+    "answer": 3,
+    "explanation": "O cofre começa fechado. A primeira condição recusa a operação; o ramo que soma ao saldo não é executado. O saldo permanece zero.",
+    "seconds": 90,
+    "source": "Prática • questão 9 — Cofre"
+  },
+  {
+    "id": 108,
+    "curriculum": "poo-v2",
+    "title": "Pintura: um método chama outro",
+    "concept": "Composição de métodos",
+    "kind": "Preveja a saída",
+    "code": "class ServicoPintura:\n    def __init__(self, largura, altura, preco_metro):\n        self.largura = largura\n        self.altura = altura\n        self.preco_metro = preco_metro\n\n    def calcular_area(self):\n        return self.largura * self.altura\n\n    def calcular_valor(self):\n        return self.calcular_area() * self.preco_metro\n\ns = ServicoPintura(5, 3, 10)\nprint(s.calcular_valor())",
+    "options": [
+      "15",
+      "150",
+      "50",
+      "30"
+    ],
+    "answer": 1,
+    "explanation": "A área é 5 × 3 = 15 m². calcular_valor() chama self.calcular_area() e multiplica 15 por 10, retornando 150.",
+    "seconds": 90,
+    "source": "Prática • questão 10 — Serviço de pintura"
+  },
+  {
+    "id": 109,
+    "curriculum": "poo-v2",
+    "title": "Impressora: validar antes de descontar",
+    "concept": "Operação recusada",
+    "kind": "Detetive de bugs",
+    "code": "# Trecho INCORRETO de imprimir(self, paginas):\nself.folhas -= paginas\nself.tinta -= paginas * 2\nif self.folhas < 0 or self.tinta < 0:\n    print(\"Recursos insuficientes\")\n\n# Uma solicitação recusada deve preservar TODOS\n# os atributos. Não pode haver impressão parcial.",
+    "options": [
+      "Só trocar a mensagem exibida.",
+      "Sempre imprimir, mesmo com tinta insuficiente.",
+      "Validar páginas positivas, papel e tinta antes de alterar atributos.",
+      "Zerar papel e tinta quando a operação for recusada."
+    ],
+    "answer": 2,
+    "explanation": "O trecho desconta os recursos antes de saber se a impressão é possível. Primeiro valide páginas > 0, folhas suficientes e tinta >= paginas * 2. Só então desconte os recursos e atualize os contadores.",
+    "seconds": 90,
+    "source": "Avaliação • exercício 1 — Impressora"
+  },
+  {
+    "id": 110,
+    "curriculum": "poo-v2",
+    "title": "Aluno: notas inválidas preservam o registro",
+    "concept": "Validação conjunta",
+    "kind": "Preveja a saída",
+    "code": "class Aluno:\n    def __init__(self, nome):\n        self.nome = nome\n        self.nota1 = 0\n        self.nota2 = 0\n\n    def registrar_notas(self, n1, n2):\n        if 0 <= n1 <= 10 and 0 <= n2 <= 10:\n            self.nota1 = n1\n            self.nota2 = n2\n        else:\n            print(\"Notas inválidas\")\n\nb = Aluno(\"Bruno\")\nb.registrar_notas(5, 7)\nb.registrar_notas(9, 12)\nprint(b.nota1, b.nota2)",
+    "options": [
+      "Mostra Notas inválidas e depois 5 7.",
+      "Mostra Notas inválidas e depois 9 7.",
+      "Mostra 9 12, sem recusar.",
+      "Mostra Notas inválidas e depois 0 0."
+    ],
+    "answer": 0,
+    "explanation": "Como 12 está fora do intervalo, a segunda chamada não altera nenhuma nota. As notas 5 e 7 da primeira chamada são preservadas juntas.",
+    "seconds": 90,
+    "source": "Avaliação • exercício 2 — Aluno"
+  },
+  {
+    "id": 111,
+    "curriculum": "poo-v2",
+    "title": "Internet: começar um novo mês",
+    "concept": "Reinicialização de estado",
+    "kind": "Conceito",
+    "code": "# Atributos do PlanoInternet de Carla:\n# titular = \"Carla\"\n# franquia_base = 10\n# dados_extras = 5\n# consumo = 8\n# gasto_extras = 25\n\n# O que iniciar_novo_mes() deve fazer,\n# considerando a ampliação do exercício?",
+    "options": [
+      "Zerar apenas consumo e manter extras e gasto do mês anterior.",
+      "Zerar também a franquia_base e apagar o titular.",
+      "Somar dados_extras à franquia_base para o próximo mês.",
+      "Zerar consumo, dados_extras e gasto_extras; preservar titular e franquia_base."
+    ],
+    "answer": 3,
+    "explanation": "Consumo, extras e gasto_extras são dados mensais e voltam a zero. Titular e franquia_base identificam o contrato e permanecem iguais. Os dados disponíveis voltam a 10 GB.",
+    "seconds": 60,
+    "source": "Avaliação • exercício 3 — Plano de internet, ampliação"
+  },
+  {
+    "id": 112,
+    "curriculum": "poo-v2",
+    "title": "Elevador: a porta impede o movimento",
+    "concept": "Condições e preservação de estado",
+    "kind": "Preveja a saída",
+    "code": "class Elevador:\n    def __init__(self, ultimo_andar):\n        self.ultimo_andar = ultimo_andar\n        self.andar_atual = 0\n        self.porta_aberta = True\n\n    def ir_para_andar(self, destino):\n        if destino < 0 or destino > self.ultimo_andar:\n            print(\"Andar inválido\")\n        elif self.porta_aberta:\n            print(\"Feche a porta\")\n        else:\n            self.andar_atual = destino\n\nsocial = Elevador(8)\nsocial.ir_para_andar(5)\nprint(social.andar_atual)",
+    "options": [
+      "Mostra apenas 5.",
+      "Mostra Feche a porta e depois 0.",
+      "Mostra Feche a porta e depois 5.",
+      "Mostra Andar inválido e depois 0."
+    ],
+    "answer": 1,
+    "explanation": "O andar 5 existe, mas a porta está aberta. A movimentação é recusada e andar_atual continua em zero. A verificação precisa ocorrer antes da alteração.",
+    "seconds": 90,
+    "source": "Avaliação • exercício 4 — Elevador"
+  },
+  {
+    "id": 113,
+    "curriculum": "poo-v2",
+    "title": "Missão final: votos brancos entram no percentual?",
+    "concept": "Percentual e retorno",
+    "kind": "Chefe final",
+    "code": "class Votacao:\n    def __init__(self):\n        self.votos_a = 0\n        self.votos_b = 0\n        self.votos_brancos = 0\n\n    def votar(self, opcao):\n        if opcao == 1:\n            self.votos_a += 1\n        elif opcao == 2:\n            self.votos_b += 1\n        elif opcao == 0:\n            self.votos_brancos += 1\n        else:\n            print(\"Opção inválida\")\n\n    def calcular_total(self):\n        return self.votos_a + self.votos_b + self.votos_brancos\n\n    def percentual_a(self):\n        total = self.calcular_total()\n        if total == 0:\n            return 0\n        return self.votos_a * 100 / total\n\n# Trecho reduzido: a votação está aberta.\nv = Votacao()\nv.votar(1)\nv.votar(2)\nv.votar(1)\nv.votar(0)\nprint(v.percentual_a())",
+    "options": [
+      "66.66666666666667",
+      "25.0",
+      "50.0",
+      "100.0"
+    ],
+    "answer": 2,
+    "explanation": "O total inclui os votos brancos: 2 + 1 + 1 = 4. O projeto A tem 2 × 100 / 4 = 50%. Incluir brancos no percentual não significa usá-los para escolher o vencedor.",
+    "seconds": 120,
+    "source": "Avaliação • exercício 5 — Votação, ampliação"
+  },
+  {
+    "id": 114,
+    "curriculum": "poo-v2",
+    "title": "Missão final: calibrar substitui a correção",
+    "concept": "Cálculo sem alterar a leitura",
+    "kind": "Chefe final",
+    "code": "class SensorTemperatura:\n    def __init__(self, local, temperatura):\n        self.local = local\n        self.temperatura = temperatura\n        self.correcao = 0\n\n    def calibrar(self, valor):\n        if -5 <= valor <= 5:\n            self.correcao = valor\n        else:\n            print(\"Correção inválida\")\n\n    def calcular_temperatura_corrigida(self):\n        return self.temperatura + self.correcao\n\ns = SensorTemperatura(\"Sala A\", 25)\ns.calibrar(2)\ns.calibrar(-2)\nprint(s.temperatura, s.calcular_temperatura_corrigida())",
+    "options": [
+      "25 23",
+      "25 25",
+      "23 23",
+      "25 27"
+    ],
+    "answer": 0,
+    "explanation": "A segunda calibração substitui +2 por -2. A leitura original continua em 25; o cálculo retorna 25 + (-2) = 23 sem alterar o objeto.",
+    "seconds": 120,
+    "source": "Avaliação • exercício 6 — Sensor de temperatura"
+  },
+  {
+    "id": 115,
+    "curriculum": "poo-v2",
+    "title": "Missão final: quem é self na comparação?",
+    "concept": "Objeto como parâmetro",
+    "kind": "Chefe final",
+    "code": "class SensorTemperatura:\n    def __init__(self, local, temperatura):\n        self.local = local\n        self.temperatura = temperatura\n        self.correcao = 0\n\n    def calcular_temperatura_corrigida(self):\n        return self.temperatura + self.correcao\n\n    def comparar(self, outro_sensor):\n        print(self.local, outro_sensor.local)\n\nsensor1 = SensorTemperatura(\"Sala A\", 25)\nsensor2 = SensorTemperatura(\"Sala B\", 28)\nsensor1.comparar(sensor2)\n\n# Dentro de comparar(), quem corresponde a self\n# e quem corresponde a outro_sensor?",
+    "options": [
+      "self é sensor2; outro_sensor é sensor1.",
+      "Ambos representam sensor1.",
+      "self é a classe; outro_sensor é o número 28.",
+      "self é sensor1; outro_sensor é sensor2."
+    ],
+    "answer": 3,
+    "explanation": "O objeto que aparece antes do ponto, sensor1, é recebido em self. O argumento sensor2 é recebido em outro_sensor. O método mostrado imprime Sala A Sala B e não altera os sensores.",
+    "seconds": 90,
+    "source": "Avaliação • exercício 6 — Sensor de temperatura, pergunta A"
   }
 ]

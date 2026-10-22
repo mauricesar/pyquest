@@ -2,6 +2,8 @@
 
 Experiência didática de orientação a objetos em Python, de **Mauricésar Barbosa**.
 
+O banco atual está alinhado aos exercícios da turma: veja [o mapa de conteúdo](ALINHAMENTO.md). Os tempos sugeridos vão de 60 a 120 segundos.
+
 ## O que funciona sem serviços externos
 
 - Aventura individual com 15 questões, tempo, pontuação e feedback explicado.
@@ -46,6 +48,7 @@ As tabelas têm RLS ativada e acesso direto revogado. As funções conferem a id
 ```sh
 python3 python/build.py
 npm test
+python3 -m unittest discover -s tests -p 'test_*.py' -v
 python3 -m http.server 8765 --directory site
 ```
 
