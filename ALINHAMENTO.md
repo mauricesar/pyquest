@@ -12,7 +12,7 @@ Classes, instâncias, construtor, atributos, `self`, chamadas de métodos, parâ
 
 Os códigos mostrados são trechos reduzidos ou adaptações para leitura e raciocínio. Não substituem a implementação completa dos exercícios de origem. Não exigem listas, dicionários, herança, bibliotecas, bancos de dados, `input()`, menus ou laços de repetição.
 
-## Sequência
+## Trilha Quiz de POO — 15 questões
 
 | Missão | Contexto | Foco | Tempo sugerido |
 |---|---|---|---|
@@ -36,10 +36,34 @@ As salas com 5 questões usam o aquecimento (1–5); com 10 incluem a prática (
 
 ## Atualização e histórico
 
-O banco usa o identificador `poo-v2` e IDs 101–115. Os IDs 1–15 e os registros de partidas antigas são mantidos no banco online. Novas salas passam a selecionar o novo currículo; partidas já criadas continuam usando as questões com que foram abertas.
+Na atualização anterior, o banco usava o identificador `poo-v2` e IDs 101–115. Esses registros são históricos; a versão atual está descrita abaixo. Os IDs 1–15 e os registros de partidas antigas são mantidos no banco online. Novas salas passam a selecionar o novo currículo; partidas já criadas continuam usando as questões com que foram abertas.
 
-Em uma instalação existente: execute `supabase/02-questions.sql` e `supabase/03-curriculum.sql`. Em uma instalação nova: execute `01-schema.sql` e `02-questions.sql`.
+As instruções atuais de instalação e atualização estão na seção Novas atividades — versão 3, abaixo.
 
 ## Verificação
 
 `python3 -m unittest discover -s tests -p 'test_*.py' -v` executa os códigos com saídas previstas, confere a correção do bug de `self`, verifica respostas numéricas e analisa a sintaxe para impedir conteúdos fora do recorte. `npm test` confere integridade do banco, pontuação, desempate e CSV.
+
+## Novas atividades — versão 3
+
+A aventura mista passa a ter **23 missões**, intercalando as 15 questões da trilha com:
+
+- **Quem sou eu?**: quatro classificações de um código de Mochila. O destaque identifica a definição da classe, a variável que referencia uma instância, um atributo e um método. A explicação distingue a variável `ana` do objeto que ela referencia.
+- **Conserte o robô**: quatro situações adaptadas dos exercícios de leitura, mochila, cofre, elevador e impressora. As alternativas substituem uma linha destacada. Depois da resposta e da etapa de explicação, a bancada permite comparar o código alterado e as saídas dos testes, sem pontos extras. As saídas são geradas e verificadas em Python; não há execução de código arbitrário enviado pelo aluno.
+- **Explique sua escolha**: oito questões da trilha original, além das oficinas e de uma classificação, recebem perguntas de raciocínio. A escrita vem depois da resposta objetiva e antes do gabarito. Tem de 8 a 400 caracteres, sem cronômetro e sem pontuação automática.
+
+O painel oferece os pacotes Aventura mista (23), Quiz de POO (15), Quem sou eu? (4), Conserte o robô (4) e Explique sua escolha (8). Na aventura mista, as primeiras cinco missões já incluem classificação e oficina. O professor pode habilitar ou desabilitar a etapa de explicação; no pacote dedicado, ela permanece habilitada.
+
+O banco atual é `poo-v3`: questões da trilha usam IDs 301–315, vocabulário 321–324 e oficinas 331–334. A ordem pedagógica é mantida no campo `position`. Os IDs das versões anteriores ficam preservados no banco online para não alterar salas existentes.
+
+Para atualizar uma instalação existente, execute a carga `02-questions.sql` e depois `04-activities.sql`. Para uma instalação nova: `01-schema.sql`, `02-questions.sql`, `04-activities.sql`. A migração 03 registra a atualização anterior e não precisa ser reaplicada.
+
+### Aplicação em sala
+
+1. O professor cria uma nova sala e escolhe o pacote e a quantidade de missões.
+2. Os alunos entram por código ou QR code. As respostas objetivas têm tempo e pontos.
+3. Quando necessário, o professor encerra as respostas e abre a escrita. Cada aluno vê apenas seu próprio texto.
+4. O professor lê as explicações recebidas e revela a correção quando desejar. Pode avançar mesmo que alguém não tenha enviado o texto.
+5. Ao final, as explicações continuam disponíveis em **Ler explicações** e nas colunas **Pergunta_explicacao** e **Justificativa** do CSV. Não há avaliação automática desses textos.
+
+O modo individual serve para prática: seus textos ficam no navegador e no CSV individual. Para o professor coletar respostas, é necessário usar uma sala conectada.

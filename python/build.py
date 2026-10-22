@@ -3,7 +3,7 @@ from dataclasses import dataclass, asdict
 from pathlib import Path
 import json
 
-CURRICULUM = 'poo-v2'
+CURRICULUM = 'poo-v3'
 
 @dataclass
 class Questao:
@@ -301,10 +301,12 @@ if __name__ == '__main__':
         data = asdict(q)
         data.pop('expected_output')
         questions.append(dict(id=101+i, curriculum=CURRICULUM, **data))
+    from activities import make_bank
+    questions = make_bank(questions)
     for q in questions:
         assert len(q['options']) == 4 and 0 <= q['answer'] < 4
         assert q['seconds'] >= 60 and q['source']
     (root/'site/questions.json').write_text(json.dumps(questions,ensure_ascii=False,indent=2)+'\n')
     payload = json.dumps(questions,ensure_ascii=False).replace("'", "''")
     (root/'supabase/02-questions.sql').write_text("-- Banco alinhado aos exercícios da turma. IDs novos preservam partidas anteriores.\ninsert into public.pq_questions(id, data) select (q->>'id')::int, q from jsonb_array_elements('"+payload+"'::jsonb) q on conflict(id) do update set data=excluded.data;\n")
-    print(f'{len(questions)} questões alinhadas e geradas.')
+    print(f'{len(questions)} questões e atividades geradas.')

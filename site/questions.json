@@ -1,7 +1,7 @@
 [
   {
-    "id": 101,
-    "curriculum": "poo-v2",
+    "id": 301,
+    "curriculum": "poo-v3",
     "title": "Mochila: o que o construtor guarda?",
     "concept": "Construtor e atributos",
     "kind": "Preveja a saída",
@@ -15,11 +15,39 @@
     "answer": 2,
     "explanation": "O construtor recebe dono e capacidade. peso_atual é um atributo inicializado em zero, sem precisar ser recebido como parâmetro.",
     "seconds": 60,
-    "source": "Prática • questão 6 — Mochila"
+    "source": "Prática • questão 6 — Mochila",
+    "activity": "quiz",
+    "reflection_prompt": "Quais valores o construtor recebe e qual atributo começa em zero?",
+    "position": 0
   },
   {
-    "id": 102,
-    "curriculum": "poo-v2",
+    "id": 321,
+    "title": "A planta da mochila",
+    "concept": "Vocabulário de POO",
+    "kind": "Quem sou eu? 🔎",
+    "activity": "classify",
+    "code": "class Mochila:\n    def __init__(self, dono, capacidade):\n        self.dono = dono\n        self.capacidade = capacidade\n        self.peso_atual = 0\n\n    def adicionar_peso(self, peso):\n        if peso > 0 and self.peso_atual + peso <= self.capacidade:\n            self.peso_atual += peso\n        else:\n            print(\"Peso recusado\")\n\nana = Mochila(\"Ana\", 5)\nana.adicionar_peso(2)\n",
+    "focus": {
+      "start": 6,
+      "end": 13
+    },
+    "options": [
+      "Classe",
+      "Objeto (instância)",
+      "Atributo",
+      "Método"
+    ],
+    "answer": 0,
+    "explanation": "Mochila aparece na definição da classe. Ela é o modelo usado para criar objetos.",
+    "seconds": 60,
+    "source": "Prática • questão 6 — Mochila",
+    "reflection_prompt": "",
+    "curriculum": "poo-v3",
+    "position": 1
+  },
+  {
+    "id": 302,
+    "curriculum": "poo-v3",
     "title": "Leitura: qual atributo está faltando?",
     "concept": "self",
     "kind": "Detetive de bugs",
@@ -33,11 +61,64 @@
     "answer": 0,
     "explanation": "Para guardar um atributo na instância, usamos self.paginas_lidas. A atribuição sem self cria apenas uma variável local no construtor.",
     "seconds": 60,
-    "source": "Prática • questão 7 — Meta de leitura"
+    "source": "Prática • questão 7 — Meta de leitura",
+    "activity": "quiz",
+    "reflection_prompt": "",
+    "position": 2
   },
   {
-    "id": 103,
-    "curriculum": "poo-v2",
+    "id": 331,
+    "title": "Pip perdeu o atributo energia",
+    "concept": "self",
+    "kind": "Conserte o robô 🤖",
+    "activity": "repair",
+    "code": "class Robo:\n    def __init__(self, nome, energia):\n        self.nome = nome\n        energia = energia\n\npip = Robo(\"Pip\", 80)\nprint(\"Energia:\", pip.energia)",
+    "options": [
+      "self.energia = 0",
+      "energia = self.energia",
+      "self.energia = energia",
+      "self.nome = energia"
+    ],
+    "answer": 2,
+    "explanation": "self.energia = energia guarda o parâmetro como atributo do objeto. A atribuição sem self só altera uma variável local.",
+    "seconds": 90,
+    "source": "Oficina • adaptação do exercício de meta de leitura",
+    "focus": {
+      "start": 84,
+      "end": 101
+    },
+    "repair_diagnosis": "O construtor não está guardando energia na instância.",
+    "repair_expected": "Energia: 80",
+    "repair_variants": [
+      {
+        "code": "class Robo:\n    def __init__(self, nome, energia):\n        self.nome = nome\n        self.energia = 0\n\npip = Robo(\"Pip\", 80)\nprint(\"Energia:\", pip.energia)",
+        "output": "Energia: 0",
+        "passed": false
+      },
+      {
+        "code": "class Robo:\n    def __init__(self, nome, energia):\n        self.nome = nome\n        energia = self.energia\n\npip = Robo(\"Pip\", 80)\nprint(\"Energia:\", pip.energia)",
+        "output": "Erro de atributo: o objeto não possui o atributo solicitado.",
+        "passed": false
+      },
+      {
+        "code": "class Robo:\n    def __init__(self, nome, energia):\n        self.nome = nome\n        self.energia = energia\n\npip = Robo(\"Pip\", 80)\nprint(\"Energia:\", pip.energia)",
+        "output": "Energia: 80",
+        "passed": true
+      },
+      {
+        "code": "class Robo:\n    def __init__(self, nome, energia):\n        self.nome = nome\n        self.nome = energia\n\npip = Robo(\"Pip\", 80)\nprint(\"Energia:\", pip.energia)",
+        "output": "Erro de atributo: o objeto não possui o atributo solicitado.",
+        "passed": false
+      }
+    ],
+    "repair_original_output": "Erro de atributo: o objeto não possui o atributo solicitado.",
+    "reflection_prompt": "Por que energia = energia não cria o atributo energia do robô?",
+    "curriculum": "poo-v3",
+    "position": 3
+  },
+  {
+    "id": 303,
+    "curriculum": "poo-v3",
     "title": "Equipe: como registrar uma vitória?",
     "concept": "Chamada de método",
     "kind": "Complete o código",
@@ -51,11 +132,39 @@
     "answer": 3,
     "explanation": "azul.registrar_vitoria() executa o método no objeto azul. O próprio objeto corresponde a self dentro do método.",
     "seconds": 60,
-    "source": "Prática • questão 8 — Equipe"
+    "source": "Prática • questão 8 — Equipe",
+    "activity": "quiz",
+    "reflection_prompt": "",
+    "position": 4
   },
   {
-    "id": 104,
-    "curriculum": "poo-v2",
+    "id": 322,
+    "title": "O nome que referencia uma instância",
+    "concept": "Vocabulário de POO",
+    "kind": "Quem sou eu? 🔎",
+    "activity": "classify",
+    "code": "class Mochila:\n    def __init__(self, dono, capacidade):\n        self.dono = dono\n        self.capacidade = capacidade\n        self.peso_atual = 0\n\n    def adicionar_peso(self, peso):\n        if peso > 0 and self.peso_atual + peso <= self.capacidade:\n            self.peso_atual += peso\n        else:\n            print(\"Peso recusado\")\n\nana = Mochila(\"Ana\", 5)\nana.adicionar_peso(2)\n",
+    "focus": {
+      "start": 337,
+      "end": 340
+    },
+    "options": [
+      "Classe",
+      "Objeto (instância)",
+      "Atributo",
+      "Método"
+    ],
+    "answer": 1,
+    "explanation": "ana é a variável que referencia um objeto criado por Mochila(\"Ana\", 5). A classe é Mochila; o objeto é uma instância dela.",
+    "seconds": 60,
+    "source": "Prática • questão 6 — Mochila",
+    "reflection_prompt": "Qual é a diferença entre o nome da classe e a variável que referencia o objeto?",
+    "curriculum": "poo-v3",
+    "position": 5
+  },
+  {
+    "id": 304,
+    "curriculum": "poo-v3",
     "title": "Dois leitores, dois totais",
     "concept": "Instâncias independentes",
     "kind": "Preveja a saída",
@@ -69,11 +178,14 @@
     "answer": 1,
     "explanation": "Carla acumula 8 + 15 = 23 páginas. Diego recebe apenas 5. Alterar um objeto não modifica o atributo do outro.",
     "seconds": 90,
-    "source": "Prática • questão 7 — Meta de leitura"
+    "source": "Prática • questão 7 — Meta de leitura",
+    "activity": "quiz",
+    "reflection_prompt": "",
+    "position": 6
   },
   {
-    "id": 105,
-    "curriculum": "poo-v2",
+    "id": 305,
+    "curriculum": "poo-v3",
     "title": "Mochila: atingir o limite é permitido",
     "concept": "Validação de limites",
     "kind": "Complete o código",
@@ -87,11 +199,64 @@
     "answer": 2,
     "explanation": "A comparação deve usar >. Usar >= recusaria também o peso exatamente igual à capacidade, que o exercício permite.",
     "seconds": 60,
-    "source": "Prática • questão 6 — Mochila"
+    "source": "Prática • questão 6 — Mochila",
+    "activity": "quiz",
+    "reflection_prompt": "Por que usar > em vez de >= para recusar o peso da mochila?",
+    "position": 7
   },
   {
-    "id": 106,
-    "curriculum": "poo-v2",
+    "id": 332,
+    "title": "Gastar energia está carregando o robô",
+    "concept": "Alteração de estado",
+    "kind": "Conserte o robô 🤖",
+    "activity": "repair",
+    "code": "class Robo:\n    def __init__(self, energia):\n        self.energia = energia\n\n    def gastar(self, valor):\n        if valor <= 0:\n            print(\"Valor inválido\")\n        elif valor > self.energia:\n            print(\"Energia insuficiente\")\n        else:\n            self.energia += valor\n\npip = Robo(50)\npip.gastar(20)\nprint(\"Energia:\", pip.energia)",
+    "options": [
+      "self.energia -= valor",
+      "self.energia = valor",
+      "self.energia += valor",
+      "self.energia = 0"
+    ],
+    "answer": 0,
+    "explanation": "Depois de validar o valor, -= desconta o gasto. Com 50 de energia e gasto de 20, o estado final é 30.",
+    "seconds": 90,
+    "source": "Oficina • adaptação dos exercícios de mochila e impressora",
+    "focus": {
+      "start": 268,
+      "end": 289
+    },
+    "repair_diagnosis": "Uma operação de gasto precisa diminuir a energia quando for permitida.",
+    "repair_expected": "Energia: 30",
+    "repair_variants": [
+      {
+        "code": "class Robo:\n    def __init__(self, energia):\n        self.energia = energia\n\n    def gastar(self, valor):\n        if valor <= 0:\n            print(\"Valor inválido\")\n        elif valor > self.energia:\n            print(\"Energia insuficiente\")\n        else:\n            self.energia -= valor\n\npip = Robo(50)\npip.gastar(20)\nprint(\"Energia:\", pip.energia)",
+        "output": "Energia: 30",
+        "passed": true
+      },
+      {
+        "code": "class Robo:\n    def __init__(self, energia):\n        self.energia = energia\n\n    def gastar(self, valor):\n        if valor <= 0:\n            print(\"Valor inválido\")\n        elif valor > self.energia:\n            print(\"Energia insuficiente\")\n        else:\n            self.energia = valor\n\npip = Robo(50)\npip.gastar(20)\nprint(\"Energia:\", pip.energia)",
+        "output": "Energia: 20",
+        "passed": false
+      },
+      {
+        "code": "class Robo:\n    def __init__(self, energia):\n        self.energia = energia\n\n    def gastar(self, valor):\n        if valor <= 0:\n            print(\"Valor inválido\")\n        elif valor > self.energia:\n            print(\"Energia insuficiente\")\n        else:\n            self.energia += valor\n\npip = Robo(50)\npip.gastar(20)\nprint(\"Energia:\", pip.energia)",
+        "output": "Energia: 70",
+        "passed": false
+      },
+      {
+        "code": "class Robo:\n    def __init__(self, energia):\n        self.energia = energia\n\n    def gastar(self, valor):\n        if valor <= 0:\n            print(\"Valor inválido\")\n        elif valor > self.energia:\n            print(\"Energia insuficiente\")\n        else:\n            self.energia = 0\n\npip = Robo(50)\npip.gastar(20)\nprint(\"Energia:\", pip.energia)",
+        "output": "Energia: 0",
+        "passed": false
+      }
+    ],
+    "repair_original_output": "Energia: 70",
+    "reflection_prompt": "Por que a energia só deve ser alterada depois das validações?",
+    "curriculum": "poo-v3",
+    "position": 8
+  },
+  {
+    "id": 306,
+    "curriculum": "poo-v3",
     "title": "Equipe: calcular sem guardar outro atributo",
     "concept": "return e cálculo",
     "kind": "Preveja a saída",
@@ -105,11 +270,39 @@
     "answer": 0,
     "explanation": "O método retorna 2 + 1 + 0 = 3 jogos. Sete seria a pontuação dessa campanha, não a quantidade de jogos. Não é necessário criar um atributo total_jogos.",
     "seconds": 90,
-    "source": "Prática • questão 8 — Equipe"
+    "source": "Prática • questão 8 — Equipe",
+    "activity": "quiz",
+    "reflection_prompt": "",
+    "position": 9
   },
   {
-    "id": 107,
-    "curriculum": "poo-v2",
+    "id": 323,
+    "title": "Uma informação guardada no objeto",
+    "concept": "Vocabulário de POO",
+    "kind": "Quem sou eu? 🔎",
+    "activity": "classify",
+    "code": "class Mochila:\n    def __init__(self, dono, capacidade):\n        self.dono = dono\n        self.capacidade = capacidade\n        self.peso_atual = 0\n\n    def adicionar_peso(self, peso):\n        if peso > 0 and self.peso_atual + peso <= self.capacidade:\n            self.peso_atual += peso\n        else:\n            print(\"Peso recusado\")\n\nana = Mochila(\"Ana\", 5)\nana.adicionar_peso(2)\n",
+    "focus": {
+      "start": 127,
+      "end": 142
+    },
+    "options": [
+      "Classe",
+      "Objeto (instância)",
+      "Atributo",
+      "Método"
+    ],
+    "answer": 2,
+    "explanation": "self.peso_atual acessa um atributo da instância. Esse atributo armazena o peso atual da mochila.",
+    "seconds": 60,
+    "source": "Prática • questão 6 — Mochila",
+    "reflection_prompt": "",
+    "curriculum": "poo-v3",
+    "position": 10
+  },
+  {
+    "id": 307,
+    "curriculum": "poo-v3",
     "title": "Cofre fechado: o saldo deve mudar?",
     "concept": "Estado booleano e validação",
     "kind": "Preveja a saída",
@@ -123,11 +316,14 @@
     "answer": 3,
     "explanation": "O cofre começa fechado. A primeira condição recusa a operação; o ramo que soma ao saldo não é executado. O saldo permanece zero.",
     "seconds": 90,
-    "source": "Prática • questão 9 — Cofre"
+    "source": "Prática • questão 9 — Cofre",
+    "activity": "quiz",
+    "reflection_prompt": "Por que o saldo deve continuar igual quando o cofre está fechado?",
+    "position": 11
   },
   {
-    "id": 108,
-    "curriculum": "poo-v2",
+    "id": 308,
+    "curriculum": "poo-v3",
     "title": "Pintura: um método chama outro",
     "concept": "Composição de métodos",
     "kind": "Preveja a saída",
@@ -141,11 +337,64 @@
     "answer": 1,
     "explanation": "A área é 5 × 3 = 15 m². calcular_valor() chama self.calcular_area() e multiplica 15 por 10, retornando 150.",
     "seconds": 90,
-    "source": "Prática • questão 10 — Serviço de pintura"
+    "source": "Prática • questão 10 — Serviço de pintura",
+    "activity": "quiz",
+    "reflection_prompt": "",
+    "position": 12
   },
   {
-    "id": 109,
-    "curriculum": "poo-v2",
+    "id": 333,
+    "title": "O robô está andando desligado",
+    "concept": "Estado booleano e validação",
+    "kind": "Conserte o robô 🤖",
+    "activity": "repair",
+    "code": "class Robo:\n    def __init__(self):\n        self.ligado = False\n        self.passos = 0\n\n    def andar(self):\n        if self.ligado == False:\n            self.passos += 1\n        else:\n            print(\"Robô desligado\")\n\npip = Robo()\npip.andar()\nprint(\"Passos:\", pip.passos)",
+    "options": [
+      "self.passos >= 0",
+      "self.ligado == False",
+      "self.passos < 10",
+      "self.ligado == True"
+    ],
+    "answer": 3,
+    "explanation": "A condição deve permitir o movimento quando ligado é True. Como o robô começa desligado, a chamada exibe a mensagem e mantém zero passos.",
+    "seconds": 90,
+    "source": "Oficina • adaptação dos exercícios de cofre e elevador",
+    "focus": {
+      "start": 121,
+      "end": 141
+    },
+    "repair_diagnosis": "O robô só pode dar passos se estiver ligado. Uma recusa deve preservar passos.",
+    "repair_expected": "Robô desligado\nPassos: 0",
+    "repair_variants": [
+      {
+        "code": "class Robo:\n    def __init__(self):\n        self.ligado = False\n        self.passos = 0\n\n    def andar(self):\n        if self.passos >= 0:\n            self.passos += 1\n        else:\n            print(\"Robô desligado\")\n\npip = Robo()\npip.andar()\nprint(\"Passos:\", pip.passos)",
+        "output": "Passos: 1",
+        "passed": false
+      },
+      {
+        "code": "class Robo:\n    def __init__(self):\n        self.ligado = False\n        self.passos = 0\n\n    def andar(self):\n        if self.ligado == False:\n            self.passos += 1\n        else:\n            print(\"Robô desligado\")\n\npip = Robo()\npip.andar()\nprint(\"Passos:\", pip.passos)",
+        "output": "Passos: 1",
+        "passed": false
+      },
+      {
+        "code": "class Robo:\n    def __init__(self):\n        self.ligado = False\n        self.passos = 0\n\n    def andar(self):\n        if self.passos < 10:\n            self.passos += 1\n        else:\n            print(\"Robô desligado\")\n\npip = Robo()\npip.andar()\nprint(\"Passos:\", pip.passos)",
+        "output": "Passos: 1",
+        "passed": false
+      },
+      {
+        "code": "class Robo:\n    def __init__(self):\n        self.ligado = False\n        self.passos = 0\n\n    def andar(self):\n        if self.ligado == True:\n            self.passos += 1\n        else:\n            print(\"Robô desligado\")\n\npip = Robo()\npip.andar()\nprint(\"Passos:\", pip.passos)",
+        "output": "Robô desligado\nPassos: 0",
+        "passed": true
+      }
+    ],
+    "repair_original_output": "Passos: 1",
+    "reflection_prompt": "O que a condição precisa verificar antes de alterar passos?",
+    "curriculum": "poo-v3",
+    "position": 13
+  },
+  {
+    "id": 309,
+    "curriculum": "poo-v3",
     "title": "Impressora: validar antes de descontar",
     "concept": "Operação recusada",
     "kind": "Detetive de bugs",
@@ -159,11 +408,39 @@
     "answer": 2,
     "explanation": "O trecho desconta os recursos antes de saber se a impressão é possível. Primeiro valide páginas > 0, folhas suficientes e tinta >= paginas * 2. Só então desconte os recursos e atualize os contadores.",
     "seconds": 90,
-    "source": "Avaliação • exercício 1 — Impressora"
+    "source": "Avaliação • exercício 1 — Impressora",
+    "activity": "quiz",
+    "reflection_prompt": "Por que verificar papel e tinta antes de descontar os recursos?",
+    "position": 14
   },
   {
-    "id": 110,
-    "curriculum": "poo-v2",
+    "id": 324,
+    "title": "Um comportamento da mochila",
+    "concept": "Vocabulário de POO",
+    "kind": "Quem sou eu? 🔎",
+    "activity": "classify",
+    "code": "class Mochila:\n    def __init__(self, dono, capacidade):\n        self.dono = dono\n        self.capacidade = capacidade\n        self.peso_atual = 0\n\n    def adicionar_peso(self, peso):\n        if peso > 0 and self.peso_atual + peso <= self.capacidade:\n            self.peso_atual += peso\n        else:\n            print(\"Peso recusado\")\n\nana = Mochila(\"Ana\", 5)\nana.adicionar_peso(2)\n",
+    "focus": {
+      "start": 156,
+      "end": 170
+    },
+    "options": [
+      "Classe",
+      "Objeto (instância)",
+      "Atributo",
+      "Método"
+    ],
+    "answer": 3,
+    "explanation": "adicionar_peso é um método: uma função definida na classe para representar um comportamento da mochila.",
+    "seconds": 60,
+    "source": "Prática • questão 6 — Mochila",
+    "reflection_prompt": "",
+    "curriculum": "poo-v3",
+    "position": 15
+  },
+  {
+    "id": 310,
+    "curriculum": "poo-v3",
     "title": "Aluno: notas inválidas preservam o registro",
     "concept": "Validação conjunta",
     "kind": "Preveja a saída",
@@ -177,11 +454,14 @@
     "answer": 0,
     "explanation": "Como 12 está fora do intervalo, a segunda chamada não altera nenhuma nota. As notas 5 e 7 da primeira chamada são preservadas juntas.",
     "seconds": 90,
-    "source": "Avaliação • exercício 2 — Aluno"
+    "source": "Avaliação • exercício 2 — Aluno",
+    "activity": "quiz",
+    "reflection_prompt": "Por que nenhuma das duas notas deve mudar quando uma delas é inválida?",
+    "position": 16
   },
   {
-    "id": 111,
-    "curriculum": "poo-v2",
+    "id": 311,
+    "curriculum": "poo-v3",
     "title": "Internet: começar um novo mês",
     "concept": "Reinicialização de estado",
     "kind": "Conceito",
@@ -195,11 +475,64 @@
     "answer": 3,
     "explanation": "Consumo, extras e gasto_extras são dados mensais e voltam a zero. Titular e franquia_base identificam o contrato e permanecem iguais. Os dados disponíveis voltam a 10 GB.",
     "seconds": 60,
-    "source": "Avaliação • exercício 3 — Plano de internet, ampliação"
+    "source": "Avaliação • exercício 3 — Plano de internet, ampliação",
+    "activity": "quiz",
+    "reflection_prompt": "Por que o novo mês zera o consumo e os extras, mas preserva a franquia base?",
+    "position": 17
   },
   {
-    "id": 112,
-    "curriculum": "poo-v2",
+    "id": 334,
+    "title": "A impressora robô está sem tinta",
+    "concept": "Operação recusada",
+    "kind": "Conserte o robô 🤖",
+    "activity": "repair",
+    "code": "class RoboImpressor:\n    def __init__(self, folhas, tinta):\n        self.folhas = folhas\n        self.tinta = tinta\n\n    def imprimir(self, paginas):\n        if paginas <= 0:\n            print(\"Quantidade inválida\")\n        elif paginas > self.folhas and paginas * 2 > self.tinta:\n            print(\"Recursos insuficientes\")\n        else:\n            self.folhas -= paginas\n            self.tinta -= paginas * 2\n\na = RoboImpressor(4, 6)\nb = RoboImpressor(6, 20)\na.imprimir(4)\nb.imprimir(2)\nprint(a.folhas, a.tinta)\nprint(b.folhas, b.tinta)",
+    "options": [
+      "paginas > self.folhas",
+      "paginas > self.folhas or paginas * 2 > self.tinta",
+      "paginas > self.folhas and paginas * 2 > self.tinta",
+      "paginas * 2 < self.tinta"
+    ],
+    "answer": 1,
+    "explanation": "O operador or recusa quando pelo menos um recurso é insuficiente. O objeto a preserva 4 folhas e tinta 6; b imprime duas páginas e termina com 4 folhas e tinta 16.",
+    "seconds": 120,
+    "source": "Avaliação • exercício 1 — Impressora",
+    "focus": {
+      "start": 229,
+      "end": 279
+    },
+    "repair_diagnosis": "A impressão inteira deve ser recusada se faltar papel OU tinta.",
+    "repair_expected": "Recursos insuficientes\n4 6\n4 16",
+    "repair_variants": [
+      {
+        "code": "class RoboImpressor:\n    def __init__(self, folhas, tinta):\n        self.folhas = folhas\n        self.tinta = tinta\n\n    def imprimir(self, paginas):\n        if paginas <= 0:\n            print(\"Quantidade inválida\")\n        elif paginas > self.folhas:\n            print(\"Recursos insuficientes\")\n        else:\n            self.folhas -= paginas\n            self.tinta -= paginas * 2\n\na = RoboImpressor(4, 6)\nb = RoboImpressor(6, 20)\na.imprimir(4)\nb.imprimir(2)\nprint(a.folhas, a.tinta)\nprint(b.folhas, b.tinta)",
+        "output": "0 -2\n4 16",
+        "passed": false
+      },
+      {
+        "code": "class RoboImpressor:\n    def __init__(self, folhas, tinta):\n        self.folhas = folhas\n        self.tinta = tinta\n\n    def imprimir(self, paginas):\n        if paginas <= 0:\n            print(\"Quantidade inválida\")\n        elif paginas > self.folhas or paginas * 2 > self.tinta:\n            print(\"Recursos insuficientes\")\n        else:\n            self.folhas -= paginas\n            self.tinta -= paginas * 2\n\na = RoboImpressor(4, 6)\nb = RoboImpressor(6, 20)\na.imprimir(4)\nb.imprimir(2)\nprint(a.folhas, a.tinta)\nprint(b.folhas, b.tinta)",
+        "output": "Recursos insuficientes\n4 6\n4 16",
+        "passed": true
+      },
+      {
+        "code": "class RoboImpressor:\n    def __init__(self, folhas, tinta):\n        self.folhas = folhas\n        self.tinta = tinta\n\n    def imprimir(self, paginas):\n        if paginas <= 0:\n            print(\"Quantidade inválida\")\n        elif paginas > self.folhas and paginas * 2 > self.tinta:\n            print(\"Recursos insuficientes\")\n        else:\n            self.folhas -= paginas\n            self.tinta -= paginas * 2\n\na = RoboImpressor(4, 6)\nb = RoboImpressor(6, 20)\na.imprimir(4)\nb.imprimir(2)\nprint(a.folhas, a.tinta)\nprint(b.folhas, b.tinta)",
+        "output": "0 -2\n4 16",
+        "passed": false
+      },
+      {
+        "code": "class RoboImpressor:\n    def __init__(self, folhas, tinta):\n        self.folhas = folhas\n        self.tinta = tinta\n\n    def imprimir(self, paginas):\n        if paginas <= 0:\n            print(\"Quantidade inválida\")\n        elif paginas * 2 < self.tinta:\n            print(\"Recursos insuficientes\")\n        else:\n            self.folhas -= paginas\n            self.tinta -= paginas * 2\n\na = RoboImpressor(4, 6)\nb = RoboImpressor(6, 20)\na.imprimir(4)\nb.imprimir(2)\nprint(a.folhas, a.tinta)\nprint(b.folhas, b.tinta)",
+        "output": "Recursos insuficientes\n0 -2\n6 20",
+        "passed": false
+      }
+    ],
+    "repair_original_output": "0 -2\n4 16",
+    "reflection_prompt": "Por que usar or para detectar recursos insuficientes neste caso?",
+    "curriculum": "poo-v3",
+    "position": 18
+  },
+  {
+    "id": 312,
+    "curriculum": "poo-v3",
     "title": "Elevador: a porta impede o movimento",
     "concept": "Condições e preservação de estado",
     "kind": "Preveja a saída",
@@ -213,11 +546,14 @@
     "answer": 1,
     "explanation": "O andar 5 existe, mas a porta está aberta. A movimentação é recusada e andar_atual continua em zero. A verificação precisa ocorrer antes da alteração.",
     "seconds": 90,
-    "source": "Avaliação • exercício 4 — Elevador"
+    "source": "Avaliação • exercício 4 — Elevador",
+    "activity": "quiz",
+    "reflection_prompt": "Por que um andar válido não basta para permitir o movimento do elevador?",
+    "position": 19
   },
   {
-    "id": 113,
-    "curriculum": "poo-v2",
+    "id": 313,
+    "curriculum": "poo-v3",
     "title": "Missão final: votos brancos entram no percentual?",
     "concept": "Percentual e retorno",
     "kind": "Chefe final",
@@ -231,11 +567,14 @@
     "answer": 2,
     "explanation": "O total inclui os votos brancos: 2 + 1 + 1 = 4. O projeto A tem 2 × 100 / 4 = 50%. Incluir brancos no percentual não significa usá-los para escolher o vencedor.",
     "seconds": 120,
-    "source": "Avaliação • exercício 5 — Votação, ampliação"
+    "source": "Avaliação • exercício 5 — Votação, ampliação",
+    "activity": "quiz",
+    "reflection_prompt": "",
+    "position": 20
   },
   {
-    "id": 114,
-    "curriculum": "poo-v2",
+    "id": 314,
+    "curriculum": "poo-v3",
     "title": "Missão final: calibrar substitui a correção",
     "concept": "Cálculo sem alterar a leitura",
     "kind": "Chefe final",
@@ -249,11 +588,14 @@
     "answer": 0,
     "explanation": "A segunda calibração substitui +2 por -2. A leitura original continua em 25; o cálculo retorna 25 + (-2) = 23 sem alterar o objeto.",
     "seconds": 120,
-    "source": "Avaliação • exercício 6 — Sensor de temperatura"
+    "source": "Avaliação • exercício 6 — Sensor de temperatura",
+    "activity": "quiz",
+    "reflection_prompt": "Por que a calibração deve ficar separada da leitura original?",
+    "position": 21
   },
   {
-    "id": 115,
-    "curriculum": "poo-v2",
+    "id": 315,
+    "curriculum": "poo-v3",
     "title": "Missão final: quem é self na comparação?",
     "concept": "Objeto como parâmetro",
     "kind": "Chefe final",
@@ -267,6 +609,9 @@
     "answer": 3,
     "explanation": "O objeto que aparece antes do ponto, sensor1, é recebido em self. O argumento sensor2 é recebido em outro_sensor. O método mostrado imprime Sala A Sala B e não altera os sensores.",
     "seconds": 90,
-    "source": "Avaliação • exercício 6 — Sensor de temperatura, pergunta A"
+    "source": "Avaliação • exercício 6 — Sensor de temperatura, pergunta A",
+    "activity": "quiz",
+    "reflection_prompt": "",
+    "position": 22
   }
 ]
