@@ -1,0 +1,6 @@
+import {escapeHTML as e} from './engine.js';
+export function historyMarkup(rooms,subjects){
+ const item=r=>`<article class="history-room"><div><strong>${e(r.title)}</strong><p class="small muted">${e(subjects[r.subject||'python'].short)} · ${e(r.code)} · ${e(({lobby:'aguardando participantes',active:'em jogo',reflection:'explicações',reveal:'correção',finished:'encerrada'})[r.status])}</p></div><div class="history-actions"><button class="btn secondary" data-resume="${e(r.id)}">${r.status==='finished'?'Ver resultados':'Abrir partida'}</button>${r.archived_at?`<button class="subtle" data-restore="${e(r.id)}">Restaurar no painel</button>`:r.status==='finished'?`<button class="subtle" data-archive="${e(r.id)}">Arquivar</button>`:`<button class="btn danger" data-close-room="${e(r.id)}">Encerrar partida</button>`}</div></article>`;
+ const visible=rooms.filter(r=>!r.archived_at),archived=rooms.filter(r=>r.archived_at);
+ return `<p class="small muted">Encerrar leva os participantes aos resultados e bloqueia novas respostas. Arquivar retira a partida desta lista, mantendo os dados.</p>${visible.map(item).join('')||'<p class="empty">Nenhuma partida na lista principal. Crie uma nova sala quando quiser.</p>'}${archived.length?`<details class="archived-rooms"><summary>Partidas arquivadas (${archived.length})</summary>${archived.map(item).join('')}</details>`:''}`;
+}

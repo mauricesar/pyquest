@@ -75,3 +75,7 @@ HTML/CSS retoma os conteúdos dos chats fornecidos pelo autor:
 As questões são autorais e usam trechos reduzidos, sem pedir JavaScript aos alunos. A prévia da oficina usa iframe com sandbox e política que bloqueia scripts, rede e envio de formulários. A descrição do resultado é pedagógica; o HTML/CSS corrigido é renderizado pelo próprio navegador.
 
 Atualização do banco: aplicar `02-questions.sql` e depois `05-subjects.sql`, com a migração `04-activities.sql` já instalada. O tratamento HTTP aceita confirmações sem corpo (incluindo HTTP 204) para responder, avançar e salvar explicações; erros reais continuam sendo informados.
+
+## Encerrar e arquivar salas
+
+Aplicar `supabase/06-room-management.sql` após as migrações anteriores. No painel, **Encerrar partida** leva os alunos ao resultado e bloqueia novos envios, preservando respostas e pontos. A ação também está disponível durante a sala. **Arquivar** retira uma sala encerrada da lista principal. As salas continuam acessíveis em **Partidas arquivadas**, com resultados e opção de restaurar no painel. Restaurar não reabre a rodada encerrada. Apenas o professor proprietário pode executar essas ações.
