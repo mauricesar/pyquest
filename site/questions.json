@@ -18,7 +18,8 @@
     "source": "Prática • questão 6 — Mochila",
     "activity": "quiz",
     "reflection_prompt": "Olhe a criação da mochila: quais valores chegam ao construtor e qual atributo começa em zero?",
-    "position": 0
+    "position": 0,
+    "subject": "python"
   },
   {
     "id": 321,
@@ -43,7 +44,8 @@
     "source": "Prática • questão 6 — Mochila",
     "reflection_prompt": "",
     "curriculum": "poo-v3",
-    "position": 1
+    "position": 1,
+    "subject": "python"
   },
   {
     "id": 302,
@@ -64,7 +66,8 @@
     "source": "Prática • questão 7 — Meta de leitura",
     "activity": "quiz",
     "reflection_prompt": "",
-    "position": 2
+    "position": 2,
+    "subject": "python"
   },
   {
     "id": 331,
@@ -114,7 +117,8 @@
     "repair_original_output": "Erro de atributo: o objeto não possui o atributo solicitado.",
     "reflection_prompt": "Por que energia = energia não cria o atributo energia do robô?",
     "curriculum": "poo-v3",
-    "position": 3
+    "position": 3,
+    "subject": "python"
   },
   {
     "id": 303,
@@ -135,7 +139,8 @@
     "source": "Prática • questão 8 — Equipe",
     "activity": "quiz",
     "reflection_prompt": "",
-    "position": 4
+    "position": 4,
+    "subject": "python"
   },
   {
     "id": 322,
@@ -160,7 +165,8 @@
     "source": "Prática • questão 6 — Mochila",
     "reflection_prompt": "Qual é a diferença entre o nome da classe e a variável que referencia o objeto?",
     "curriculum": "poo-v3",
-    "position": 5
+    "position": 5,
+    "subject": "python"
   },
   {
     "id": 304,
@@ -181,7 +187,8 @@
     "source": "Prática • questão 7 — Meta de leitura",
     "activity": "quiz",
     "reflection_prompt": "",
-    "position": 6
+    "position": 6,
+    "subject": "python"
   },
   {
     "id": 305,
@@ -202,7 +209,8 @@
     "source": "Prática • questão 6 — Mochila",
     "activity": "quiz",
     "reflection_prompt": "Por que usar > em vez de >= para recusar o peso da mochila?",
-    "position": 7
+    "position": 7,
+    "subject": "python"
   },
   {
     "id": 332,
@@ -252,7 +260,8 @@
     "repair_original_output": "Energia: 70",
     "reflection_prompt": "O que pode dar errado se a energia mudar antes de o método validar o valor?",
     "curriculum": "poo-v3",
-    "position": 8
+    "position": 8,
+    "subject": "python"
   },
   {
     "id": 306,
@@ -273,7 +282,8 @@
     "source": "Prática • questão 8 — Equipe",
     "activity": "quiz",
     "reflection_prompt": "",
-    "position": 9
+    "position": 9,
+    "subject": "python"
   },
   {
     "id": 323,
@@ -298,7 +308,8 @@
     "source": "Prática • questão 6 — Mochila",
     "reflection_prompt": "",
     "curriculum": "poo-v3",
-    "position": 10
+    "position": 10,
+    "subject": "python"
   },
   {
     "id": 307,
@@ -319,7 +330,8 @@
     "source": "Prática • questão 9 — Cofre",
     "activity": "quiz",
     "reflection_prompt": "Por que o saldo deve continuar igual quando o cofre está fechado?",
-    "position": 11
+    "position": 11,
+    "subject": "python"
   },
   {
     "id": 308,
@@ -340,7 +352,8 @@
     "source": "Prática • questão 10 — Serviço de pintura",
     "activity": "quiz",
     "reflection_prompt": "",
-    "position": 12
+    "position": 12,
+    "subject": "python"
   },
   {
     "id": 333,
@@ -390,7 +403,8 @@
     "repair_original_output": "Passos: 1",
     "reflection_prompt": "O que a condição precisa verificar antes de alterar passos?",
     "curriculum": "poo-v3",
-    "position": 13
+    "position": 13,
+    "subject": "python"
   },
   {
     "id": 309,
@@ -411,7 +425,8 @@
     "source": "Avaliação • exercício 1 — Impressora",
     "activity": "quiz",
     "reflection_prompt": "Por que verificar papel e tinta antes de descontar os recursos?",
-    "position": 14
+    "position": 14,
+    "subject": "python"
   },
   {
     "id": 324,
@@ -436,7 +451,8 @@
     "source": "Prática • questão 6 — Mochila",
     "reflection_prompt": "",
     "curriculum": "poo-v3",
-    "position": 15
+    "position": 15,
+    "subject": "python"
   },
   {
     "id": 310,
@@ -457,7 +473,8 @@
     "source": "Avaliação • exercício 2 — Aluno",
     "activity": "quiz",
     "reflection_prompt": "Por que nenhuma das duas notas deve mudar quando uma delas é inválida?",
-    "position": 16
+    "position": 16,
+    "subject": "python"
   },
   {
     "id": 311,
@@ -478,7 +495,8 @@
     "source": "Avaliação • exercício 3 — Plano de internet, ampliação",
     "activity": "quiz",
     "reflection_prompt": "Por que o novo mês zera o consumo e os extras, mas preserva a franquia base?",
-    "position": 17
+    "position": 17,
+    "subject": "python"
   },
   {
     "id": 334,
@@ -528,7 +546,8 @@
     "repair_original_output": "0 -2\n4 16",
     "reflection_prompt": "Por que usar or para detectar recursos insuficientes neste caso?",
     "curriculum": "poo-v3",
-    "position": 18
+    "position": 18,
+    "subject": "python"
   },
   {
     "id": 312,
@@ -549,7 +568,8 @@
     "source": "Avaliação • exercício 4 — Elevador",
     "activity": "quiz",
     "reflection_prompt": "Por que um andar válido não basta para permitir o movimento do elevador?",
-    "position": 19
+    "position": 19,
+    "subject": "python"
   },
   {
     "id": 313,
@@ -570,7 +590,8 @@
     "source": "Avaliação • exercício 5 — Votação, ampliação",
     "activity": "quiz",
     "reflection_prompt": "",
-    "position": 20
+    "position": 20,
+    "subject": "python"
   },
   {
     "id": 314,
@@ -591,7 +612,8 @@
     "source": "Avaliação • exercício 6 — Sensor de temperatura",
     "activity": "quiz",
     "reflection_prompt": "Por que a calibração deve ficar separada da leitura original?",
-    "position": 21
+    "position": 21,
+    "subject": "python"
   },
   {
     "id": 315,
@@ -612,6 +634,645 @@
     "source": "Avaliação • exercício 6 — Sensor de temperatura, pergunta A",
     "activity": "quiz",
     "reflection_prompt": "",
+    "position": 22,
+    "subject": "python"
+  },
+  {
+    "id": 501,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "quiz",
+    "kind": "Leia o código",
+    "title": "O título aparece onde?",
+    "concept": "Estrutura do documento",
+    "code": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Meu primeiro site</title>\n</head>\n<body>\n    <h1>Olá, turma!</h1>\n</body>\n</html>",
+    "options": [
+      "Os dois textos aparecem apenas na aba.",
+      "Meu primeiro site aparece na aba; Olá, turma! aparece no conteúdo.",
+      "title e h1 têm a mesma função.",
+      "O texto de h1 fica dentro de head."
+    ],
+    "answer": 1,
+    "explanation": "title define o título do documento, normalmente exibido na aba. O h1 está no body e aparece como título principal do conteúdo.",
+    "reflection_prompt": "Por que title e h1 podem ter textos diferentes?",
+    "seconds": 90,
+    "source": "Introdução ao HTML • exercícios básicos e estrutura de páginas",
+    "position": 0
+  },
+  {
+    "id": 521,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "classify",
+    "kind": "Quem sou eu? 🔎",
+    "title": "O que é href neste trecho?",
+    "concept": "Vocabulário de HTML/CSS",
+    "code": "<a href=\"#sobre\">Sobre</a>",
+    "focus": {
+      "start": 3,
+      "end": 7
+    },
+    "options": [
+      "Tag de abertura",
+      "Atributo HTML",
+      "Seletor CSS",
+      "Propriedade CSS"
+    ],
+    "answer": 1,
+    "explanation": "href é um atributo da tag a. Seu valor indica o destino do link.",
+    "reflection_prompt": "",
+    "seconds": 60,
+    "source": "Introdução ao HTML • exercícios básicos e estrutura de páginas",
+    "position": 1
+  },
+  {
+    "id": 502,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "quiz",
+    "kind": "Leia o código",
+    "title": "Uma seção dentro da página",
+    "concept": "Hierarquia de títulos",
+    "code": "<h1>Minha apresentação</h1>\n<h2>Meus interesses</h2>\n<p>Gosto de tecnologia e música.</p>",
+    "options": [
+      "h2 cria uma segunda aba.",
+      "h2 serve apenas para deixar o texto menor.",
+      "p substitui o título principal.",
+      "h2 indica uma seção subordinada ao título h1."
+    ],
+    "answer": 3,
+    "explanation": "Os níveis h1, h2 e h3 expressam a hierarquia do conteúdo. O tamanho visual pode ser ajustado com CSS, sem trocar o nível só pela aparência.",
+    "reflection_prompt": "",
+    "seconds": 90,
+    "source": "Introdução ao HTML • exercícios básicos e estrutura de páginas",
+    "position": 2
+  },
+  {
+    "id": 531,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "repair",
+    "kind": "Conserte a página 🛠️",
+    "title": "O link não leva ao contato",
+    "concept": "Links internos",
+    "code": "<a src=\"#contato\">Contato</a>\n<section id=\"contato\">Fale com a turma</section>",
+    "focus": {
+      "start": 3,
+      "end": 17
+    },
+    "options": [
+      "alt=\"#contato\"",
+      "href=\"contato\"",
+      "href=\"#contato\"",
+      "class=\"contato\""
+    ],
+    "answer": 2,
+    "explanation": "O link aponta para o elemento com id=\"contato\". O destino existe, mas a tag a está usando o atributo errado para criar o link.",
+    "repair_diagnosis": "O destino existe, mas a tag a está usando o atributo errado para criar o link.",
+    "repair_expected": "O link aponta para o elemento com id=\"contato\".",
+    "repair_variants": [
+      {
+        "code": "<a alt=\"#contato\">Contato</a>\n<section id=\"contato\">Fale com a turma</section>",
+        "output": "alt não define o destino de um link.",
+        "passed": false
+      },
+      {
+        "code": "<a href=\"contato\">Contato</a>\n<section id=\"contato\">Fale com a turma</section>",
+        "output": "O destino é um caminho relativo chamado contato, sem o fragmento #.",
+        "passed": false
+      },
+      {
+        "code": "<a href=\"#contato\">Contato</a>\n<section id=\"contato\">Fale com a turma</section>",
+        "output": "O link aponta para o elemento com id=\"contato\".",
+        "passed": true
+      },
+      {
+        "code": "<a class=\"contato\">Contato</a>\n<section id=\"contato\">Fale com a turma</section>",
+        "output": "class identifica uma classe, mas não cria um destino de navegação.",
+        "passed": false
+      }
+    ],
+    "repair_original_output": "O destino existe, mas a tag a está usando o atributo errado para criar o link.",
+    "reflection_prompt": "Por que src não substitui href em uma tag a?",
+    "seconds": 90,
+    "source": "Introdução ao HTML • exercícios básicos e estrutura de páginas",
+    "position": 3
+  },
+  {
+    "id": 503,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "quiz",
+    "kind": "Leia o código",
+    "title": "Como marcar uma informação importante?",
+    "concept": "Semântica do texto",
+    "code": "<p>_____ Traga seu caderno. _____</p>",
+    "options": [
+      "<strong> e </strong>",
+      "<br> e </br>",
+      "<img> e </img>",
+      "<title> e </title>"
+    ],
+    "answer": 0,
+    "explanation": "strong indica que o conteúdo tem importância. Por padrão costuma aparecer em negrito, mas seu papel não se limita à aparência.",
+    "reflection_prompt": "Por que escolher strong pela importância do texto, e não só pelo negrito?",
+    "seconds": 90,
+    "source": "Introdução ao HTML • exercícios básicos e estrutura de páginas",
+    "position": 4
+  },
+  {
+    "id": 522,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "classify",
+    "kind": "Quem sou eu? 🔎",
+    "title": "Quem seleciona os cards?",
+    "concept": "Vocabulário de HTML/CSS",
+    "code": ".card { color: navy; }",
+    "focus": {
+      "start": 0,
+      "end": 5
+    },
+    "options": [
+      "Seletor CSS",
+      "Valor CSS",
+      "Atributo HTML",
+      "Tag HTML"
+    ],
+    "answer": 0,
+    "explanation": ".card é o seletor: ele identifica os elementos aos quais a regra se aplica.",
+    "reflection_prompt": "",
+    "seconds": 60,
+    "source": "Projetos HTML/CSS • reprodução didática de HUGO XMIN e Simple.css",
+    "position": 5
+  },
+  {
+    "id": 504,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "quiz",
+    "kind": "Leia o código",
+    "title": "Ingredientes ou etapas?",
+    "concept": "Listas",
+    "code": "<h2>Modo de preparo</h2>\n<ol>\n    <li>Misture os ingredientes.</li>\n    <li>Leve ao forno.</li>\n</ol>",
+    "options": [
+      "ol cria uma lista sem itens.",
+      "li define a cor da lista.",
+      "ol é adequado porque as etapas seguem uma sequência.",
+      "Para receitas, apenas ul é permitido."
+    ],
+    "answer": 2,
+    "explanation": "ol representa uma lista ordenada. Aqui, a sequência das etapas importa. Cada li representa um item, tanto em ol quanto em ul.",
+    "reflection_prompt": "",
+    "seconds": 90,
+    "source": "Introdução ao HTML • exercícios básicos e estrutura de páginas",
+    "position": 6
+  },
+  {
+    "id": 505,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "quiz",
+    "kind": "Leia o código",
+    "title": "Um atalho para o contato",
+    "concept": "Links internos",
+    "code": "<a href=\"#contato\">Fale conosco</a>\n<section id=\"contato\">\n    <h2>Contato</h2>\n</section>",
+    "options": [
+      "O navegador procura um elemento com id=\"contato\" na página.",
+      "O navegador cria um arquivo contato.html.",
+      "O link envia um e-mail automaticamente.",
+      "O texto Contato precisa ser o nome de uma classe CSS."
+    ],
+    "answer": 0,
+    "explanation": "O fragmento #contato aponta para o id contato no próprio documento. O navegador pode rolar a página até esse elemento.",
+    "reflection_prompt": "O que precisa coincidir entre href e id para o atalho funcionar?",
+    "seconds": 90,
+    "source": "Introdução ao HTML • exercícios básicos e estrutura de páginas",
+    "position": 7
+  },
+  {
+    "id": 532,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "repair",
+    "kind": "Conserte a página 🛠️",
+    "title": "A cor não chegou ao card",
+    "concept": "Seletores CSS",
+    "code": "<p class=\"card\">Curso de CSS</p>\n<style>\ncard { color: navy; }\n</style>",
+    "focus": {
+      "start": 41,
+      "end": 47
+    },
+    "options": [
+      "#card {",
+      ".card {",
+      "href {",
+      "padding {"
+    ],
+    "answer": 1,
+    "explanation": "O parágrafo recebe a cor navy. O elemento tem uma classe chamada card. O seletor atual procura uma tag card.",
+    "repair_diagnosis": "O elemento tem uma classe chamada card. O seletor atual procura uma tag card.",
+    "repair_expected": "O parágrafo recebe a cor navy.",
+    "repair_variants": [
+      {
+        "code": "<p class=\"card\">Curso de CSS</p>\n<style>\n#card { color: navy; }\n</style>",
+        "output": "O seletor procura id=\"card\", que não existe aqui.",
+        "passed": false
+      },
+      {
+        "code": "<p class=\"card\">Curso de CSS</p>\n<style>\n.card { color: navy; }\n</style>",
+        "output": "O parágrafo recebe a cor navy.",
+        "passed": true
+      },
+      {
+        "code": "<p class=\"card\">Curso de CSS</p>\n<style>\nhref { color: navy; }\n</style>",
+        "output": "O seletor procura uma tag href.",
+        "passed": false
+      },
+      {
+        "code": "<p class=\"card\">Curso de CSS</p>\n<style>\npadding { color: navy; }\n</style>",
+        "output": "O seletor procura uma tag padding.",
+        "passed": false
+      }
+    ],
+    "repair_original_output": "O elemento tem uma classe chamada card. O seletor atual procura uma tag card.",
+    "reflection_prompt": "O que muda quando colocamos um ponto antes de card?",
+    "seconds": 90,
+    "source": "Projetos HTML/CSS • reprodução didática de HUGO XMIN e Simple.css",
+    "position": 8
+  },
+  {
+    "id": 506,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "quiz",
+    "kind": "Leia o código",
+    "title": "A imagem também precisa de contexto",
+    "concept": "Imagens e atributos",
+    "code": "<img src=\"imagens/teclado.jpg\" alt=\"Teclado para computador\">",
+    "options": [
+      "alt muda o caminho do arquivo.",
+      "src descreve a imagem para leitores de tela.",
+      "alt define a largura da imagem.",
+      "src aponta para o arquivo; alt oferece uma alternativa textual."
+    ],
+    "answer": 3,
+    "explanation": "src indica onde buscar a imagem. alt fornece uma alternativa textual; a descrição deve fazer sentido para a função da imagem na página.",
+    "reflection_prompt": "Como alt ajuda quando a imagem não pode ser vista?",
+    "seconds": 90,
+    "source": "Introdução ao HTML • exercícios básicos e estrutura de páginas",
+    "position": 9
+  },
+  {
+    "id": 523,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "classify",
+    "kind": "Quem sou eu? 🔎",
+    "title": "O que estamos definindo?",
+    "concept": "Vocabulário de HTML/CSS",
+    "code": ".card { padding: 16px; }",
+    "focus": {
+      "start": 8,
+      "end": 15
+    },
+    "options": [
+      "Valor CSS",
+      "Tag HTML",
+      "Propriedade CSS",
+      "Classe de Python"
+    ],
+    "answer": 2,
+    "explanation": "padding é a propriedade CSS. Ela define o espaçamento interno; 16px é o valor escolhido.",
+    "reflection_prompt": "",
+    "seconds": 60,
+    "source": "Projetos HTML/CSS • reprodução didática de HUGO XMIN e Simple.css",
+    "position": 10
+  },
+  {
+    "id": 507,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "quiz",
+    "kind": "Leia o código",
+    "title": "Onde entra a notícia?",
+    "concept": "HTML semântico",
+    "code": "<main>\n    <article>\n        <h2>Novidades do curso</h2>\n        <p>As inscrições estão abertas.</p>\n    </article>\n</main>",
+    "options": [
+      "article só pode conter imagens.",
+      "article representa um conteúdo que faz sentido de forma independente.",
+      "main é usado para guardar apenas metadados.",
+      "As tags semânticas impedem o uso de CSS."
+    ],
+    "answer": 1,
+    "explanation": "Uma notícia é um bom exemplo de article porque pode ser compreendida como conteúdo independente. main reúne o conteúdo principal da página.",
+    "reflection_prompt": "",
+    "seconds": 90,
+    "source": "Introdução ao HTML • exercícios básicos e estrutura de páginas",
+    "position": 11
+  },
+  {
+    "id": 508,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "quiz",
+    "kind": "Leia o código",
+    "title": "O rótulo conversa com qual campo?",
+    "concept": "Formulários acessíveis",
+    "code": "<label for=\"email\">Seu e-mail</label>\n<input id=\"email\" name=\"email\" type=\"email\" required>",
+    "options": [
+      "for deve repetir o placeholder.",
+      "required salva o cadastro em um banco.",
+      "for associa o rótulo ao campo com o mesmo id.",
+      "type=\"email\" garante que o endereço existe."
+    ],
+    "answer": 2,
+    "explanation": "for=\"email\" associa o label ao input cujo id é email. required pede preenchimento na validação do navegador; type=\"email\" verifica o formato básico, sem confirmar a existência do endereço.",
+    "reflection_prompt": "Por que manter o label mesmo quando o campo tem placeholder?",
+    "seconds": 90,
+    "source": "Introdução ao HTML • exercícios básicos e estrutura de páginas",
+    "position": 12
+  },
+  {
+    "id": 533,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "repair",
+    "kind": "Conserte a página 🛠️",
+    "title": "O texto continua grudado na borda",
+    "concept": "Box model",
+    "code": "<div class=\"card\">Olá, turma!</div>\n<style>\n.card { border: 1px solid navy; padding: 20; }\n</style>",
+    "focus": {
+      "start": 76,
+      "end": 88
+    },
+    "options": [
+      "padding: 20px;",
+      "padding: -20px;",
+      "padding: auto;",
+      "padding: 20;"
+    ],
+    "answer": 0,
+    "explanation": "O card ganha 20px de espaçamento interno nos quatro lados. O navegador ignora esse padding: o comprimento diferente de zero precisa de uma unidade válida.",
+    "repair_diagnosis": "O navegador ignora esse padding: o comprimento diferente de zero precisa de uma unidade válida.",
+    "repair_expected": "O card ganha 20px de espaçamento interno nos quatro lados.",
+    "repair_variants": [
+      {
+        "code": "<div class=\"card\">Olá, turma!</div>\n<style>\n.card { border: 1px solid navy; padding: 20px; }\n</style>",
+        "output": "O card ganha 20px de espaçamento interno nos quatro lados.",
+        "passed": true
+      },
+      {
+        "code": "<div class=\"card\">Olá, turma!</div>\n<style>\n.card { border: 1px solid navy; padding: -20px; }\n</style>",
+        "output": "Padding negativo é inválido.",
+        "passed": false
+      },
+      {
+        "code": "<div class=\"card\">Olá, turma!</div>\n<style>\n.card { border: 1px solid navy; padding: auto; }\n</style>",
+        "output": "auto não é um valor válido para padding.",
+        "passed": false
+      },
+      {
+        "code": "<div class=\"card\">Olá, turma!</div>\n<style>\n.card { border: 1px solid navy; padding: 20; }\n</style>",
+        "output": "O comprimento 20 está sem unidade e é inválido nesse caso.",
+        "passed": false
+      }
+    ],
+    "repair_original_output": "O navegador ignora esse padding: o comprimento diferente de zero precisa de uma unidade válida.",
+    "reflection_prompt": "Por que 20px é válido para padding, mas 20 sozinho não é?",
+    "seconds": 90,
+    "source": "Projetos HTML/CSS • reprodução didática de HUGO XMIN e Simple.css",
+    "position": 13
+  },
+  {
+    "id": 509,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "quiz",
+    "kind": "Leia o código",
+    "title": "Como o HTML encontra o CSS?",
+    "concept": "Folha de estilos externa",
+    "code": "<head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>",
+    "options": [
+      "O navegador carrega style.css como folha de estilos.",
+      "link transforma CSS em JavaScript.",
+      "O CSS precisa ficar dentro de body para funcionar.",
+      "href indica o título da aba."
+    ],
+    "answer": 0,
+    "explanation": "rel=\"stylesheet\" identifica a relação com uma folha de estilos. href indica o caminho do arquivo, relativo ao documento neste exemplo.",
+    "reflection_prompt": "",
+    "seconds": 90,
+    "source": "Projetos HTML/CSS • reprodução didática de HUGO XMIN e Simple.css",
+    "position": 14
+  },
+  {
+    "id": 524,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "classify",
+    "kind": "Quem sou eu? 🔎",
+    "title": "E 16px, qual é o seu papel?",
+    "concept": "Vocabulário de HTML/CSS",
+    "code": ".card { padding: 16px; }",
+    "focus": {
+      "start": 17,
+      "end": 21
+    },
+    "options": [
+      "Seletor CSS",
+      "Atributo HTML",
+      "Método",
+      "Valor CSS"
+    ],
+    "answer": 3,
+    "explanation": "16px é o valor da declaração padding: 16px. O número e a unidade definem o espaçamento nesse exemplo.",
+    "reflection_prompt": "",
+    "seconds": 60,
+    "source": "Projetos HTML/CSS • reprodução didática de HUGO XMIN e Simple.css",
+    "position": 15
+  },
+  {
+    "id": 510,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "quiz",
+    "kind": "Leia o código",
+    "title": "Qual regra alcança os cards?",
+    "concept": "Seletores CSS",
+    "code": "<article class=\"card\">Curso de HTML</article>\n<article class=\"card\">Curso de CSS</article>\n\n/* No arquivo CSS: */\n.card { color: navy; }",
+    "options": [
+      "Apenas o primeiro article recebe a cor.",
+      "A regra seleciona um id chamado card.",
+      "A regra seleciona somente a tag card.",
+      "Os dois elementos com class=\"card\" recebem a cor."
+    ],
+    "answer": 3,
+    "explanation": "O ponto inicia um seletor de classe. Todos os elementos que têm a classe card correspondem a .card, incluindo os dois article.",
+    "reflection_prompt": "Qual é a diferença entre .card no CSS e class=\"card\" no HTML?",
+    "seconds": 90,
+    "source": "Projetos HTML/CSS • reprodução didática de HUGO XMIN e Simple.css",
+    "position": 16
+  },
+  {
+    "id": 511,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "quiz",
+    "kind": "Leia o código",
+    "title": "Espaço dentro ou fora?",
+    "concept": "Box model",
+    "code": ".card {\n    padding: 20px;\n    margin: 12px;\n    border: 1px solid navy;\n}",
+    "options": [
+      "margin cria espaço entre o conteúdo e a borda.",
+      "padding fica entre o conteúdo e a borda; margin fica fora da borda.",
+      "padding e margin são sempre iguais.",
+      "border substitui os dois espaçamentos."
+    ],
+    "answer": 1,
+    "explanation": "Imagine o card como uma caixa: padding afasta o conteúdo da borda por dentro; margin participa do espaçamento do lado de fora.",
+    "reflection_prompt": "Qual propriedade você mudaria para afastar o texto da borda, sem aumentar a margem externa?",
+    "seconds": 90,
+    "source": "Projetos HTML/CSS • reprodução didática de HUGO XMIN e Simple.css",
+    "position": 17
+  },
+  {
+    "id": 534,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "repair",
+    "kind": "Conserte a página 🛠️",
+    "title": "Clicar no rótulo não seleciona o campo",
+    "concept": "Formulários acessíveis",
+    "code": "<label for=\"nome\">Seu nome</label>\n<input id=\"email\" name=\"nome\" type=\"text\">",
+    "focus": {
+      "start": 42,
+      "end": 52
+    },
+    "options": [
+      "class=\"nome\"",
+      "id=\"campo\"",
+      "title=\"nome\"",
+      "id=\"nome\""
+    ],
+    "answer": 3,
+    "explanation": "O rótulo Seu nome fica associado ao input. O valor de for precisa corresponder ao id do input que o rótulo descreve.",
+    "repair_diagnosis": "O valor de for precisa corresponder ao id do input que o rótulo descreve.",
+    "repair_expected": "O rótulo Seu nome fica associado ao input.",
+    "repair_variants": [
+      {
+        "code": "<label for=\"nome\">Seu nome</label>\n<input class=\"nome\" name=\"nome\" type=\"text\">",
+        "output": "class não substitui id na associação com for.",
+        "passed": false
+      },
+      {
+        "code": "<label for=\"nome\">Seu nome</label>\n<input id=\"campo\" name=\"nome\" type=\"text\">",
+        "output": "O id campo ainda é diferente de nome.",
+        "passed": false
+      },
+      {
+        "code": "<label for=\"nome\">Seu nome</label>\n<input title=\"nome\" name=\"nome\" type=\"text\">",
+        "output": "title não substitui id na associação com for.",
+        "passed": false
+      },
+      {
+        "code": "<label for=\"nome\">Seu nome</label>\n<input id=\"nome\" name=\"nome\" type=\"text\">",
+        "output": "O rótulo Seu nome fica associado ao input.",
+        "passed": true
+      }
+    ],
+    "repair_original_output": "O valor de for precisa corresponder ao id do input que o rótulo descreve.",
+    "reflection_prompt": "Por que ter name=\"nome\" não resolve sozinho a associação com o label?",
+    "seconds": 90,
+    "source": "Introdução ao HTML • exercícios básicos e estrutura de páginas",
+    "position": 18
+  },
+  {
+    "id": 512,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "quiz",
+    "kind": "Leia o código",
+    "title": "Uma coluna confortável para leitura",
+    "concept": "Largura e alinhamento",
+    "code": "main {\n    max-width: 800px;\n    margin: 0 auto;\n}",
+    "options": [
+      "main ocupa sempre exatamente 800px, mesmo em telas menores.",
+      "O texto fica automaticamente centralizado.",
+      "A largura é limitada a 800px, e as margens laterais automáticas centralizam a caixa quando há espaço.",
+      "As margens superior e inferior viram automáticas."
+    ],
+    "answer": 2,
+    "explanation": "max-width define um limite máximo, não uma largura mínima. Em uma caixa de bloco comum com espaço disponível, margin: 0 auto distribui as margens laterais igualmente. O texto não é centralizado por essa regra.",
+    "reflection_prompt": "",
+    "seconds": 90,
+    "source": "Projetos HTML/CSS • reprodução didática de HUGO XMIN e Simple.css",
+    "position": 19
+  },
+  {
+    "id": 513,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "quiz",
+    "kind": "Leia o código",
+    "title": "O menu lado a lado",
+    "concept": "Flexbox",
+    "code": "nav ul {\n    display: flex;\n    gap: 16px;\n    list-style: none;\n}",
+    "options": [
+      "flex organiza os filhos diretos em uma linha por padrão, e gap define o espaço entre eles.",
+      "gap altera o tamanho da fonte.",
+      "list-style: none apaga os links.",
+      "flex exige JavaScript para organizar o menu."
+    ],
+    "answer": 0,
+    "explanation": "O contêiner flex organiza seus filhos diretos. A direção padrão é row; gap cria espaço entre os itens e list-style: none retira os marcadores da lista.",
+    "reflection_prompt": "",
+    "seconds": 90,
+    "source": "Projetos HTML/CSS • reprodução didática de HUGO XMIN e Simple.css",
+    "position": 20
+  },
+  {
+    "id": 514,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "quiz",
+    "kind": "Leia o código",
+    "title": "O botão mudou quando o mouse chegou",
+    "concept": "Pseudo-classe :hover",
+    "code": "a:hover {\n    color: purple;\n    text-decoration: underline;\n}",
+    "options": [
+      "A regra vale apenas depois de clicar no link.",
+      "hover cria um novo link.",
+      "A regra muda o HTML para sempre.",
+      "A regra se aplica enquanto o ponteiro está sobre o link."
+    ],
+    "answer": 3,
+    "explanation": "A pseudo-classe :hover representa o estado em que o ponteiro está sobre o elemento. Em telas de toque esse comportamento pode variar; não deve ser a única forma de comunicar uma informação.",
+    "reflection_prompt": "",
+    "seconds": 90,
+    "source": "Projetos HTML/CSS • reprodução didática de HUGO XMIN e Simple.css",
+    "position": 21
+  },
+  {
+    "id": 515,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "quiz",
+    "kind": "Leia o código",
+    "title": "O card sobe, mas sem um salto brusco",
+    "concept": "Transições CSS",
+    "code": ".card {\n    transition: transform 0.3s ease;\n}\n.card:hover {\n    transform: translateY(-8px);\n}",
+    "options": [
+      "transition inicia o movimento sem precisar de uma mudança.",
+      "A mudança de transform ocorre ao longo de 0,3 segundo; translateY(-8px) desloca o card para cima.",
+      "translateY(-8px) aumenta a margem em 8px.",
+      "ease define a cor da sombra."
+    ],
+    "answer": 1,
+    "explanation": "O :hover muda transform. transition suaviza a passagem entre os valores durante 0,3 segundo; o deslocamento negativo no eixo Y leva o card para cima. Na regra base, a transição também pode suavizar a volta.",
+    "reflection_prompt": "Qual é o papel de :hover e qual é o papel de transition nesse exemplo?",
+    "seconds": 90,
+    "source": "Projetos HTML/CSS • reprodução didática de HUGO XMIN e Simple.css",
     "position": 22
   }
 ]

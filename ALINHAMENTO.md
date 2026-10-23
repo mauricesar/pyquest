@@ -67,3 +67,9 @@ Para atualizar uma instalação existente, execute a carga `02-questions.sql` e 
 5. Ao final, as explicações continuam disponíveis em **Ler explicações** e nas colunas **Pergunta_explicacao** e **Justificativa** do CSV. Não há avaliação automática desses textos.
 
 O modo individual serve para prática: seus textos ficam no navegador e no CSV individual. Para o professor coletar respostas, é necessário usar uma sala conectada.
+
+## HTML e CSS — trilha independente
+
+Base: chats de Introdução ao HTML e Projeto HTML CSS Educacional enviados pelo professor. As questões cobrem documento HTML, hierarquia, strong, listas, fragmentos de links, src/alt, article/main, label/for/id, folha externa, classes e seletores, padding/margin, max-width, Flexbox, hover e transition. Não exigem JavaScript, frameworks nem funcionamento de cadastro no servidor.
+
+Quiz: IDs 501–515; vocabulário: 521–524; oficina: 531–534. A separação usa subject e curriculum, preservando os IDs e os códigos de Python.

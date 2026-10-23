@@ -33,6 +33,6 @@ class ActivityTests(unittest.TestCase):
         for q in QUESTOES:
             data=asdict(q);data.pop('expected_output');base.append(data)
         actual=json.loads((ROOT/'site/questions.json').read_text())
-        self.assertEqual(make_bank(base),actual)
+        self.assertEqual(make_bank(base), [{k:v for k,v in q.items() if k!="subject"} for q in actual if q["subject"]=="python"])
 
 if __name__=='__main__':unittest.main()

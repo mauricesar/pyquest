@@ -302,7 +302,8 @@ if __name__ == '__main__':
         data.pop('expected_output')
         questions.append(dict(id=101+i, curriculum=CURRICULUM, **data))
     from activities import make_bank
-    questions = make_bank(questions)
+    from web_activities import web_bank
+    questions = [dict(q, subject="python") for q in make_bank(questions)] + web_bank()
     for q in questions:
         assert len(q['options']) == 4 and 0 <= q['answer'] < 4
         assert q['seconds'] >= 60 and q['source']

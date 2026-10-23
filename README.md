@@ -63,3 +63,15 @@ Repositório dedicado `mauricesar/pyquest`, GitHub Pages via GitHub Actions. A p
 ## Antes de uma turma real
 
 Faça uma partida entre dois dispositivos; teste acerto, erro, expiração, clique duplo, reconexão, pódio e CSV. O frontend pode ser testado individualmente antes da ativação. Custos e limites de Supabase dependem do plano escolhido; a aplicação não contrata plano pago.
+
+## Trilhas Python e HTML/CSS
+
+Na página inicial, escolha **Python · POO** ou **HTML e CSS**. No painel do professor, o campo **Conteúdo** determina a trilha da sala. Cada trilha tem 23 questões independentes: 15 de quiz, 4 de classificação e 4 de correção. O pacote de explicações seleciona 8 questões de quiz. A trilha fica registrada na sala e na exportação; a escolha local do aluno não altera o conteúdo da sala. Clientes anteriores continuam criando salas de Python.
+
+HTML/CSS retoma os conteúdos dos chats fornecidos pelo autor:
+- [Introdução ao HTML](https://chatgpt.com/share/6adb5462-2ff4-83e9-8ad2-ac012d645bc7): estrutura, títulos, listas, links, imagens, semântica e formulários.
+- [Projeto HTML CSS Educacional](https://chatgpt.com/share/6adb5474-2bf4-83e8-afe8-98c48bd52c8f): HUGO XMIN e Simple.css, seletores, box model, tipografia, largura, navegação e efeitos.
+
+As questões são autorais e usam trechos reduzidos, sem pedir JavaScript aos alunos. A prévia da oficina usa iframe com sandbox e política que bloqueia scripts, rede e envio de formulários. A descrição do resultado é pedagógica; o HTML/CSS corrigido é renderizado pelo próprio navegador.
+
+Atualização do banco: aplicar `02-questions.sql` e depois `05-subjects.sql`, com a migração `04-activities.sql` já instalada. O tratamento HTTP aceita confirmações sem corpo (incluindo HTTP 204) para responder, avançar e salvar explicações; erros reais continuam sendo informados.
