@@ -1,5 +1,5 @@
 import {score,rank,escapeHTML as e,csv} from './engine.js';
-import {configured,login,anonymous,rpc,logout} from './api.js';
+import {configured,login,anonymous,rpc,logout} from './api.js?v=subjects-v5';
 import {PACKS,selectQuestions,codeMarkup,repairMarkup,bindRepair,reflectionForm,bindReflectionCounter,validReflection} from './activities.js?v=textos-v4';
 const app=document.querySelector('#app');
 const bank=await fetch('questions.json?v=textos-v4').then(r=>{if(!r.ok)throw Error('Banco indisponível');return r.json();}).catch(()=>[]);
