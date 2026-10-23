@@ -5,7 +5,7 @@ import {selectQuestions,packsFor,codeMarkup,repairMarkup,webDocument} from '../s
 const bank=JSON.parse(readFileSync(new URL('../site/questions.json',import.meta.url)));
 test('trilhas não misturam questões e cada pacote filtra o conteúdo escolhido',()=>{
  for(const subject of ['python','html-css']){
-  for(const [pack,count] of Object.entries({mixed:23,quiz:15,classify:4,repair:4,reflect:8})){
+  for(const [pack,count] of Object.entries({mixed:subject==='python'?23:35,quiz:15,classify:4,repair:4,reflect:8,...(subject==='html-css'?{visual:4,selectors:4,structure:4}:{})})){
    const qs=selectQuestions(bank,pack,subject);assert.equal(qs.length,count,`${subject}/${pack}`);assert.ok(qs.every(q=>q.subject===subject));
   }
  }
@@ -16,5 +16,5 @@ test('oficina web escapa o código e isola a prévia sem scripts ou rede',()=>{
   const html=codeMarkup(q);assert.ok(html.includes('Código HTML e CSS'));assert.ok(!html.includes('<style>'));assert.ok(!html.includes('<input '));
   const preview=repairMarkup(q,q.answer);assert.ok(preview.includes('sandbox=""'));assert.ok(preview.includes('srcdoc="&lt;!doctype html&gt;'));assert.equal(q.repair_variants.filter(v=>v.passed).length,1);
  }
- assert.ok(webDocument('<p>Teste</p>').includes("default-src 'none'"));
+ assert.ok(webDocument('<p>Teste</p>').includes("default-src 'none'"));assert.ok(webDocument('<a href="#teste">Teste</a>').includes('<base href="about:srcdoc">'));
 });

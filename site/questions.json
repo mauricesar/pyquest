@@ -1274,5 +1274,473 @@
     "seconds": 90,
     "source": "Projetos HTML/CSS • reprodução didática de HUGO XMIN e Simple.css",
     "position": 22
+  },
+  {
+    "id": 541,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "visual",
+    "kind": "Duelo de estilos 🎨",
+    "title": "Um card com cantos arredondados",
+    "concept": "Cores e bordas",
+    "code": "<article class=\"card\">Meu curso</article>\n<!-- Qual regra CSS reproduz a referência? -->",
+    "options": [
+      ".card { background: #e0e7ff; border-radius: 16px; padding: 20px; }",
+      ".card { background: #e0e7ff; border-radius: 0; padding: 20px; }",
+      ".card { color: #e0e7ff; border-radius: 16px; padding: 20px; }",
+      ".card { background: #111827; border-radius: 16px; padding: 20px; }"
+    ],
+    "answer": 0,
+    "explanation": "background colore o fundo; border-radius arredonda os cantos. O card de referência combina fundo lilás, cantos de 16px e padding de 20px.",
+    "seconds": 90,
+    "reflection_prompt": "Qual detalhe da referência ajudou você a escolher essa regra CSS?",
+    "source": "Projetos HTML/CSS e Introdução ao HTML • práticas da turma",
+    "position": 23,
+    "visual_target": "<article class=\"card\">Meu curso</article><style>.card { background: #e0e7ff; border-radius: 16px; padding: 20px; }</style>",
+    "visual_instruction": "Observe o fundo lilás e os cantos arredondados.",
+    "repair_variants": [
+      {
+        "code": "<article class=\"card\">Meu curso</article>\n<style>\n.card { background: #e0e7ff; border-radius: 16px; padding: 20px; }\n</style>",
+        "output": "Este CSS reproduz a referência.",
+        "passed": true
+      },
+      {
+        "code": "<article class=\"card\">Meu curso</article>\n<style>\n.card { background: #e0e7ff; border-radius: 0; padding: 20px; }\n</style>",
+        "output": "Compare o espaçamento, a cor, o alinhamento e o formato com a referência.",
+        "passed": false
+      },
+      {
+        "code": "<article class=\"card\">Meu curso</article>\n<style>\n.card { color: #e0e7ff; border-radius: 16px; padding: 20px; }\n</style>",
+        "output": "Compare o espaçamento, a cor, o alinhamento e o formato com a referência.",
+        "passed": false
+      },
+      {
+        "code": "<article class=\"card\">Meu curso</article>\n<style>\n.card { background: #111827; border-radius: 16px; padding: 20px; }\n</style>",
+        "output": "Compare o espaçamento, a cor, o alinhamento e o formato com a referência.",
+        "passed": false
+      }
+    ],
+    "repair_expected": "Este CSS reproduz a referência."
+  },
+  {
+    "id": 542,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "visual",
+    "kind": "Duelo de estilos 🎨",
+    "title": "O espaço fica dentro da borda",
+    "concept": "Box model",
+    "code": "<article class=\"card\">Texto com espaço para respirar</article>\n<!-- Qual regra CSS reproduz a referência? -->",
+    "options": [
+      ".card { border: 2px solid navy; margin: 24px; }",
+      ".card { border: 2px solid navy; padding: 0; }",
+      ".card { border: 2px solid navy; padding: 24px; }",
+      ".card { border: 2px solid navy; padding: 2px; }"
+    ],
+    "answer": 2,
+    "explanation": "A referência tem 24px entre o texto e a borda. Esse espaço é padding. margin pode afastar a caixa de outras caixas, mas não cria esse espaço interno.",
+    "seconds": 90,
+    "reflection_prompt": "",
+    "source": "Projetos HTML/CSS e Introdução ao HTML • práticas da turma",
+    "position": 24,
+    "visual_target": "<article class=\"card\">Texto com espaço para respirar</article><style>.card { border: 2px solid navy; padding: 24px; }</style>",
+    "visual_instruction": "Reproduza o espaço interno de 24px.",
+    "repair_variants": [
+      {
+        "code": "<article class=\"card\">Texto com espaço para respirar</article>\n<style>\n.card { border: 2px solid navy; margin: 24px; }\n</style>",
+        "output": "Compare o espaçamento, a cor, o alinhamento e o formato com a referência.",
+        "passed": false
+      },
+      {
+        "code": "<article class=\"card\">Texto com espaço para respirar</article>\n<style>\n.card { border: 2px solid navy; padding: 0; }\n</style>",
+        "output": "Compare o espaçamento, a cor, o alinhamento e o formato com a referência.",
+        "passed": false
+      },
+      {
+        "code": "<article class=\"card\">Texto com espaço para respirar</article>\n<style>\n.card { border: 2px solid navy; padding: 24px; }\n</style>",
+        "output": "Este CSS reproduz a referência.",
+        "passed": true
+      },
+      {
+        "code": "<article class=\"card\">Texto com espaço para respirar</article>\n<style>\n.card { border: 2px solid navy; padding: 2px; }\n</style>",
+        "output": "Compare o espaçamento, a cor, o alinhamento e o formato com a referência.",
+        "passed": false
+      }
+    ],
+    "repair_expected": "Este CSS reproduz a referência."
+  },
+  {
+    "id": 543,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "visual",
+    "kind": "Duelo de estilos 🎨",
+    "title": "Dois itens na mesma linha",
+    "concept": "Flexbox",
+    "code": "<div class=\"menu\"><span>Início</span><span>Contato</span></div>\n<!-- Qual regra CSS reproduz a referência? -->",
+    "options": [
+      ".menu { display: block; gap: 12px; }",
+      ".menu { display: flex; flex-direction: column; gap: 12px; }",
+      ".menu { display: flex; gap: 0; }",
+      ".menu { display: flex; gap: 12px; }"
+    ],
+    "answer": 3,
+    "explanation": "display: flex organiza os filhos em linha por padrão. gap: 12px cria o intervalo entre eles, como na referência.",
+    "seconds": 90,
+    "reflection_prompt": "",
+    "source": "Projetos HTML/CSS e Introdução ao HTML • práticas da turma",
+    "position": 25,
+    "visual_target": "<div class=\"menu\"><span>Início</span><span>Contato</span></div><style>.menu { display: flex; gap: 12px; }</style>",
+    "visual_instruction": "Reproduza a linha com 12px entre os itens.",
+    "repair_variants": [
+      {
+        "code": "<div class=\"menu\"><span>Início</span><span>Contato</span></div>\n<style>\n.menu { display: block; gap: 12px; }\n</style>",
+        "output": "Compare o espaçamento, a cor, o alinhamento e o formato com a referência.",
+        "passed": false
+      },
+      {
+        "code": "<div class=\"menu\"><span>Início</span><span>Contato</span></div>\n<style>\n.menu { display: flex; flex-direction: column; gap: 12px; }\n</style>",
+        "output": "Compare o espaçamento, a cor, o alinhamento e o formato com a referência.",
+        "passed": false
+      },
+      {
+        "code": "<div class=\"menu\"><span>Início</span><span>Contato</span></div>\n<style>\n.menu { display: flex; gap: 0; }\n</style>",
+        "output": "Compare o espaçamento, a cor, o alinhamento e o formato com a referência.",
+        "passed": false
+      },
+      {
+        "code": "<div class=\"menu\"><span>Início</span><span>Contato</span></div>\n<style>\n.menu { display: flex; gap: 12px; }\n</style>",
+        "output": "Este CSS reproduz a referência.",
+        "passed": true
+      }
+    ],
+    "repair_expected": "Este CSS reproduz a referência."
+  },
+  {
+    "id": 544,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "visual",
+    "kind": "Duelo de estilos 🎨",
+    "title": "Um título centralizado",
+    "concept": "Tipografia",
+    "code": "<h2>Notícias da turma</h2>\n<!-- Qual regra CSS reproduz a referência? -->",
+    "options": [
+      "h2 { text-align: left; font-size: 28px; }",
+      "h2 { text-align: center; font-size: 28px; }",
+      "h2 { text-align: right; font-size: 28px; }",
+      "h2 { text-align: center; font-size: 14px; }"
+    ],
+    "answer": 1,
+    "explanation": "text-align: center centraliza o texto dentro da caixa do h2. font-size: 28px define o tamanho pedido; não muda o nível semântico do título.",
+    "seconds": 90,
+    "reflection_prompt": "",
+    "source": "Projetos HTML/CSS e Introdução ao HTML • práticas da turma",
+    "position": 26,
+    "visual_target": "<h2>Notícias da turma</h2><style>h2 { text-align: center; font-size: 28px; }</style>",
+    "visual_instruction": "Reproduza o texto centralizado com 28px.",
+    "repair_variants": [
+      {
+        "code": "<h2>Notícias da turma</h2>\n<style>\nh2 { text-align: left; font-size: 28px; }\n</style>",
+        "output": "Compare o espaçamento, a cor, o alinhamento e o formato com a referência.",
+        "passed": false
+      },
+      {
+        "code": "<h2>Notícias da turma</h2>\n<style>\nh2 { text-align: center; font-size: 28px; }\n</style>",
+        "output": "Este CSS reproduz a referência.",
+        "passed": true
+      },
+      {
+        "code": "<h2>Notícias da turma</h2>\n<style>\nh2 { text-align: right; font-size: 28px; }\n</style>",
+        "output": "Compare o espaçamento, a cor, o alinhamento e o formato com a referência.",
+        "passed": false
+      },
+      {
+        "code": "<h2>Notícias da turma</h2>\n<style>\nh2 { text-align: center; font-size: 14px; }\n</style>",
+        "output": "Compare o espaçamento, a cor, o alinhamento e o formato com a referência.",
+        "passed": false
+      }
+    ],
+    "repair_expected": "Este CSS reproduz a referência."
+  },
+  {
+    "id": 551,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "selectors",
+    "kind": "Caça aos seletores 🎯",
+    "title": "Quem essa regra alcança? .aviso",
+    "concept": "Seletores CSS",
+    "code": "<h2 id=\"titulo\">[1] Cursos</h2>\n<p class=\"aviso\">[2] Matrículas abertas</p>\n<p class=\"aviso\" id=\"destaque\">[3] Últimas vagas</p>\n<nav><a href=\"#curso\">[4] Ver cursos</a></nav>\n<a href=\"#inicio\">[5] Voltar ao início</a>\n\n/* Qual grupo recebe a cor? */\n.aviso { color: purple; }",
+    "options": [
+      "Apenas [1]",
+      "Apenas [2] e [3]",
+      "Apenas [3]",
+      "Todos os cinco elementos"
+    ],
+    "answer": 1,
+    "explanation": "O ponto seleciona uma classe. Os dois parágrafos têm class=\"aviso\", então [2] e [3] correspondem a .aviso.",
+    "seconds": 90,
+    "reflection_prompt": "Como o seletor indica quais elementos recebem o estilo?",
+    "source": "Projetos HTML/CSS e Introdução ao HTML • práticas da turma",
+    "position": 27,
+    "stage_markup": "<h2 id=\"titulo\">[1] Cursos</h2>\n<p class=\"aviso\">[2] Matrículas abertas</p>\n<p class=\"aviso\" id=\"destaque\">[3] Últimas vagas</p>\n<nav><a href=\"#curso\">[4] Ver cursos</a></nav>\n<a href=\"#inicio\">[5] Voltar ao início</a>",
+    "visual_instruction": "Use os números da página para identificar os elementos selecionados. A prévia está sem a regra de cor para você fazer a previsão."
+  },
+  {
+    "id": 552,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "selectors",
+    "kind": "Caça aos seletores 🎯",
+    "title": "Quem essa regra alcança? #destaque",
+    "concept": "Seletores CSS",
+    "code": "<h2 id=\"titulo\">[1] Cursos</h2>\n<p class=\"aviso\">[2] Matrículas abertas</p>\n<p class=\"aviso\" id=\"destaque\">[3] Últimas vagas</p>\n<nav><a href=\"#curso\">[4] Ver cursos</a></nav>\n<a href=\"#inicio\">[5] Voltar ao início</a>\n\n/* Qual grupo recebe a cor? */\n#destaque { color: purple; }",
+    "options": [
+      "Apenas [2] e [3]",
+      "Apenas [1]",
+      "Todos os parágrafos",
+      "Apenas [3]"
+    ],
+    "answer": 3,
+    "explanation": "O # inicia um seletor de id. Só o parágrafo [3] tem id=\"destaque\". A classe aviso não muda essa correspondência.",
+    "seconds": 90,
+    "reflection_prompt": "",
+    "source": "Projetos HTML/CSS e Introdução ao HTML • práticas da turma",
+    "position": 28,
+    "stage_markup": "<h2 id=\"titulo\">[1] Cursos</h2>\n<p class=\"aviso\">[2] Matrículas abertas</p>\n<p class=\"aviso\" id=\"destaque\">[3] Últimas vagas</p>\n<nav><a href=\"#curso\">[4] Ver cursos</a></nav>\n<a href=\"#inicio\">[5] Voltar ao início</a>",
+    "visual_instruction": "Use os números da página para identificar os elementos selecionados. A prévia está sem a regra de cor para você fazer a previsão."
+  },
+  {
+    "id": 553,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "selectors",
+    "kind": "Caça aos seletores 🎯",
+    "title": "Quem essa regra alcança? nav a",
+    "concept": "Seletores CSS",
+    "code": "<h2 id=\"titulo\">[1] Cursos</h2>\n<p class=\"aviso\">[2] Matrículas abertas</p>\n<p class=\"aviso\" id=\"destaque\">[3] Últimas vagas</p>\n<nav><a href=\"#curso\">[4] Ver cursos</a></nav>\n<a href=\"#inicio\">[5] Voltar ao início</a>\n\n/* Qual grupo recebe a cor? */\nnav a { color: purple; }",
+    "options": [
+      "Apenas [4]",
+      "Apenas [5]",
+      "Os links [4] e [5]",
+      "Apenas o elemento nav"
+    ],
+    "answer": 0,
+    "explanation": "O espaço indica descendência: nav a seleciona links dentro de nav. O link [5] está fora do nav, então não corresponde.",
+    "seconds": 90,
+    "reflection_prompt": "",
+    "source": "Projetos HTML/CSS e Introdução ao HTML • práticas da turma",
+    "position": 29,
+    "stage_markup": "<h2 id=\"titulo\">[1] Cursos</h2>\n<p class=\"aviso\">[2] Matrículas abertas</p>\n<p class=\"aviso\" id=\"destaque\">[3] Últimas vagas</p>\n<nav><a href=\"#curso\">[4] Ver cursos</a></nav>\n<a href=\"#inicio\">[5] Voltar ao início</a>",
+    "visual_instruction": "Use os números da página para identificar os elementos selecionados. A prévia está sem a regra de cor para você fazer a previsão."
+  },
+  {
+    "id": 554,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "selectors",
+    "kind": "Caça aos seletores 🎯",
+    "title": "Quem essa regra alcança? h2",
+    "concept": "Seletores CSS",
+    "code": "<h2 id=\"titulo\">[1] Cursos</h2>\n<p class=\"aviso\">[2] Matrículas abertas</p>\n<p class=\"aviso\" id=\"destaque\">[3] Últimas vagas</p>\n<nav><a href=\"#curso\">[4] Ver cursos</a></nav>\n<a href=\"#inicio\">[5] Voltar ao início</a>\n\n/* Qual grupo recebe a cor? */\nh2 { color: purple; }",
+    "options": [
+      "Todos os elementos com id",
+      "Apenas [2]",
+      "Apenas [1]",
+      "Apenas os links"
+    ],
+    "answer": 2,
+    "explanation": "O seletor h2 procura pelo nome da tag. Só o elemento [1] é um h2.",
+    "seconds": 90,
+    "reflection_prompt": "",
+    "source": "Projetos HTML/CSS e Introdução ao HTML • práticas da turma",
+    "position": 30,
+    "stage_markup": "<h2 id=\"titulo\">[1] Cursos</h2>\n<p class=\"aviso\">[2] Matrículas abertas</p>\n<p class=\"aviso\" id=\"destaque\">[3] Últimas vagas</p>\n<nav><a href=\"#curso\">[4] Ver cursos</a></nav>\n<a href=\"#inicio\">[5] Voltar ao início</a>",
+    "visual_instruction": "Use os números da página para identificar os elementos selecionados. A prévia está sem a regra de cor para você fazer a previsão."
+  },
+  {
+    "id": 561,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "structure",
+    "kind": "Monte a página 🧩",
+    "title": "O menu precisa de uma casa",
+    "concept": "Navegação semântica",
+    "code": "<_____>\n    <a href=\"#inicio\">Início</a>\n    <a href=\"#contato\">Contato</a>\n</_____>",
+    "options": [
+      "<article>",
+      "<footer>",
+      "<nav>",
+      "<strong>"
+    ],
+    "answer": 2,
+    "explanation": "nav é apropriado para uma seção de navegação. Ele comunica a função desses links; o alinhamento visual fica por conta do CSS.",
+    "seconds": 90,
+    "reflection_prompt": "Por que essa tag combina com a função dos links?",
+    "source": "Projetos HTML/CSS e Introdução ao HTML • práticas da turma",
+    "position": 31,
+    "visual_instruction": "Um conjunto de links principais ajuda o visitante a se localizar. Qual tag representa essa função?",
+    "repair_variants": [
+      {
+        "code": "<article>\n    <a href=\"#inicio\">Início</a>\n    <a href=\"#contato\">Contato</a>\n</article>",
+        "output": "O navegador pode exibir o conteúdo, mas a tag não expressa a função pedida.",
+        "passed": false
+      },
+      {
+        "code": "<footer>\n    <a href=\"#inicio\">Início</a>\n    <a href=\"#contato\">Contato</a>\n</footer>",
+        "output": "O navegador pode exibir o conteúdo, mas a tag não expressa a função pedida.",
+        "passed": false
+      },
+      {
+        "code": "<nav>\n    <a href=\"#inicio\">Início</a>\n    <a href=\"#contato\">Contato</a>\n</nav>",
+        "output": "A tag expressa a função pedida no desafio.",
+        "passed": true
+      },
+      {
+        "code": "<strong>\n    <a href=\"#inicio\">Início</a>\n    <a href=\"#contato\">Contato</a>\n</strong>",
+        "output": "O navegador pode exibir o conteúdo, mas a tag não expressa a função pedida.",
+        "passed": false
+      }
+    ],
+    "repair_expected": "A tag expressa a função pedida no desafio."
+  },
+  {
+    "id": 562,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "structure",
+    "kind": "Monte a página 🧩",
+    "title": "Qual tag reúne o conteúdo principal?",
+    "concept": "Conteúdo principal",
+    "code": "<header>Nome do site</header>\n<_____>\n    <h1>Sobre o curso</h1>\n    <p>Conheça nossa proposta.</p>\n</_____>\n<footer>Informações finais</footer>",
+    "options": [
+      "<main>",
+      "<head>",
+      "<title>",
+      "<nav>"
+    ],
+    "answer": 0,
+    "explanation": "main reúne o conteúdo principal da página. head guarda metadados; não é a região para o conteúdo visível do curso.",
+    "seconds": 90,
+    "reflection_prompt": "",
+    "source": "Projetos HTML/CSS e Introdução ao HTML • práticas da turma",
+    "position": 32,
+    "visual_instruction": "O cabeçalho e o rodapé já existem. Falta identificar a região com o conteúdo principal.",
+    "repair_variants": [
+      {
+        "code": "<header>Nome do site</header>\n<main>\n    <h1>Sobre o curso</h1>\n    <p>Conheça nossa proposta.</p>\n</main>\n<footer>Informações finais</footer>",
+        "output": "A tag expressa a função pedida no desafio.",
+        "passed": true
+      },
+      {
+        "code": "<header>Nome do site</header>\n<head>\n    <h1>Sobre o curso</h1>\n    <p>Conheça nossa proposta.</p>\n</head>\n<footer>Informações finais</footer>",
+        "output": "O navegador pode exibir o conteúdo, mas a tag não expressa a função pedida.",
+        "passed": false
+      },
+      {
+        "code": "<header>Nome do site</header>\n<title>\n    <h1>Sobre o curso</h1>\n    <p>Conheça nossa proposta.</p>\n</title>\n<footer>Informações finais</footer>",
+        "output": "O navegador pode exibir o conteúdo, mas a tag não expressa a função pedida.",
+        "passed": false
+      },
+      {
+        "code": "<header>Nome do site</header>\n<nav>\n    <h1>Sobre o curso</h1>\n    <p>Conheça nossa proposta.</p>\n</nav>\n<footer>Informações finais</footer>",
+        "output": "O navegador pode exibir o conteúdo, mas a tag não expressa a função pedida.",
+        "passed": false
+      }
+    ],
+    "repair_expected": "A tag expressa a função pedida no desafio."
+  },
+  {
+    "id": 563,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "structure",
+    "kind": "Monte a página 🧩",
+    "title": "Etapas que precisam seguir uma ordem",
+    "concept": "Listas ordenadas",
+    "code": "<_____>\n    <li>Crie o arquivo HTML.</li>\n    <li>Adicione o CSS.</li>\n    <li>Teste no navegador.</li>\n</_____>",
+    "options": [
+      "<ul>",
+      "<p>",
+      "<section>",
+      "<ol>"
+    ],
+    "answer": 3,
+    "explanation": "ol representa uma lista em que a ordem dos itens importa. li representa cada etapa dentro dela.",
+    "seconds": 90,
+    "reflection_prompt": "",
+    "source": "Projetos HTML/CSS e Introdução ao HTML • práticas da turma",
+    "position": 33,
+    "visual_instruction": "A sequência de preparação precisa ficar clara. Escolha o contêiner adequado para os três itens.",
+    "repair_variants": [
+      {
+        "code": "<ul>\n    <li>Crie o arquivo HTML.</li>\n    <li>Adicione o CSS.</li>\n    <li>Teste no navegador.</li>\n</ul>",
+        "output": "O navegador pode exibir o conteúdo, mas a tag não expressa a função pedida.",
+        "passed": false
+      },
+      {
+        "code": "<p>\n    <li>Crie o arquivo HTML.</li>\n    <li>Adicione o CSS.</li>\n    <li>Teste no navegador.</li>\n</p>",
+        "output": "O navegador pode exibir o conteúdo, mas a tag não expressa a função pedida.",
+        "passed": false
+      },
+      {
+        "code": "<section>\n    <li>Crie o arquivo HTML.</li>\n    <li>Adicione o CSS.</li>\n    <li>Teste no navegador.</li>\n</section>",
+        "output": "O navegador pode exibir o conteúdo, mas a tag não expressa a função pedida.",
+        "passed": false
+      },
+      {
+        "code": "<ol>\n    <li>Crie o arquivo HTML.</li>\n    <li>Adicione o CSS.</li>\n    <li>Teste no navegador.</li>\n</ol>",
+        "output": "A tag expressa a função pedida no desafio.",
+        "passed": true
+      }
+    ],
+    "repair_expected": "A tag expressa a função pedida no desafio."
+  },
+  {
+    "id": 564,
+    "subject": "html-css",
+    "curriculum": "web-v1",
+    "activity": "structure",
+    "kind": "Monte a página 🧩",
+    "title": "Uma notícia que faz sentido sozinha",
+    "concept": "Conteúdo independente",
+    "code": "<main>\n    <_____>\n        <h2>Inscrições abertas</h2>\n        <p>O curso começa na próxima semana.</p>\n    </_____>\n</main>",
+    "options": [
+      "<span>",
+      "<article>",
+      "<label>",
+      "<head>"
+    ],
+    "answer": 1,
+    "explanation": "article é adequado para uma notícia que pode ser compreendida como conteúdo independente. O main continua reunindo o conteúdo principal da página.",
+    "seconds": 90,
+    "reflection_prompt": "",
+    "source": "Projetos HTML/CSS e Introdução ao HTML • práticas da turma",
+    "position": 34,
+    "visual_instruction": "Essa notícia poderia ser compartilhada e compreendida separadamente. Qual tag expressa isso?",
+    "repair_variants": [
+      {
+        "code": "<main>\n    <span>\n        <h2>Inscrições abertas</h2>\n        <p>O curso começa na próxima semana.</p>\n    </span>\n</main>",
+        "output": "O navegador pode exibir o conteúdo, mas a tag não expressa a função pedida.",
+        "passed": false
+      },
+      {
+        "code": "<main>\n    <article>\n        <h2>Inscrições abertas</h2>\n        <p>O curso começa na próxima semana.</p>\n    </article>\n</main>",
+        "output": "A tag expressa a função pedida no desafio.",
+        "passed": true
+      },
+      {
+        "code": "<main>\n    <label>\n        <h2>Inscrições abertas</h2>\n        <p>O curso começa na próxima semana.</p>\n    </label>\n</main>",
+        "output": "O navegador pode exibir o conteúdo, mas a tag não expressa a função pedida.",
+        "passed": false
+      },
+      {
+        "code": "<main>\n    <head>\n        <h2>Inscrições abertas</h2>\n        <p>O curso começa na próxima semana.</p>\n    </head>\n</main>",
+        "output": "O navegador pode exibir o conteúdo, mas a tag não expressa a função pedida.",
+        "passed": false
+      }
+    ],
+    "repair_expected": "A tag expressa a função pedida no desafio."
   }
 ]

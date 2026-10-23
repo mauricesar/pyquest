@@ -73,3 +73,9 @@ O modo individual serve para prática: seus textos ficam no navegador e no CSV i
 Base: chats de Introdução ao HTML e Projeto HTML CSS Educacional enviados pelo professor. As questões cobrem documento HTML, hierarquia, strong, listas, fragmentos de links, src/alt, article/main, label/for/id, folha externa, classes e seletores, padding/margin, max-width, Flexbox, hover e transition. Não exigem JavaScript, frameworks nem funcionamento de cadastro no servidor.
 
 Quiz: IDs 501–515; vocabulário: 521–524; oficina: 531–534. A separação usa subject e curriculum, preservando os IDs e os códigos de Python.
+
+## Jogos adicionais de HTML/CSS
+
+- Duelo de estilos (541–544): fundo, arredondamento, padding, flex, gap e tipografia; cada alternativa foi comparada ao alvo pelos estilos calculados no navegador.
+- Caça aos seletores (551–554): classe, id, descendência e tag; elementos numerados e regras pequenas, sem JavaScript para o aluno.
+- Monte a página (561–564): nav, main, ol e article. O navegador pode renderizar escolhas semanticamente inadequadas; a correção explica a função da tag, sem presumir que aparência igual significa HTML correto.

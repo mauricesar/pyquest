@@ -79,3 +79,11 @@ Atualização do banco: aplicar `02-questions.sql` e depois `05-subjects.sql`, c
 ## Encerrar e arquivar salas
 
 Aplicar `supabase/06-room-management.sql` após as migrações anteriores. No painel, **Encerrar partida** leva os alunos ao resultado e bloqueia novos envios, preservando respostas e pontos. A ação também está disponível durante a sala. **Arquivar** retira uma sala encerrada da lista principal. As salas continuam acessíveis em **Partidas arquivadas**, com resultados e opção de restaurar no painel. Restaurar não reabre a rodada encerrada. Apenas o professor proprietário pode executar essas ações.
+
+## Novos jogos de HTML/CSS
+
+A trilha tem **35 desafios**: os 23 anteriores e mais 12 em **Duelo de estilos**, **Caça aos seletores** e **Monte a página** (4 em cada). Os jogos estão na página inicial e no seletor de atividades do professor. A aventura mista pode usar os 35. Python continua com 23 desafios. Depois da carga atualizada de `02-questions.sql`, aplicar `07-web-games.sql`.
+
+Os alvos visuais e as páginas numeradas são renderizados em prévias isoladas. Após a correção, o aluno compara as alternativas sem alterar seus pontos. As primeiras rodadas de cada jogo podem solicitar explicações. Os links de fragmento da prévia usam uma base própria para permanecer dentro do exemplo.
+
+A interface diferencia falhas reais de atualizações normais da rodada. Respostas duplicadas, cronômetro encerrado e mudanças de fase pedem atualização da sala em vez de apresentar falha técnica. Mensagens de login, sessão e conexão orientam a próxima ação em português. Leituras vazias são tratadas como dados ausentes; confirmações vazias de ações continuam válidas.
