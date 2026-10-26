@@ -87,3 +87,9 @@ A trilha tem **35 desafios**: os 23 anteriores e mais 12 em **Duelo de estilos**
 Os alvos visuais e as páginas numeradas são renderizados em prévias isoladas. Após a correção, o aluno compara as alternativas sem alterar seus pontos. As primeiras rodadas de cada jogo podem solicitar explicações. Os links de fragmento da prévia usam uma base própria para permanecer dentro do exemplo.
 
 A interface diferencia falhas reais de atualizações normais da rodada. Respostas duplicadas, cronômetro encerrado e mudanças de fase pedem atualização da sala em vez de apresentar falha técnica. Mensagens de login, sessão e conexão orientam a próxima ação em português. Leituras vazias são tratadas como dados ausentes; confirmações vazias de ações continuam válidas.
+
+## Só HTML e Só CSS
+
+Além de Python e HTML/CSS juntos, o seletor de conteúdo oferece **Só HTML** (22 desafios inéditos) e **Só CSS** (26 desafios inéditos). São bancos independentes, sem reutilizar os enunciados ou códigos anteriores. Só HTML oferece quiz, vocabulário, correção, explicações e montagem de estrutura; Só CSS oferece quiz, vocabulário, correção, explicações, comparação visual e seletores. Nos exemplos de CSS, o HTML é um contexto fixo e não é objeto da resposta.
+
+Para atualizar o banco: carregar `02-questions.sql` e aplicar `08-individual-subjects.sql`. A exportação identifica a modalidade correta. Links com `?conteudo=html` ou `?conteudo=css` abrem diretamente a modalidade, inclusive para prática individual. A sala sempre determina o conteúdo dos participantes, mesmo que tenham escolhido outra modalidade antes de entrar.

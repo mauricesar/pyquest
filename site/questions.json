@@ -1742,5 +1742,1553 @@
       }
     ],
     "repair_expected": "A tag expressa a função pedida no desafio."
+  },
+  {
+    "subject": "html",
+    "id": 701,
+    "curriculum": "html-v1",
+    "activity": "quiz",
+    "title": "Como declarar o idioma da página?",
+    "concept": "Idioma do documento",
+    "kind": "Desafio de HTML",
+    "code": "<html lang=\"pt-BR\">\n    <!-- Portal de uma biblioteca brasileira -->\n</html>",
+    "options": [
+      "O conteúdo será traduzido automaticamente.",
+      "O idioma principal declarado é português brasileiro.",
+      "A tag limita o acesso a visitantes do Brasil.",
+      "lang determina a fonte do texto."
+    ],
+    "answer": 1,
+    "explanation": "lang declara o idioma do conteúdo e ajuda tecnologias assistivas a interpretá-lo. Ele não traduz a página.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "O que você observou no HTML para chegar a essa resposta?",
+    "position": 0
+  },
+  {
+    "subject": "html",
+    "id": 702,
+    "curriculum": "html-v1",
+    "activity": "quiz",
+    "title": "Acentos no mural da escola",
+    "concept": "Codificação de caracteres",
+    "kind": "Desafio de HTML",
+    "code": "<head>\n    <meta charset=\"UTF-8\">\n    <title>Mural: inscrições e notícias</title>\n</head>",
+    "options": [
+      "A declaração informa a codificação de caracteres do documento.",
+      "UTF-8 define o idioma como português.",
+      "charset muda o título para letras maiúsculas.",
+      "meta mostra um aviso no conteúdo da página."
+    ],
+    "answer": 0,
+    "explanation": "charset=\"UTF-8\" informa como os caracteres devem ser interpretados. O arquivo também precisa ser salvo com a codificação adequada.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 1
+  },
+  {
+    "subject": "html",
+    "id": 703,
+    "curriculum": "html-v1",
+    "activity": "quiz",
+    "title": "Qual é o fechamento bem organizado?",
+    "concept": "Aninhamento de elementos",
+    "kind": "Desafio de HTML",
+    "code": "<!-- Destaque o aviso dentro do parágrafo. -->\n<p>Chegue <strong>com antecedência ...",
+    "options": [
+      "</p></strong>",
+      "</strong><p>",
+      "</strong></p>",
+      "</strong></strong>"
+    ],
+    "answer": 2,
+    "explanation": "O elemento aberto por último, strong, fecha primeiro. Assim, o destaque fica inteiramente dentro do parágrafo.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "O que você observou no HTML para chegar a essa resposta?",
+    "position": 2
+  },
+  {
+    "subject": "html",
+    "id": 704,
+    "curriculum": "html-v1",
+    "activity": "quiz",
+    "title": "Muitas linhas para contar sua experiência",
+    "concept": "Campos de formulário",
+    "kind": "Desafio de HTML",
+    "code": "<form>\n    <label for=\"relato\">Conte como foi a visita</label>\n    <!-- Qual elemento recebe um texto de várias linhas? -->\n</form>",
+    "options": [
+      "<input type=\"password\" id=\"relato\">",
+      "<select id=\"relato\"></select>",
+      "<br id=\"relato\">",
+      "<textarea id=\"relato\" name=\"relato\" rows=\"4\"></textarea>"
+    ],
+    "answer": 3,
+    "explanation": "textarea recebe texto de várias linhas. rows sugere a quantidade inicial de linhas visíveis; não limita o número de caracteres.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "O que você observou no HTML para chegar a essa resposta?",
+    "position": 3
+  },
+  {
+    "subject": "html",
+    "id": 705,
+    "curriculum": "html-v1",
+    "activity": "quiz",
+    "title": "Escolher um turno entre opções prontas",
+    "concept": "Lista de opções",
+    "kind": "Desafio de HTML",
+    "code": "<select name=\"turno\">\n    <option value=\"manha\">Manhã</option>\n    <option value=\"noite\">Noite</option>\n</select>",
+    "options": [
+      "Manhã e Noite são duas opções do mesmo select.",
+      "Cada option cria um formulário separado.",
+      "value define a cor de cada opção.",
+      "select obriga o usuário a marcar as duas opções."
+    ],
+    "answer": 0,
+    "explanation": "select reúne as opções. O visitante vê o texto da option, enquanto value fornece seu valor para o formulário.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 4
+  },
+  {
+    "subject": "html",
+    "id": 706,
+    "curriculum": "html-v1",
+    "activity": "quiz",
+    "title": "O nome do dado enviado",
+    "concept": "Atributo name",
+    "kind": "Desafio de HTML",
+    "code": "<input id=\"telefone-contato\" name=\"telefone\" type=\"text\">",
+    "options": [
+      "O nome do dado é telefone-contato por causa do id.",
+      "O nome do dado é telefone, definido em name.",
+      "type=\"text\" envia um e-mail automaticamente.",
+      "O atributo name substitui a necessidade de um servidor."
+    ],
+    "answer": 1,
+    "explanation": "name identifica o dado quando o formulário é enviado. id identifica o elemento no documento. Essa estrutura sozinha não armazena os dados.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "O que você observou no HTML para chegar a essa resposta?",
+    "position": 5
+  },
+  {
+    "subject": "html",
+    "id": 707,
+    "curriculum": "html-v1",
+    "activity": "quiz",
+    "title": "Um botão para limpar o formulário",
+    "concept": "Tipos de botão",
+    "kind": "Desafio de HTML",
+    "code": "<form>\n    <input name=\"busca\" value=\"Python\">\n    <button type=\"reset\">Limpar</button>\n</form>",
+    "options": [
+      "Apaga o arquivo HTML.",
+      "Envia a busca a um banco de dados.",
+      "Volta os campos aos valores iniciais do formulário.",
+      "Troca todos os valores por texto vazio."
+    ],
+    "answer": 2,
+    "explanation": "reset restaura os valores iniciais. Como o input tem value=\"Python\", esse é o valor inicial que volta ao campo.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 6
+  },
+  {
+    "subject": "html",
+    "id": 708,
+    "curriculum": "html-v1",
+    "activity": "quiz",
+    "title": "Uma informação curta no fim do comunicado",
+    "concept": "Texto complementar",
+    "kind": "Desafio de HTML",
+    "code": "<p>Visita técnica confirmada.</p>\n<small>Horário sujeito à confirmação do transporte.</small>",
+    "options": [
+      "small cria uma nova janela.",
+      "small torna a informação invisível.",
+      "small indica o título principal.",
+      "small é apropriado para essa observação complementar."
+    ],
+    "answer": 3,
+    "explanation": "small representa comentários laterais e textos pequenos, como ressalvas e observações. Ele não torna o conteúdo invisível.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 7
+  },
+  {
+    "subject": "html",
+    "id": 709,
+    "curriculum": "html-v1",
+    "activity": "quiz",
+    "title": "Uma pergunta que pode ser expandida",
+    "concept": "Conteúdo expansível",
+    "kind": "Desafio de HTML",
+    "code": "<details>\n    <summary>Preciso levar documento?</summary>\n    <p>Sim, leve um documento com foto.</p>\n</details>",
+    "options": [
+      "summary é o rótulo que permite abrir e fechar o conteúdo de details.",
+      "details exige JavaScript para funcionar.",
+      "summary envia a pergunta ao professor.",
+      "p fica fora de details por padrão."
+    ],
+    "answer": 0,
+    "explanation": "details e summary oferecem esse comportamento nativo no navegador, sem precisar escrever JavaScript para a interação básica.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "O que você observou no HTML para chegar a essa resposta?",
+    "position": 8
+  },
+  {
+    "subject": "html",
+    "id": 710,
+    "curriculum": "html-v1",
+    "activity": "quiz",
+    "title": "Mostrar um exemplo com quebras preservadas",
+    "concept": "Exibição de código",
+    "kind": "Desafio de HTML",
+    "code": "<pre><code>nome = \"Lia\"\nprint(nome)</code></pre>",
+    "options": [
+      "O navegador executa esse Python.",
+      "pre preserva espaços e quebras; code indica um trecho de código.",
+      "code converte o texto para HTML.",
+      "pre adiciona uma lista numerada."
+    ],
+    "answer": 1,
+    "explanation": "O exemplo é exibido como texto. pre preserva sua formatação e code identifica semanticamente o código; nenhum deles executa Python.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 9
+  },
+  {
+    "subject": "css",
+    "id": 801,
+    "curriculum": "css-v1",
+    "activity": "quiz",
+    "title": "Uma fonte com alternativa",
+    "concept": "Família tipográfica",
+    "kind": "Desafio de CSS",
+    "code": "body { font-family: Arial, sans-serif; }",
+    "options": [
+      "Usa as duas fontes ao mesmo tempo em cada letra.",
+      "sans-serif é a cor do fundo.",
+      "Arial é preferida; sans-serif é uma família genérica de alternativa.",
+      "Arial só funciona em títulos."
+    ],
+    "answer": 2,
+    "explanation": "A lista define uma ordem de preferência. O navegador usa uma fonte disponível; sans-serif oferece uma alternativa genérica sem serifa.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 0
+  },
+  {
+    "subject": "css",
+    "id": 802,
+    "curriculum": "css-v1",
+    "activity": "quiz",
+    "title": "Mais espaço entre as linhas",
+    "concept": "Altura da linha",
+    "kind": "Desafio de CSS",
+    "code": "p { font-size: 16px; line-height: 1.5; }",
+    "options": [
+      "line-height cria margem de 1,5px.",
+      "A altura da linha corresponde a 1,5 vezes o tamanho da fonte, aqui 24px.",
+      "O texto gira 1,5 grau.",
+      "Cada linha fica limitada a 16 caracteres."
+    ],
+    "answer": 1,
+    "explanation": "O valor sem unidade 1.5 multiplica o tamanho da fonte. Com 16px, a altura de linha calculada é 24px.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "Qual parte da regra CSS sustenta a sua escolha?",
+    "position": 1
+  },
+  {
+    "subject": "css",
+    "id": 803,
+    "curriculum": "css-v1",
+    "activity": "quiz",
+    "title": "Qual parte da borda mede 3px?",
+    "concept": "Bordas",
+    "kind": "Desafio de CSS",
+    "code": "figure { border: 3px dashed teal; }",
+    "options": [
+      "A borda tem 3px de espessura, estilo tracejado e cor teal.",
+      "A imagem mede 3px de largura.",
+      "A borda é contínua porque usa dashed.",
+      "teal é o tamanho do arredondamento."
+    ],
+    "answer": 0,
+    "explanation": "A forma abreviada reúne espessura, estilo e cor. dashed produz uma borda tracejada.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 2
+  },
+  {
+    "subject": "css",
+    "id": 804,
+    "curriculum": "css-v1",
+    "activity": "quiz",
+    "title": "Retirar o sublinhado do menu",
+    "concept": "Decoração do texto",
+    "kind": "Desafio de CSS",
+    "code": "nav a { text-decoration: none; }",
+    "options": [
+      "Apaga o texto dos links.",
+      "Bloqueia a navegação.",
+      "Remove todas as cores da página.",
+      "Retira a decoração de texto aplicada por essa regra, como o sublinhado."
+    ],
+    "answer": 3,
+    "explanation": "text-decoration altera a decoração visual. O link continua sendo um link; mudar sua aparência não troca sua função no HTML.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 3
+  },
+  {
+    "subject": "css",
+    "id": 805,
+    "curriculum": "css-v1",
+    "activity": "quiz",
+    "title": "Onde ficam os 6px e os 18px?",
+    "concept": "Espaçamento abreviado",
+    "kind": "Desafio de CSS",
+    "code": ".etiqueta { padding: 6px 18px; }",
+    "options": [
+      "6px à esquerda e 18px à direita.",
+      "6px em cima e embaixo; 18px à esquerda e à direita.",
+      "18px apenas no topo.",
+      "6px de margem externa e 18px de borda."
+    ],
+    "answer": 1,
+    "explanation": "Com dois valores, padding usa o primeiro no eixo vertical e o segundo no eixo horizontal.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "Qual parte da regra CSS sustenta a sua escolha?",
+    "position": 4
+  },
+  {
+    "subject": "css",
+    "id": 806,
+    "curriculum": "css-v1",
+    "activity": "quiz",
+    "title": "Uma regra substitui a anterior",
+    "concept": "Ordem das regras",
+    "kind": "Desafio de CSS",
+    "code": ".legenda { color: navy; }\n.legenda { color: maroon; }",
+    "options": [
+      "A cor alterna sozinha.",
+      "O navegador soma as cores.",
+      "maroon vence entre essas regras de mesma origem, importância e especificidade.",
+      "A primeira regra sempre vence."
+    ],
+    "answer": 2,
+    "explanation": "Nestas condições iguais, a declaração posterior de color vence. A ordem faz diferença quando os demais critérios da cascata empatam.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "Qual parte da regra CSS sustenta a sua escolha?",
+    "position": 5
+  },
+  {
+    "subject": "css",
+    "id": 807,
+    "curriculum": "css-v1",
+    "activity": "quiz",
+    "title": "Alinhar no eixo principal",
+    "concept": "Flexbox: alinhamento",
+    "kind": "Desafio de CSS",
+    "code": ".barra {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n}",
+    "options": [
+      "Com espaço livre, o primeiro e o último item ficam nas extremidades e o espaço é distribuído entre eles.",
+      "Os itens mudam para uma coluna.",
+      "O texto de cada item fica justificado como um parágrafo.",
+      "Todos os itens se sobrepõem."
+    ],
+    "answer": 0,
+    "explanation": "justify-content distribui os itens no eixo principal. Aqui, row define esse eixo horizontalmente na escrita usual da esquerda para a direita.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "Qual parte da regra CSS sustenta a sua escolha?",
+    "position": 6
+  },
+  {
+    "subject": "css",
+    "id": 808,
+    "curriculum": "css-v1",
+    "activity": "quiz",
+    "title": "Movimento horizontal",
+    "concept": "Transformações",
+    "kind": "Desafio de CSS",
+    "code": ".selo { transform: translateX(12px); }",
+    "options": [
+      "O selo sobe 12px.",
+      "A fonte aumenta para 12px.",
+      "A margem externa vira 12px.",
+      "Na referência usual de eixos, o selo se desloca visualmente 12px para a direita."
+    ],
+    "answer": 3,
+    "explanation": "translateX atua no eixo horizontal. A transformação visual não é uma alteração da propriedade margin.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 7
+  },
+  {
+    "subject": "css",
+    "id": 809,
+    "curriculum": "css-v1",
+    "activity": "quiz",
+    "title": "Uma transição mais demorada",
+    "concept": "Duração da transição",
+    "kind": "Desafio de CSS",
+    "code": ".botao { transition: background-color 0.8s linear; }",
+    "options": [
+      "A transição tem duração de 8 segundos.",
+      "A transição de background-color dura 0,8 segundo com progressão linear.",
+      "O fundo muda mesmo sem uma mudança de estado ou valor.",
+      "linear é a cor final."
+    ],
+    "answer": 1,
+    "explanation": "A duração é 0,8 segundo, ou 800ms. A transição suaviza uma mudança de valor; a regra, sozinha, não define uma nova cor de destino.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "Qual parte da regra CSS sustenta a sua escolha?",
+    "position": 8
+  },
+  {
+    "subject": "css",
+    "id": 810,
+    "curriculum": "css-v1",
+    "activity": "quiz",
+    "title": "Uma sombra ao redor da caixa",
+    "concept": "Sombra da caixa",
+    "kind": "Desafio de CSS",
+    "code": ".painel { box-shadow: 2px 4px 8px gray; }",
+    "options": [
+      "A caixa ganha uma borda sólida de 8px.",
+      "gray define o tamanho da fonte.",
+      "A sombra tem deslocamentos de 2px e 4px e desfoque de 8px.",
+      "A sombra altera o conteúdo do texto."
+    ],
+    "answer": 2,
+    "explanation": "Os valores indicam deslocamento horizontal, vertical, raio de desfoque e cor da sombra nesse exemplo.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 9
+  },
+  {
+    "subject": "html",
+    "id": 721,
+    "curriculum": "html-v1",
+    "activity": "classify",
+    "title": "O início de um parágrafo",
+    "concept": "Vocabulário de HTML",
+    "kind": "Quem sou eu? 🔎",
+    "code": "<p>Bem-vindos à mostra cultural.</p>",
+    "options": [
+      "Tag de abertura",
+      "Atributo",
+      "Texto do conteúdo",
+      "Tag de fechamento"
+    ],
+    "answer": 0,
+    "explanation": "<p> abre o elemento de parágrafo.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 10,
+    "focus": {
+      "start": 0,
+      "end": 3
+    }
+  },
+  {
+    "subject": "html",
+    "id": 722,
+    "curriculum": "html-v1",
+    "activity": "classify",
+    "title": "O encerramento do destaque",
+    "concept": "Vocabulário de HTML",
+    "kind": "Quem sou eu? 🔎",
+    "code": "<em>Visita guiada</em>",
+    "options": [
+      "Atributo",
+      "Tag de abertura",
+      "Tag de fechamento",
+      "Nome de arquivo"
+    ],
+    "answer": 2,
+    "explanation": "A barra indica a tag de fechamento do elemento em.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 11,
+    "focus": {
+      "start": 17,
+      "end": 22
+    }
+  },
+  {
+    "subject": "html",
+    "id": 723,
+    "curriculum": "html-v1",
+    "activity": "classify",
+    "title": "O texto que será lido",
+    "concept": "Vocabulário de HTML",
+    "kind": "Quem sou eu? 🔎",
+    "code": "<h3>Programação da tarde</h3>",
+    "options": [
+      "Tag de fechamento",
+      "Conteúdo textual",
+      "Atributo",
+      "Nome de elemento"
+    ],
+    "answer": 1,
+    "explanation": "Esse trecho é o conteúdo textual entre as tags de h3.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 12,
+    "focus": {
+      "start": 4,
+      "end": 24
+    }
+  },
+  {
+    "subject": "html",
+    "id": 724,
+    "curriculum": "html-v1",
+    "activity": "classify",
+    "title": "Um valor do atributo",
+    "concept": "Vocabulário de HTML",
+    "kind": "Quem sou eu? 🔎",
+    "code": "<input type=\"number\" name=\"idade\">",
+    "options": [
+      "Tag HTML",
+      "Texto visível do botão",
+      "Nome de atributo",
+      "Valor do atributo type"
+    ],
+    "answer": 3,
+    "explanation": "number é o valor atribuído a type, definindo um campo numérico.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 13,
+    "focus": {
+      "start": 13,
+      "end": 19
+    }
+  },
+  {
+    "subject": "css",
+    "id": 821,
+    "curriculum": "css-v1",
+    "activity": "classify",
+    "title": "Quem define o estilo do texto?",
+    "concept": "Vocabulário de CSS",
+    "kind": "Quem sou eu? 🔎",
+    "code": ".resumo { font-style: italic; }",
+    "options": [
+      "Propriedade CSS",
+      "Valor CSS",
+      "Seletor de id",
+      "Atributo HTML"
+    ],
+    "answer": 0,
+    "explanation": "font-style é a propriedade. italic é o valor escolhido.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 10,
+    "focus": {
+      "start": 10,
+      "end": 20
+    }
+  },
+  {
+    "subject": "css",
+    "id": 822,
+    "curriculum": "css-v1",
+    "activity": "classify",
+    "title": "Reconheça a declaração completa",
+    "concept": "Vocabulário de CSS",
+    "kind": "Quem sou eu? 🔎",
+    "code": ".resumo { letter-spacing: 1px; }",
+    "options": [
+      "Comentário",
+      "Seletor",
+      "Declaração CSS",
+      "Tag HTML"
+    ],
+    "answer": 2,
+    "explanation": "Uma declaração relaciona propriedade e valor. Aqui, define o espaçamento entre letras.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 11,
+    "focus": {
+      "start": 10,
+      "end": 30
+    }
+  },
+  {
+    "subject": "css",
+    "id": 823,
+    "curriculum": "css-v1",
+    "activity": "classify",
+    "title": "Um comentário para quem lê o código",
+    "concept": "Vocabulário de CSS",
+    "kind": "Quem sou eu? 🔎",
+    "code": "/* Menu do rodapé */\nfooter a { color: teal; }",
+    "options": [
+      "Seletor",
+      "Comentário CSS",
+      "Valor numérico",
+      "Atributo"
+    ],
+    "answer": 1,
+    "explanation": "O trecho entre /* e */ é um comentário CSS e não aplica um estilo.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 12,
+    "focus": {
+      "start": 0,
+      "end": 20
+    }
+  },
+  {
+    "subject": "css",
+    "id": 824,
+    "curriculum": "css-v1",
+    "activity": "classify",
+    "title": "Uma unidade no tamanho da fonte",
+    "concept": "Vocabulário de CSS",
+    "kind": "Quem sou eu? 🔎",
+    "code": ".aviso { font-size: 18px; }",
+    "options": [
+      "Propriedade",
+      "Seletor",
+      "Nome de classe",
+      "Unidade de comprimento"
+    ],
+    "answer": 3,
+    "explanation": "px é uma unidade de comprimento em CSS. Ela acompanha o valor 18 neste exemplo.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 13,
+    "focus": {
+      "start": 22,
+      "end": 24
+    }
+  },
+  {
+    "subject": "html",
+    "id": 731,
+    "curriculum": "html-v1",
+    "activity": "repair",
+    "title": "A lista de equipamentos está sem itens bem marcados",
+    "concept": "Itens de lista",
+    "kind": "Conserte o HTML 🛠️",
+    "code": "<ul>\n    <p>Projetor</p>\n</ul>",
+    "options": [
+      "<h1>Projetor</h1>",
+      "<li>Projetor</li>",
+      "<ul>Projetor</ul>",
+      "<br>Projetor"
+    ],
+    "answer": 1,
+    "explanation": "ul reúne uma lista não ordenada; cada item deve ser marcado com li. O texto continua Projetor.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 14,
+    "repair_diagnosis": "A lista de equipamentos está sem itens bem marcados. Projetor deve aparecer como um item da lista, com seu marcador.",
+    "repair_expected": "Projetor deve aparecer como um item da lista, com seu marcador.",
+    "repair_variants": [
+      {
+        "code": "<ul>\n    <h1>Projetor</h1>\n</ul>",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false
+      },
+      {
+        "code": "<ul>\n    <li>Projetor</li>\n</ul>",
+        "output": "Projetor deve aparecer como um item da lista, com seu marcador.",
+        "passed": true
+      },
+      {
+        "code": "<ul>\n    <ul>Projetor</ul>\n</ul>",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false
+      },
+      {
+        "code": "<ul>\n    <br>Projetor\n</ul>",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false
+      }
+    ],
+    "focus": {
+      "start": 9,
+      "end": 24
+    }
+  },
+  {
+    "subject": "html",
+    "id": 732,
+    "curriculum": "html-v1",
+    "activity": "repair",
+    "title": "O campo de idade aceita texto livre",
+    "concept": "Tipo de input",
+    "kind": "Conserte o HTML 🛠️",
+    "code": "<label for=\"idade\">Idade</label>\n<input id=\"idade\" name=\"idade\" type=\"text\">",
+    "options": [
+      "type=\"number\"",
+      "type=\"idade\"",
+      "name=\"number\"",
+      "id=\"number\""
+    ],
+    "answer": 0,
+    "explanation": "type=\"number\" define um campo numérico. Isso não substitui validações adicionais de uma aplicação real.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 15,
+    "repair_diagnosis": "O campo de idade aceita texto livre. O campo deve permitir entrada numérica, em vez de texto livre.",
+    "repair_expected": "O campo deve permitir entrada numérica, em vez de texto livre.",
+    "repair_variants": [
+      {
+        "code": "<label for=\"idade\">Idade</label>\n<input id=\"idade\" name=\"idade\" type=\"number\">",
+        "output": "O campo deve permitir entrada numérica, em vez de texto livre.",
+        "passed": true
+      },
+      {
+        "code": "<label for=\"idade\">Idade</label>\n<input id=\"idade\" name=\"idade\" type=\"idade\">",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false
+      },
+      {
+        "code": "<label for=\"idade\">Idade</label>\n<input id=\"idade\" name=\"idade\" name=\"number\">",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false
+      },
+      {
+        "code": "<label for=\"idade\">Idade</label>\n<input id=\"idade\" name=\"idade\" id=\"number\">",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false
+      }
+    ],
+    "focus": {
+      "start": 64,
+      "end": 75
+    }
+  },
+  {
+    "subject": "html",
+    "id": 733,
+    "curriculum": "html-v1",
+    "activity": "repair",
+    "title": "O botão deveria enviar o formulário",
+    "concept": "Envio do formulário",
+    "kind": "Conserte o HTML 🛠️",
+    "code": "<form>\n    <input name=\"nome\">\n    <button type=\"reset\">Enviar inscrição</button>\n</form>",
+    "options": [
+      "type=\"text\"",
+      "type=\"clear\"",
+      "type=\"button\"",
+      "type=\"submit\""
+    ],
+    "answer": 3,
+    "explanation": "submit solicita o envio do formulário; reset restaura seus valores. A gravação dos dados depende do destino e do processamento da aplicação.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 16,
+    "repair_diagnosis": "O botão deveria enviar o formulário. O botão deve solicitar o envio do formulário, sem restaurar os valores dos campos.",
+    "repair_expected": "O botão deve solicitar o envio do formulário, sem restaurar os valores dos campos.",
+    "repair_variants": [
+      {
+        "code": "<form>\n    <input name=\"nome\">\n    <button type=\"text\">Enviar inscrição</button>\n</form>",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false
+      },
+      {
+        "code": "<form>\n    <input name=\"nome\">\n    <button type=\"clear\">Enviar inscrição</button>\n</form>",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false
+      },
+      {
+        "code": "<form>\n    <input name=\"nome\">\n    <button type=\"button\">Enviar inscrição</button>\n</form>",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false
+      },
+      {
+        "code": "<form>\n    <input name=\"nome\">\n    <button type=\"submit\">Enviar inscrição</button>\n</form>",
+        "output": "O botão deve solicitar o envio do formulário, sem restaurar os valores dos campos.",
+        "passed": true
+      }
+    ],
+    "focus": {
+      "start": 43,
+      "end": 55
+    }
+  },
+  {
+    "subject": "html",
+    "id": 734,
+    "curriculum": "html-v1",
+    "activity": "repair",
+    "title": "O destaque fechou com a tag errada",
+    "concept": "Fechamento de elementos",
+    "kind": "Conserte o HTML 🛠️",
+    "code": "<p>Retire o ingresso <em>na recepção</strong>.</p>",
+    "options": [
+      "<em>",
+      "</p>",
+      "</em>",
+      "</h2>"
+    ],
+    "answer": 2,
+    "explanation": "O par de abertura e fechamento deve corresponder: <em> e </em>. A correção mantém o destaque dentro do parágrafo.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 17,
+    "repair_diagnosis": "O destaque fechou com a tag errada. As tags de abertura e fechamento do destaque precisam corresponder.",
+    "repair_expected": "As tags de abertura e fechamento do destaque precisam corresponder.",
+    "repair_variants": [
+      {
+        "code": "<p>Retire o ingresso <em>na recepção<em>.</p>",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false
+      },
+      {
+        "code": "<p>Retire o ingresso <em>na recepção</p>.</p>",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false
+      },
+      {
+        "code": "<p>Retire o ingresso <em>na recepção</em>.</p>",
+        "output": "As tags de abertura e fechamento do destaque precisam corresponder.",
+        "passed": true
+      },
+      {
+        "code": "<p>Retire o ingresso <em>na recepção</h2>.</p>",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false
+      }
+    ],
+    "focus": {
+      "start": 36,
+      "end": 45
+    }
+  },
+  {
+    "subject": "css",
+    "id": 831,
+    "curriculum": "css-v1",
+    "activity": "repair",
+    "title": "A declaração de cor está com a sintaxe trocada",
+    "concept": "Sintaxe CSS",
+    "kind": "Conserte o CSS 🛠️",
+    "code": ".chamada { color = crimson; }",
+    "options": [
+      "color: crimson;",
+      "color; crimson:",
+      "color == crimson;",
+      "crimson: color;"
+    ],
+    "answer": 0,
+    "explanation": "CSS separa propriedade e valor com dois-pontos. O ponto e vírgula encerra a declaração.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 14,
+    "repair_diagnosis": "A declaração de cor está com a sintaxe trocada. O texto da chamada deve receber a cor crimson por meio de uma declaração CSS válida.",
+    "repair_expected": "O texto da chamada deve receber a cor crimson por meio de uma declaração CSS válida.",
+    "repair_variants": [
+      {
+        "code": ".chamada { color: crimson; }",
+        "output": "O texto da chamada deve receber a cor crimson por meio de uma declaração CSS válida.",
+        "passed": true,
+        "preview": "<p class=\"chamada\">Aviso da turma</p><style>.chamada { color: crimson; }</style>"
+      },
+      {
+        "code": ".chamada { color; crimson: }",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false,
+        "preview": "<p class=\"chamada\">Aviso da turma</p><style>.chamada { color; crimson: }</style>"
+      },
+      {
+        "code": ".chamada { color == crimson; }",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false,
+        "preview": "<p class=\"chamada\">Aviso da turma</p><style>.chamada { color == crimson; }</style>"
+      },
+      {
+        "code": ".chamada { crimson: color; }",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false,
+        "preview": "<p class=\"chamada\">Aviso da turma</p><style>.chamada { crimson: color; }</style>"
+      }
+    ],
+    "focus": {
+      "start": 11,
+      "end": 27
+    }
+  },
+  {
+    "subject": "css",
+    "id": 832,
+    "curriculum": "css-v1",
+    "activity": "repair",
+    "title": "O texto deveria ficar em negrito",
+    "concept": "Peso da fonte",
+    "kind": "Conserte o CSS 🛠️",
+    "code": ".titulo { font-style: bold; }",
+    "options": [
+      "font-size: bold;",
+      "font-weight: bold;",
+      "font-family: bold;",
+      "text-align: bold;"
+    ],
+    "answer": 1,
+    "explanation": "bold é um valor de font-weight. font-style é usado para estilos como normal e italic.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 15,
+    "repair_diagnosis": "O texto deveria ficar em negrito. O título deve ser exibido em negrito.",
+    "repair_expected": "O título deve ser exibido em negrito.",
+    "repair_variants": [
+      {
+        "code": ".titulo { font-size: bold; }",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false,
+        "preview": "<h2 class=\"titulo\">Nossa mostra</h2><style>.titulo { font-size: bold; }</style>"
+      },
+      {
+        "code": ".titulo { font-weight: bold; }",
+        "output": "O título deve ser exibido em negrito.",
+        "passed": true,
+        "preview": "<h2 class=\"titulo\">Nossa mostra</h2><style>.titulo { font-weight: bold; }</style>"
+      },
+      {
+        "code": ".titulo { font-family: bold; }",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false,
+        "preview": "<h2 class=\"titulo\">Nossa mostra</h2><style>.titulo { font-family: bold; }</style>"
+      },
+      {
+        "code": ".titulo { text-align: bold; }",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false,
+        "preview": "<h2 class=\"titulo\">Nossa mostra</h2><style>.titulo { text-align: bold; }</style>"
+      }
+    ],
+    "focus": {
+      "start": 10,
+      "end": 27
+    }
+  },
+  {
+    "subject": "css",
+    "id": 833,
+    "curriculum": "css-v1",
+    "activity": "repair",
+    "title": "O arredondamento deveria medir 10px",
+    "concept": "Arredondamento",
+    "kind": "Conserte o CSS 🛠️",
+    "code": ".foto { border-radius: 10; }",
+    "options": [
+      "border: 10px;",
+      "margin: 10px;",
+      "border-radius: 10px;",
+      "border-radius: -10px;"
+    ],
+    "answer": 2,
+    "explanation": "O comprimento diferente de zero precisa de unidade. Um raio negativo não é válido.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 16,
+    "repair_diagnosis": "O arredondamento deveria medir 10px. Os cantos da foto devem ter arredondamento de 10 pixels.",
+    "repair_expected": "Os cantos da foto devem ter arredondamento de 10 pixels.",
+    "repair_variants": [
+      {
+        "code": ".foto { border: 10px; }",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false,
+        "preview": "<div class=\"foto\" style=\"width:100px;height:80px;background:lightgray\">Foto</div><style>.foto { border: 10px; }</style>"
+      },
+      {
+        "code": ".foto { margin: 10px; }",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false,
+        "preview": "<div class=\"foto\" style=\"width:100px;height:80px;background:lightgray\">Foto</div><style>.foto { margin: 10px; }</style>"
+      },
+      {
+        "code": ".foto { border-radius: 10px; }",
+        "output": "Os cantos da foto devem ter arredondamento de 10 pixels.",
+        "passed": true,
+        "preview": "<div class=\"foto\" style=\"width:100px;height:80px;background:lightgray\">Foto</div><style>.foto { border-radius: 10px; }</style>"
+      },
+      {
+        "code": ".foto { border-radius: -10px; }",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false,
+        "preview": "<div class=\"foto\" style=\"width:100px;height:80px;background:lightgray\">Foto</div><style>.foto { border-radius: -10px; }</style>"
+      }
+    ],
+    "focus": {
+      "start": 8,
+      "end": 26
+    }
+  },
+  {
+    "subject": "css",
+    "id": 834,
+    "curriculum": "css-v1",
+    "activity": "repair",
+    "title": "Os itens deveriam ficar em coluna",
+    "concept": "Direção do Flexbox",
+    "kind": "Conserte o CSS 🛠️",
+    "code": ".tarefas { display: flex; flex-direction: horizontal; }",
+    "options": [
+      "justify-content: column;",
+      "flex-direction: row;",
+      "display: column;",
+      "flex-direction: column;"
+    ],
+    "answer": 3,
+    "explanation": "column define o eixo principal na direção de coluna. horizontal não é um valor válido de flex-direction.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 17,
+    "repair_diagnosis": "Os itens deveriam ficar em coluna. Os itens devem ficar um abaixo do outro, em coluna.",
+    "repair_expected": "Os itens devem ficar um abaixo do outro, em coluna.",
+    "repair_variants": [
+      {
+        "code": ".tarefas { display: flex; justify-content: column; }",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false,
+        "preview": "<div class=\"tarefas\"><span>Ler</span><span>Praticar</span></div><style>.tarefas { display: flex; justify-content: column; }</style>"
+      },
+      {
+        "code": ".tarefas { display: flex; flex-direction: row; }",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false,
+        "preview": "<div class=\"tarefas\"><span>Ler</span><span>Praticar</span></div><style>.tarefas { display: flex; flex-direction: row; }</style>"
+      },
+      {
+        "code": ".tarefas { display: flex; display: column; }",
+        "output": "Essa alteração não atende ao objetivo descrito.",
+        "passed": false,
+        "preview": "<div class=\"tarefas\"><span>Ler</span><span>Praticar</span></div><style>.tarefas { display: flex; display: column; }</style>"
+      },
+      {
+        "code": ".tarefas { display: flex; flex-direction: column; }",
+        "output": "Os itens devem ficar um abaixo do outro, em coluna.",
+        "passed": true,
+        "preview": "<div class=\"tarefas\"><span>Ler</span><span>Praticar</span></div><style>.tarefas { display: flex; flex-direction: column; }</style>"
+      }
+    ],
+    "focus": {
+      "start": 26,
+      "end": 53
+    }
+  },
+  {
+    "subject": "html",
+    "id": 741,
+    "curriculum": "html-v1",
+    "activity": "structure",
+    "title": "Um rodapé para a exposição",
+    "concept": "Rodapé",
+    "kind": "Monte o HTML 🧩",
+    "code": "<_____>\n    <p>Exposição escolar • Informações de contato</p>\n</_____>",
+    "options": [
+      "<footer>",
+      "<head>",
+      "<em>",
+      "<title>"
+    ],
+    "answer": 0,
+    "explanation": "footer representa o rodapé da seção ou página.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 18,
+    "visual_instruction": "Leia a função pedida e escolha a tag para as duas lacunas.",
+    "repair_variants": [
+      {
+        "code": "<footer>\n    <p>Exposição escolar • Informações de contato</p>\n</footer>",
+        "output": "A tag expressa a função solicitada.",
+        "passed": true
+      },
+      {
+        "code": "<head>\n    <p>Exposição escolar • Informações de contato</p>\n</head>",
+        "output": "A tag não expressa a função solicitada.",
+        "passed": false
+      },
+      {
+        "code": "<em>\n    <p>Exposição escolar • Informações de contato</p>\n</em>",
+        "output": "A tag não expressa a função solicitada.",
+        "passed": false
+      },
+      {
+        "code": "<title>\n    <p>Exposição escolar • Informações de contato</p>\n</title>",
+        "output": "A tag não expressa a função solicitada.",
+        "passed": false
+      }
+    ],
+    "repair_expected": "A tag expressa a função solicitada."
+  },
+  {
+    "subject": "html",
+    "id": 742,
+    "curriculum": "html-v1",
+    "activity": "structure",
+    "title": "Um título de terceiro nível",
+    "concept": "Hierarquia de títulos",
+    "kind": "Monte o HTML 🧩",
+    "code": "<h1>Feira de ciências</h1>\n<h2>Projetos</h2>\n<_____>Robótica</_____>",
+    "options": [
+      "<p>",
+      "<title>",
+      "<h3>",
+      "<strong>"
+    ],
+    "answer": 2,
+    "explanation": "h3 representa o terceiro nível desta hierarquia: um assunto dentro da seção Projetos.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 19,
+    "visual_instruction": "Leia a função pedida e escolha a tag para as duas lacunas.",
+    "repair_variants": [
+      {
+        "code": "<h1>Feira de ciências</h1>\n<h2>Projetos</h2>\n<p>Robótica</p>",
+        "output": "A tag não expressa a função solicitada.",
+        "passed": false
+      },
+      {
+        "code": "<h1>Feira de ciências</h1>\n<h2>Projetos</h2>\n<title>Robótica</title>",
+        "output": "A tag não expressa a função solicitada.",
+        "passed": false
+      },
+      {
+        "code": "<h1>Feira de ciências</h1>\n<h2>Projetos</h2>\n<h3>Robótica</h3>",
+        "output": "A tag expressa a função solicitada.",
+        "passed": true
+      },
+      {
+        "code": "<h1>Feira de ciências</h1>\n<h2>Projetos</h2>\n<strong>Robótica</strong>",
+        "output": "A tag não expressa a função solicitada.",
+        "passed": false
+      }
+    ],
+    "repair_expected": "A tag expressa a função solicitada."
+  },
+  {
+    "subject": "html",
+    "id": 743,
+    "curriculum": "html-v1",
+    "activity": "structure",
+    "title": "Um aviso com ênfase",
+    "concept": "Ênfase no texto",
+    "kind": "Monte o HTML 🧩",
+    "code": "<p>Faça a visita <_____>com calma</_____>.</p>",
+    "options": [
+      "<br>",
+      "<em>",
+      "<html>",
+      "<meta>"
+    ],
+    "answer": 1,
+    "explanation": "em marca ênfase no trecho. Sua aparência padrão pode ser itálica, mas a função aqui é semântica.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 20,
+    "visual_instruction": "Leia a função pedida e escolha a tag para as duas lacunas.",
+    "repair_variants": [
+      {
+        "code": "<p>Faça a visita <br>com calma</br>.</p>",
+        "output": "A tag não expressa a função solicitada.",
+        "passed": false
+      },
+      {
+        "code": "<p>Faça a visita <em>com calma</em>.</p>",
+        "output": "A tag expressa a função solicitada.",
+        "passed": true
+      },
+      {
+        "code": "<p>Faça a visita <html>com calma</html>.</p>",
+        "output": "A tag não expressa a função solicitada.",
+        "passed": false
+      },
+      {
+        "code": "<p>Faça a visita <meta>com calma</meta>.</p>",
+        "output": "A tag não expressa a função solicitada.",
+        "passed": false
+      }
+    ],
+    "repair_expected": "A tag expressa a função solicitada."
+  },
+  {
+    "subject": "html",
+    "id": 744,
+    "curriculum": "html-v1",
+    "activity": "structure",
+    "title": "Um agrupamento temático",
+    "concept": "Seção temática",
+    "kind": "Monte o HTML 🧩",
+    "code": "<_____>\n    <h2>Horários de atendimento</h2>\n    <p>De segunda a sexta, pela manhã.</p>\n</_____>",
+    "options": [
+      "<label>",
+      "<small>",
+      "<option>",
+      "<section>"
+    ],
+    "answer": 3,
+    "explanation": "section representa uma seção temática. O título identifica o assunto desse agrupamento.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 21,
+    "visual_instruction": "Leia a função pedida e escolha a tag para as duas lacunas.",
+    "repair_variants": [
+      {
+        "code": "<label>\n    <h2>Horários de atendimento</h2>\n    <p>De segunda a sexta, pela manhã.</p>\n</label>",
+        "output": "A tag não expressa a função solicitada.",
+        "passed": false
+      },
+      {
+        "code": "<small>\n    <h2>Horários de atendimento</h2>\n    <p>De segunda a sexta, pela manhã.</p>\n</small>",
+        "output": "A tag não expressa a função solicitada.",
+        "passed": false
+      },
+      {
+        "code": "<option>\n    <h2>Horários de atendimento</h2>\n    <p>De segunda a sexta, pela manhã.</p>\n</option>",
+        "output": "A tag não expressa a função solicitada.",
+        "passed": false
+      },
+      {
+        "code": "<section>\n    <h2>Horários de atendimento</h2>\n    <p>De segunda a sexta, pela manhã.</p>\n</section>",
+        "output": "A tag expressa a função solicitada.",
+        "passed": true
+      }
+    ],
+    "repair_expected": "A tag expressa a função solicitada."
+  },
+  {
+    "subject": "css",
+    "id": 841,
+    "curriculum": "css-v1",
+    "activity": "visual",
+    "title": "Uma legenda em itálico",
+    "concept": "Estilo da fonte",
+    "kind": "Duelo de estilos 🎨",
+    "code": ".legenda { /* escolha a regra para a referência */ }",
+    "options": [
+      ".legenda { font-style: italic; }",
+      ".legenda { font-weight: bold; }",
+      ".legenda { text-transform: uppercase; }",
+      ".legenda { text-decoration: underline; }"
+    ],
+    "answer": 0,
+    "explanation": "font-style: italic produz o itálico pedido. As demais regras alteram outras características.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 18,
+    "visual_target": "<p class=\"legenda\">Registro da visita</p><style>.legenda { font-style: italic; }</style>",
+    "visual_instruction": "Compare a característica visual pedida; o conteúdo HTML é apenas o suporte do exemplo.",
+    "repair_variants": [
+      {
+        "code": ".legenda { font-style: italic; }",
+        "preview": "<p class=\"legenda\">Registro da visita</p>\n<style>.legenda { font-style: italic; }</style>",
+        "output": "A regra reproduz a referência.",
+        "passed": true
+      },
+      {
+        "code": ".legenda { font-weight: bold; }",
+        "preview": "<p class=\"legenda\">Registro da visita</p>\n<style>.legenda { font-weight: bold; }</style>",
+        "output": "Compare a característica visual com a referência.",
+        "passed": false
+      },
+      {
+        "code": ".legenda { text-transform: uppercase; }",
+        "preview": "<p class=\"legenda\">Registro da visita</p>\n<style>.legenda { text-transform: uppercase; }</style>",
+        "output": "Compare a característica visual com a referência.",
+        "passed": false
+      },
+      {
+        "code": ".legenda { text-decoration: underline; }",
+        "preview": "<p class=\"legenda\">Registro da visita</p>\n<style>.legenda { text-decoration: underline; }</style>",
+        "output": "Compare a característica visual com a referência.",
+        "passed": false
+      }
+    ],
+    "repair_expected": "A regra reproduz a referência."
+  },
+  {
+    "subject": "css",
+    "id": 842,
+    "curriculum": "css-v1",
+    "activity": "visual",
+    "title": "Um selo com borda pontilhada",
+    "concept": "Estilo da borda",
+    "kind": "Duelo de estilos 🎨",
+    "code": ".selo { /* escolha a regra para a referência */ }",
+    "options": [
+      ".selo { border: 3px solid teal; }",
+      ".selo { border: 3px dotted teal; }",
+      ".selo { border: 3px dashed teal; }",
+      ".selo { border: 0; }"
+    ],
+    "answer": 1,
+    "explanation": "dotted é uma borda pontilhada; dashed é tracejada; solid é contínua.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 19,
+    "visual_target": "<div class=\"selo\">Entrada livre</div><style>.selo { border: 3px dotted teal; }</style>",
+    "visual_instruction": "Compare a característica visual pedida; o conteúdo HTML é apenas o suporte do exemplo.",
+    "repair_variants": [
+      {
+        "code": ".selo { border: 3px solid teal; }",
+        "preview": "<div class=\"selo\">Entrada livre</div>\n<style>.selo { border: 3px solid teal; }</style>",
+        "output": "Compare a característica visual com a referência.",
+        "passed": false
+      },
+      {
+        "code": ".selo { border: 3px dotted teal; }",
+        "preview": "<div class=\"selo\">Entrada livre</div>\n<style>.selo { border: 3px dotted teal; }</style>",
+        "output": "A regra reproduz a referência.",
+        "passed": true
+      },
+      {
+        "code": ".selo { border: 3px dashed teal; }",
+        "preview": "<div class=\"selo\">Entrada livre</div>\n<style>.selo { border: 3px dashed teal; }</style>",
+        "output": "Compare a característica visual com a referência.",
+        "passed": false
+      },
+      {
+        "code": ".selo { border: 0; }",
+        "preview": "<div class=\"selo\">Entrada livre</div>\n<style>.selo { border: 0; }</style>",
+        "output": "Compare a característica visual com a referência.",
+        "passed": false
+      }
+    ],
+    "repair_expected": "A regra reproduz a referência."
+  },
+  {
+    "subject": "css",
+    "id": 843,
+    "curriculum": "css-v1",
+    "activity": "visual",
+    "title": "Uma chamada em letras maiúsculas",
+    "concept": "Transformação do texto",
+    "kind": "Duelo de estilos 🎨",
+    "code": ".chamada { /* escolha a regra para a referência */ }",
+    "options": [
+      ".chamada { font-variant: normal; }",
+      ".chamada { text-transform: lowercase; }",
+      ".chamada { text-transform: uppercase; }",
+      ".chamada { text-transform: capitalize; }"
+    ],
+    "answer": 2,
+    "explanation": "uppercase muda a apresentação do texto para maiúsculas sem reescrever o conteúdo do HTML.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 20,
+    "visual_target": "<p class=\"chamada\">Encontro de leitura</p><style>.chamada { text-transform: uppercase; }</style>",
+    "visual_instruction": "Compare a característica visual pedida; o conteúdo HTML é apenas o suporte do exemplo.",
+    "repair_variants": [
+      {
+        "code": ".chamada { font-variant: normal; }",
+        "preview": "<p class=\"chamada\">Encontro de leitura</p>\n<style>.chamada { font-variant: normal; }</style>",
+        "output": "Compare a característica visual com a referência.",
+        "passed": false
+      },
+      {
+        "code": ".chamada { text-transform: lowercase; }",
+        "preview": "<p class=\"chamada\">Encontro de leitura</p>\n<style>.chamada { text-transform: lowercase; }</style>",
+        "output": "Compare a característica visual com a referência.",
+        "passed": false
+      },
+      {
+        "code": ".chamada { text-transform: uppercase; }",
+        "preview": "<p class=\"chamada\">Encontro de leitura</p>\n<style>.chamada { text-transform: uppercase; }</style>",
+        "output": "A regra reproduz a referência.",
+        "passed": true
+      },
+      {
+        "code": ".chamada { text-transform: capitalize; }",
+        "preview": "<p class=\"chamada\">Encontro de leitura</p>\n<style>.chamada { text-transform: capitalize; }</style>",
+        "output": "Compare a característica visual com a referência.",
+        "passed": false
+      }
+    ],
+    "repair_expected": "A regra reproduz a referência."
+  },
+  {
+    "subject": "css",
+    "id": 844,
+    "curriculum": "css-v1",
+    "activity": "visual",
+    "title": "Um título com risco no meio",
+    "concept": "Decoração do texto",
+    "kind": "Duelo de estilos 🎨",
+    "code": ".antigo { /* escolha a regra para a referência */ }",
+    "options": [
+      ".antigo { text-decoration: underline; }",
+      ".antigo { font-style: italic; }",
+      ".antigo { text-decoration: none; }",
+      ".antigo { text-decoration: line-through; }"
+    ],
+    "answer": 3,
+    "explanation": "line-through desenha uma linha atravessando o texto. É uma decoração visual; sozinha não comunica uma alteração semântica do documento.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 21,
+    "visual_target": "<p class=\"antigo\">Programação anterior</p><style>.antigo { text-decoration: line-through; }</style>",
+    "visual_instruction": "Compare a característica visual pedida; o conteúdo HTML é apenas o suporte do exemplo.",
+    "repair_variants": [
+      {
+        "code": ".antigo { text-decoration: underline; }",
+        "preview": "<p class=\"antigo\">Programação anterior</p>\n<style>.antigo { text-decoration: underline; }</style>",
+        "output": "Compare a característica visual com a referência.",
+        "passed": false
+      },
+      {
+        "code": ".antigo { font-style: italic; }",
+        "preview": "<p class=\"antigo\">Programação anterior</p>\n<style>.antigo { font-style: italic; }</style>",
+        "output": "Compare a característica visual com a referência.",
+        "passed": false
+      },
+      {
+        "code": ".antigo { text-decoration: none; }",
+        "preview": "<p class=\"antigo\">Programação anterior</p>\n<style>.antigo { text-decoration: none; }</style>",
+        "output": "Compare a característica visual com a referência.",
+        "passed": false
+      },
+      {
+        "code": ".antigo { text-decoration: line-through; }",
+        "preview": "<p class=\"antigo\">Programação anterior</p>\n<style>.antigo { text-decoration: line-through; }</style>",
+        "output": "A regra reproduz a referência.",
+        "passed": true
+      }
+    ],
+    "repair_expected": "A regra reproduz a referência."
+  },
+  {
+    "subject": "css",
+    "id": 851,
+    "curriculum": "css-v1",
+    "activity": "selectors",
+    "title": "Selecione os alvos de p.dica",
+    "concept": "Leitura de seletores",
+    "kind": "Caça aos seletores 🎯",
+    "code": "<h3 class=\"dica\">[1] Guia rápido</h3>\n<p class=\"dica\">[2] Leia as instruções</p>\n<aside><p>[3] Horário especial</p></aside>\n<footer><a href=\"#guia\">[4] Abrir guia</a></footer>\n\np.dica { font-weight: bold; }",
+    "options": [
+      "Só [1]",
+      "Só [2]",
+      "[1] e [2]",
+      "[2] e [3]"
+    ],
+    "answer": 1,
+    "explanation": "p.dica combina o nome da tag p com a classe dica. Só [2] atende aos dois critérios.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 22,
+    "stage_markup": "<h3 class=\"dica\">[1] Guia rápido</h3>\n<p class=\"dica\">[2] Leia as instruções</p>\n<aside><p>[3] Horário especial</p></aside>\n<footer><a href=\"#guia\">[4] Abrir guia</a></footer>",
+    "visual_instruction": "A prévia está sem o negrito da regra. Preveja quais números receberão esse estilo."
+  },
+  {
+    "subject": "css",
+    "id": 852,
+    "curriculum": "css-v1",
+    "activity": "selectors",
+    "title": "Selecione os alvos de h3, footer a",
+    "concept": "Leitura de seletores",
+    "kind": "Caça aos seletores 🎯",
+    "code": "<h3 class=\"dica\">[1] Guia rápido</h3>\n<p class=\"dica\">[2] Leia as instruções</p>\n<aside><p>[3] Horário especial</p></aside>\n<footer><a href=\"#guia\">[4] Abrir guia</a></footer>\n\nh3, footer a { font-weight: bold; }",
+    "options": [
+      "[1] e [4]",
+      "Só [4]",
+      "[2] e [3]",
+      "Todos"
+    ],
+    "answer": 0,
+    "explanation": "A vírgula agrupa seletores. A regra alcança o h3 e o link que está dentro de footer.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 23,
+    "stage_markup": "<h3 class=\"dica\">[1] Guia rápido</h3>\n<p class=\"dica\">[2] Leia as instruções</p>\n<aside><p>[3] Horário especial</p></aside>\n<footer><a href=\"#guia\">[4] Abrir guia</a></footer>",
+    "visual_instruction": "A prévia está sem o negrito da regra. Preveja quais números receberão esse estilo."
+  },
+  {
+    "subject": "css",
+    "id": 853,
+    "curriculum": "css-v1",
+    "activity": "selectors",
+    "title": "Selecione os alvos de aside p",
+    "concept": "Leitura de seletores",
+    "kind": "Caça aos seletores 🎯",
+    "code": "<h3 class=\"dica\">[1] Guia rápido</h3>\n<p class=\"dica\">[2] Leia as instruções</p>\n<aside><p>[3] Horário especial</p></aside>\n<footer><a href=\"#guia\">[4] Abrir guia</a></footer>\n\naside p { font-weight: bold; }",
+    "options": [
+      "Só [2]",
+      "[2] e [3]",
+      "Só [3]",
+      "Só [4]"
+    ],
+    "answer": 2,
+    "explanation": "O espaço seleciona os parágrafos descendentes de aside. O parágrafo [3] está nessa região.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 24,
+    "stage_markup": "<h3 class=\"dica\">[1] Guia rápido</h3>\n<p class=\"dica\">[2] Leia as instruções</p>\n<aside><p>[3] Horário especial</p></aside>\n<footer><a href=\"#guia\">[4] Abrir guia</a></footer>",
+    "visual_instruction": "A prévia está sem o negrito da regra. Preveja quais números receberão esse estilo."
+  },
+  {
+    "subject": "css",
+    "id": 854,
+    "curriculum": "css-v1",
+    "activity": "selectors",
+    "title": "Selecione os alvos de p",
+    "concept": "Leitura de seletores",
+    "kind": "Caça aos seletores 🎯",
+    "code": "<h3 class=\"dica\">[1] Guia rápido</h3>\n<p class=\"dica\">[2] Leia as instruções</p>\n<aside><p>[3] Horário especial</p></aside>\n<footer><a href=\"#guia\">[4] Abrir guia</a></footer>\n\np { font-weight: bold; }",
+    "options": [
+      "Só [1]",
+      "Só [3]",
+      "Todos os quatro",
+      "[2] e [3]"
+    ],
+    "answer": 3,
+    "explanation": "O seletor de tag p corresponde aos dois parágrafos, independentemente da classe ou da região em que estão.",
+    "seconds": 90,
+    "source": "Atividades autorais complementares • fundamentos trabalhados em aula",
+    "reflection_prompt": "",
+    "position": 25,
+    "stage_markup": "<h3 class=\"dica\">[1] Guia rápido</h3>\n<p class=\"dica\">[2] Leia as instruções</p>\n<aside><p>[3] Horário especial</p></aside>\n<footer><a href=\"#guia\">[4] Abrir guia</a></footer>",
+    "visual_instruction": "A prévia está sem o negrito da regra. Preveja quais números receberão esse estilo."
   }
 ]

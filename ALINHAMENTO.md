@@ -79,3 +79,11 @@ Quiz: IDs 501–515; vocabulário: 521–524; oficina: 531–534. A separação 
 - Duelo de estilos (541–544): fundo, arredondamento, padding, flex, gap e tipografia; cada alternativa foi comparada ao alvo pelos estilos calculados no navegador.
 - Caça aos seletores (551–554): classe, id, descendência e tag; elementos numerados e regras pequenas, sem JavaScript para o aluno.
 - Monte a página (561–564): nav, main, ol e article. O navegador pode renderizar escolhas semanticamente inadequadas; a correção explica a função da tag, sem presumir que aparência igual significa HTML correto.
+
+## Modalidades individuais — bancos inéditos
+
+Só HTML: 701–710 (quiz), 721–724 (vocabulário), 731–734 (correção), 741–744 (estrutura). Foco em idioma, codificação, aninhamento, textarea, select, name, reset, small, details/summary, pre/code, itens de lista, tipos de campo, rodapé, hierarquia, ênfase e seção temática.
+
+Só CSS: 801–810 (quiz), 821–824 (vocabulário), 831–834 (correção), 841–844 (visual), 851–854 (seletores). Foco em fontes, altura da linha, bordas, decoração, abreviação de padding, ordem de regras equivalentes, Flexbox, transformações, duração de transições, sombras, declarações, comentários e unidades. O HTML de suporte permanece fixo.
+
+Validação: as 58 questões das modalidades anteriores são idênticas às da versão anterior; não há IDs, títulos ou códigos de questão repetidos entre os novos bancos e os anteriores. Totais: Python 23, HTML/CSS 35, só HTML 22, só CSS 26.
