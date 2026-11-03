@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';
+import {workshops,checkExercise} from '../site/interactive.js';import {packsFor,selectQuestions} from '../site/activities.js';
+const bank=JSON.parse(readFileSync(new URL('../site/questions.json',import.meta.url)));
+test('Python do zero tem 15 questões próprias em ordem progressiva',()=>{const qs=selectQuestions(bank,'quiz','python-zero');assert.equal(qs.length,15);assert.equal(qs[0].concept,'Saída com print');assert.equal(qs.at(-1).concept,'Estado de objetos');assert.deepEqual(Object.keys(packsFor('python-zero')),['mixed','quiz','reflect']);assert.equal(new Set(bank.map(q=>q.id)).size,bank.length);});
+test('todas as cinco trilhas oferecem seis construções sem alternativas',()=>{assert.equal(Object.keys(workshops).length,5);for(const tasks of Object.values(workshops)){assert.equal(tasks.length,6);for(const q of tasks){assert.ok(!q.options);if(q.type==='order'){assert.ok(checkExercise(q,q.lines.map((_,i)=>i)));assert.ok(!checkExercise(q,q.lines.map((_,i)=>i).reverse()));assert.ok(!checkExercise(q,[]));}else{assert.ok(checkExercise(q,' '+q.expected+' '));assert.ok(!checkExercise(q,'não corresponde'));}assert.ok(q.hint);}}});
+test('bancos anteriores permanecem intactos',()=>{assert.equal(bank.filter(q=>q.subject!=='python-zero').length,106);});

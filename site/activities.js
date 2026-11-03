@@ -7,6 +7,7 @@ export const PACKS={
  reflect:{name:'Explique sua escolha 💬',description:'Responda e explique seu raciocínio antes da correção',icon:'💬'}
 };
 export const SUBJECTS={
+ 'python-zero':{name:'Python do zero',short:'Python do zero',code:'Python',badge:'PRIMEIROS PASSOS',description:'Variáveis, condicionais, loops e primeiros objetos'},
  python:{name:'Python · POO',short:'Python',code:'Python',badge:'PYTHON + OBJETOS',description:'Classes, objetos, métodos e estados'},
  'html-css':{name:'HTML e CSS',short:'HTML e CSS',code:'HTML e CSS',badge:'HTML + CSS',description:'Estrutura, semântica e estilo de páginas'},
  html:{name:'Só HTML',short:'Só HTML',code:'HTML',badge:'SÓ HTML',description:'Novos desafios de estrutura, semântica e formulários'},
@@ -14,6 +15,7 @@ export const SUBJECTS={
 };
 export function packsFor(subject='python'){
  if(subject==='python')return PACKS;
+ if(subject==='python-zero')return {mixed:{name:'Jornada do zero',description:'15 passos: fundamentos, condições, repetições e objetos',icon:'🌱'},quiz:{name:'Quiz de Python do zero',description:'15 exercícios em ordem de aprendizagem',icon:'ϟ'},reflect:PACKS.reflect};
  const packs={...PACKS,mixed:{...PACKS.mixed,description:'Todos os jogos desta modalidade na mesma aventura'},quiz:{...PACKS.quiz,name:subject==='html'?'Quiz só de HTML':subject==='css'?'Quiz só de CSS':'Quiz de HTML e CSS',description:subject==='html'?'10 questões inéditas de estrutura e semântica':subject==='css'?'10 questões inéditas sobre regras e aparência':'15 desafios de estrutura, semântica e estilo'},classify:{...PACKS.classify,description:subject==='html'?'Reconheça tags, atributos, valores e conteúdo textual':subject==='css'?'Reconheça propriedades, declarações, comentários e unidades':'Reconheça tags, atributos, seletores, propriedades e valores'},repair:{...PACKS.repair,name:subject==='html'?'Conserte o HTML 🛠️':subject==='css'?'Conserte o CSS 🛠️':'Conserte a página 🛠️',description:'Escolha uma correção e compare o resultado no navegador'}};
  if(subject!=='html'){packs.visual={name:'Duelo de estilos 🎨',description:'Compare a referência visual e escolha o CSS que a reproduz',icon:'🎨'};packs.selectors={name:'Caça aos seletores 🎯',description:'Preveja quais elementos uma regra CSS seleciona',icon:'🎯'};}
  if(subject!=='css')packs.structure={name:subject==='html'?'Monte o HTML 🧩':'Monte a página 🧩',description:'Complete a estrutura HTML com a tag adequada',icon:'🧩'};

@@ -1,0 +1,21 @@
+name: Supabase · disponibilidade
+on:
+  schedule:
+    - cron: '17 12 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  database:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verificar consulta mínima ao banco
+        env:
+          SUPABASE_URL: https://slhuiyakxelcmjeudory.supabase.co
+          SUPABASE_PUBLIC_KEY: sb_publishable_pxd4kzsbFjIG3Zqdfq1JVQ_tNTzhPT7
+        run: |
+          response=$(curl --fail-with-body --silent --show-error --max-time 30 --retry 2 \
+            "$SUPABASE_URL/rest/v1/rpc/pq_health" \
+            -H "apikey: $SUPABASE_PUBLIC_KEY" -H 'Content-Type: application/json' \
+            --data '{}')
+          test "$response" = true
